@@ -32,17 +32,56 @@
 
 ## 快速开始
 
+### 1. 克隆 & 安装
+
 ```bash
+git clone https://github.com/rxw2023/myRemotion_projects.git
+cd myRemotion_projects
 pnpm install
-pnpm run dev        # 启动 Remotion Studio
+```
+
+### 2. 安装 TTS 依赖（Python）
+
+音频使用 edge-tts 生成，需要 Python 3.8+：
+
+```bash
+pip install edge-tts mutagen
+```
+
+### 3. 生成所有视频的 TTS 音频
+
+```bash
+# 逐个运行（约 2-3 分钟全部完成）
+python -X utf8 scripts/fuckucode/generate_fuckucode_tts.py
+python -X utf8 scripts/openclaw/generate_openclaw_tts.py
+python -X utf8 scripts/claude-models/generate_tts.py
+python -X utf8 scripts/structure/generate_tts_structure.py
+python -X utf8 scripts/liangzhu/generate_lzh_tts.py
+python -X utf8 scripts/ai-text-gen/gen_aitext_tts.py
+python -X utf8 scripts/performance/generate_tts_performance.py
+python -X utf8 scripts/storage-knowledge/generate_tts.py
+```
+
+每个脚本运行后会打印音频时长汇总，并生成 `public/*/durations_*.json`。
+
+### 4. 启动预览
+
+```bash
+pnpm run dev        # 浏览器打开 http://localhost:3000
 pnpm run lint       # ESLint + TypeScript 检查
 ```
 
-## 渲染视频
+左侧列表选择对应 Composition 即可预览。
+
+### 5. 渲染视频
 
 ```bash
+# 单个渲染
+npx remotion render FuckUCode out/fuckucode.mp4
+
+# 批量渲染（示例）
 npx remotion render ClaudeModels out/claude-fable5.mp4
-npx remotion render GPTEvolution out/GPTEvolution.mp4
+npx remotion render OpenClaw out/openclaw.mp4
 ```
 
 ## 项目结构
