@@ -203,6 +203,6 @@ type TerminalLine =
 
 - 脚本路径: `scripts/fuckucode/generate_fuckucode_tts.py`
 - 音频输出: `public/fuckucode/`
-- 语音: `zh-CN-YunxiNeural`, rate `+8%`
+- 语音: `zh-CN-XiaoyiNeural` (Cartoon 风格活泼女声), rate `+8%`
 - 字幕文本: 硬编码在 `src/FuckUCode/index.tsx` 的 `SUBTITLE_TEXTS` 对象中
 - 时长文件: `public/fuckucode/durations_fuckucode.json`
