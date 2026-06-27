@@ -13,6 +13,7 @@ import { PerformanceMetrics } from "./PerformanceMetrics";
 import { ErisPet } from "./ErisPet";
 import { ClaudeModels } from "./ClaudeModels";
 import { FuckUCode } from "./FuckUCode";
+import { MemoryOrganization } from "./MemoryOrganization";
 
 // ==================== 配置类型 ====================
 
@@ -61,6 +62,14 @@ const compositions: CompConfig[] = [
     orientation: "portrait",
     category: "video",
     description: "存储系统原理",
+  },
+  {
+    id: "MemoryOrganization",
+    component: MemoryOrganization,
+    durationInFrames: 3330,
+    orientation: "portrait",
+    category: "video",
+    description: "内存工作原理 — DRAM芯片、多体交叉存储、容量扩展",
   },
   {
     id: "ComputerStructure",
