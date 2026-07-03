@@ -11,6 +11,7 @@
 | GPT进化史 | 竖屏 1080×1920 | ~21s | GPT-1 到 GPT-3 发展历程 |
 | 存储系统原理 | 竖屏 | ~96s | 寄存器到磁盘的存储层次 |
 | **内存工作原理** | 竖屏 | ~111s | DRAM芯片·多体交叉存储·容量扩展 |
+| **外部存储** | 竖屏 1080×1920 | ~187s | 机械硬盘CHS寻址·RAID·SSD对比 |
 | 计算机层次结构 | 竖屏 | ~105s | 冯诺依曼·硬件软件·编译流程 |
 | 良渚探秘 | 竖屏 | ~96s | 良渚文化遗址科普 |
 | AI文本生成 | 横版 1920×1080 | ~354s | KIMI 制作宣传单教学 |
@@ -62,6 +63,7 @@ python -X utf8 scripts/ai-text-gen/gen_aitext_tts.py
 python -X utf8 scripts/performance/generate_tts_performance.py
 python -X utf8 scripts/storage-knowledge/generate_tts.py
 python -X utf8 scripts/memory-organization/generate_tts.py
+python -X utf8 scripts/external-storage/generate_tts.py
 ```
 
 每个脚本运行后会打印音频时长汇总，并生成 `public/*/durations_*.json`。
@@ -85,6 +87,7 @@ npx remotion render FuckUCode out/fuckucode.mp4
 npx remotion render ClaudeModels out/claude-fable5.mp4
 npx remotion render OpenClaw out/openclaw.mp4
 npx remotion render MemoryOrganization out/memory-organization.mp4
+npx remotion render ExternalStorage out/external-storage.mp4
 ```
 
 ## 项目结构
@@ -100,6 +103,7 @@ src/
 ├── GPTEvolution/                # GPT 进化史（竖屏）
 ├── StorageKnowledge/            # 存储系统原理（竖屏）
 ├── MemoryOrganization/          # 内存工作原理（竖屏）
+├── ExternalStorage/             # 外部存储科普（竖屏）
 ├── ComputerStructure/           # 计算机层次结构（竖屏）
 ├── Liangzhu/                    # 良渚探秘（竖屏）
 ├── AITextGen/                   # AI 文本生成教学（横版）
@@ -119,6 +123,7 @@ public/                          # 静态资源，按项目分目录
 ├── performance-metrics/         # PerformanceMetrics 语音
 ├── storage-knowledge/           # StorageKnowledge 语音
 ├── memory-organization/         # MemoryOrganization 语音
+├── external-storage/             # ExternalStorage 语音
 └── eris-pet/                    # ErisPet GIF
 
 scripts/                         # TTS 生成脚本，按项目分目录
@@ -130,7 +135,8 @@ scripts/                         # TTS 生成脚本，按项目分目录
 ├── structure/generate_tts_structure.py
 ├── performance/generate_tts_performance.py
 └── storage-knowledge/generate_tts.py
-└── memory-organization/generate_tts.py
+├── memory-organization/generate_tts.py
+└── external-storage/generate_tts.py
 ```
 
 ## 全部 Composition
@@ -142,6 +148,7 @@ scripts/                         # TTS 生成脚本，按项目分目录
 | GPTEvolution | 1080×1920 | 630 | ~21s | GPT 进化史 |
 | StorageKnowledge | 1080×1920 | 2895 | ~96.5s | 存储系统原理 |
 | MemoryOrganization | 1080×1920 | 3330 | ~111s | 内存工作原理 |
+| ExternalStorage | 1080×1920 | 5616 | ~187s | 外部存储科普 |
 | ComputerStructure | 1080×1920 | 3164 | ~105.5s | 计算机层次结构 |
 | Liangzhu | 1080×1920 | 2899 | ~96.6s | 良渚文化探秘 |
 | AITextGen | 1920×1080 | 10625 | ~354s | AI 文本生成教学 |

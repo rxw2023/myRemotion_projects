@@ -14,6 +14,7 @@ import { ErisPet } from "./ErisPet";
 import { ClaudeModels } from "./ClaudeModels";
 import { FuckUCode } from "./FuckUCode";
 import { MemoryOrganization } from "./MemoryOrganization";
+import { ExternalStorage } from "./ExternalStorage";
 
 // ==================== 配置类型 ====================
 
@@ -70,6 +71,14 @@ const compositions: CompConfig[] = [
     orientation: "portrait",
     category: "video",
     description: "内存工作原理 — DRAM芯片、多体交叉存储、容量扩展",
+  },
+  {
+    id: "ExternalStorage",
+    component: ExternalStorage,
+    durationInFrames: 5616,
+    orientation: "portrait",
+    category: "video",
+    description: "外部存储科普 — 机械硬盘CHS寻址、RAID、SSD对比",
   },
   {
     id: "ComputerStructure",

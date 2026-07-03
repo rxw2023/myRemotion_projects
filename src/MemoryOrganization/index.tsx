@@ -333,7 +333,7 @@ const InterleaveScene: React.FC = () => {
             <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
               {[
                 { banks: ["M0", "M1", "M2", "M3"], colors: [C.accent2, C.accent3, C.accent, C.accent5] },
-              ].map((group, gi) =>
+              ].map((group) =>
                 Array.from({ length: 4 }, (_, row) => {
                   const progress = interpolate(frame, [16 + row * 4, 22 + row * 4], [0, 1], {
                     extrapolateLeft: "clamp", extrapolateRight: "clamp",
