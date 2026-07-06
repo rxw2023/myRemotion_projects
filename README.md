@@ -18,6 +18,7 @@
 | 性能指标 | 竖屏 | ~131s | CPI/FLOPS/字长 考研考点 |
 | OpenClaw | 竖屏 | ~109s | 开源 AI 智能体框架介绍 |
 | ErisPet | 竖屏 | ~14s | 桌宠动画 |
+| **GitHub PR 工作流** | 竖屏 1080×1920 | ~140s | Fork到Merge·正确流程vs常见错误 |
 
 ## 技术栈
 
@@ -64,6 +65,7 @@ python -X utf8 scripts/performance/generate_tts_performance.py
 python -X utf8 scripts/storage-knowledge/generate_tts.py
 python -X utf8 scripts/memory-organization/generate_tts.py
 python -X utf8 scripts/external-storage/generate_tts.py
+python -X utf8 scripts/github-pr-workflow/generate_tts.py
 ```
 
 每个脚本运行后会打印音频时长汇总，并生成 `public/*/durations_*.json`。
@@ -88,6 +90,7 @@ npx remotion render ClaudeModels out/claude-fable5.mp4
 npx remotion render OpenClaw out/openclaw.mp4
 npx remotion render MemoryOrganization out/memory-organization.mp4
 npx remotion render ExternalStorage out/external-storage.mp4
+npx remotion render GitHubPRWorkflow out/github-pr-workflow.mp4
 ```
 
 ## 项目结构
@@ -110,6 +113,7 @@ src/
 ├── PerformanceMetrics/          # 性能指标科普（竖屏）
 ├── OpenClaw/                    # AI 智能体框架（竖屏）
 ├── ErisPet/                     # 桌宠动画（竖屏）
+├── GitHubPRWorkflow/            # GitHub PR 工作流科普（竖屏）
 └── HelloWorld/                  # Remotion 入门模板
 
 public/                          # 静态资源，按项目分目录
@@ -124,6 +128,7 @@ public/                          # 静态资源，按项目分目录
 ├── storage-knowledge/           # StorageKnowledge 语音
 ├── memory-organization/         # MemoryOrganization 语音
 ├── external-storage/             # ExternalStorage 语音
+├── github-pr-workflow/          # GitHubPRWorkflow 音频
 └── eris-pet/                    # ErisPet GIF
 
 scripts/                         # TTS 生成脚本，按项目分目录
@@ -136,7 +141,8 @@ scripts/                         # TTS 生成脚本，按项目分目录
 ├── performance/generate_tts_performance.py
 └── storage-knowledge/generate_tts.py
 ├── memory-organization/generate_tts.py
-└── external-storage/generate_tts.py
+├── external-storage/generate_tts.py
+└── github-pr-workflow/generate_tts.py
 ```
 
 ## 全部 Composition
@@ -155,6 +161,7 @@ scripts/                         # TTS 生成脚本，按项目分目录
 | PerformanceMetrics | 1080×1920 | 3936 | ~131s | 计算机性能指标 |
 | OpenClaw | 1080×1920 | 3281 | ~109.4s | AI 智能体框架 |
 | ErisPet | 1080×1920 | 420 | ~14s | 桌宠动画 |
+| **GitHubPRWorkflow** | 1080×1920 | 4198 | ~140s | GitHub PR 工作流科普 |
 | HelloWorld | 1920×1080 | 150 | ~5s | Remotion 模板 |
 | OnlyLogo | 1920×1080 | 150 | ~5s | Logo 预览 |
 

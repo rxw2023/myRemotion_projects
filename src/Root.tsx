@@ -15,6 +15,7 @@ import { ClaudeModels } from "./ClaudeModels";
 import { FuckUCode } from "./FuckUCode";
 import { MemoryOrganization } from "./MemoryOrganization";
 import { ExternalStorage } from "./ExternalStorage";
+import { GitHubPRWorkflow } from "./GitHubPRWorkflow";
 
 // ==================== 配置类型 ====================
 
@@ -79,6 +80,14 @@ const compositions: CompConfig[] = [
     orientation: "portrait",
     category: "video",
     description: "外部存储科普 — 机械硬盘CHS寻址、RAID、SSD对比",
+  },
+  {
+    id: "GitHubPRWorkflow",
+    component: GitHubPRWorkflow,
+    durationInFrames: 4198,
+    orientation: "portrait",
+    category: "video",
+    description: "GitHub PR 工作流科普 — Fork到Merge的正确姿势 vs 常见错误",
   },
   {
     id: "ComputerStructure",
