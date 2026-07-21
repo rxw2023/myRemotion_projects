@@ -16,6 +16,7 @@ import { FuckUCode } from "./FuckUCode";
 import { MemoryOrganization } from "./MemoryOrganization";
 import { ExternalStorage } from "./ExternalStorage";
 import { GitHubPRWorkflow } from "./GitHubPRWorkflow";
+import { FrontendIsms, TOTAL_FRAMES as FrontendIsmsFrames } from "./FrontendIsms";
 
 // ==================== 配置类型 ====================
 
@@ -136,6 +137,14 @@ const compositions: CompConfig[] = [
     orientation: "portrait",
     category: "video",
     description: "fuck-u-code 代码质量分析工具介绍",
+  },
+  {
+    id: "FrontendIsms",
+    component: FrontendIsms,
+    durationInFrames: FrontendIsmsFrames,
+    orientation: "portrait",
+    category: "video",
+    description: "50种前端设计主义全展示 — 从新粗野主义到复古胶片",
   },
 
   // ---- 横版视频 ----
