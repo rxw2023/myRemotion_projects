@@ -6,6 +6,7 @@ import {
   SWEEP0,
   SWEEP1,
   SUN_CATCH_P,
+  PLANAR_P,
   SMOOTH,
   foilZ,
   catchP,
@@ -129,6 +130,11 @@ const Sun3D: React.FC<{ p: number }> = ({ p }) => {
     const paintGlow = paintGlowRef.current;
     const ripple = rippleRef.current;
 
+    // 二维画/光晕/涟漪跟随箔面位置
+    if (paint) paint.position.z = foilZ(p);
+    if (paintGlow) paintGlow.position.z = foilZ(p);
+    if (ripple) ripple.position.z = foilZ(p);
+
     if (p >= SUN_CATCH_P) {
       const sq = Math.min(1, (p - SUN_CATCH_P) / 0.05);
       const k = 1 + 0.3 * sq;
@@ -239,6 +245,20 @@ const Planets: React.FC<{ p: number }> = ({ p }) => {
       const pz = d.orbit * Math.sin(a);
       sphere.position.set(px, 0, pz);
 
+      // 平面模式: 隐藏 3D, 只留箔面上的二维画
+      if (p > PLANAR_P) {
+        sphere.visible = false;
+        if (ring) ring.visible = false;
+        if (paint) {
+          const fade = SMOOTH(Math.min(1, (p - PLANAR_P) / 0.03));
+          paint.visible = true;
+          paint.position.set(px, 0, foilZ(p));
+          paint.scale.setScalar(d.paintR * Math.max(0.001, 0.15 + 0.85 * fade));
+          (paint.material as THREE.MeshBasicMaterial).opacity = Math.min(1, fade * 2.5);
+        }
+        return;
+      }
+
       // 二维化
       const cp = catchP(sphere.position.z);
       if (p >= cp) {
@@ -251,7 +271,7 @@ const Planets: React.FC<{ p: number }> = ({ p }) => {
         if (paint) {
           const g = Math.min(1, (p - cp) / 0.06);
           paint.visible = g > 0.02;
-          paint.position.set(px, 0, 0);
+          paint.position.set(px, 0, foilZ(p));
           paint.scale.setScalar(d.paintR * Math.max(0.001, 0.15 + 0.85 * g));
           (paint.material as THREE.MeshBasicMaterial).opacity = Math.min(1, g * 2.2);
         }
@@ -314,13 +334,26 @@ const Cities: React.FC<{ p: number }> = ({ p }) => {
       const paint = paintRefs.current[i];
       if (!mesh) return;
 
+      // 平面模式: 隐藏 3D 城市点, 只留箔面上的二维点
+      if (p > PLANAR_P) {
+        mesh.visible = false;
+        if (paint) {
+          const fade = SMOOTH(Math.min(1, (p - PLANAR_P) / 0.03));
+          paint.visible = true;
+          paint.position.set(cd.pos[0], cd.pos[1], foilZ(p));
+          paint.scale.setScalar(sizes.current[i] * Math.max(0.001, 0.2 + 0.8 * fade));
+          (paint.material as THREE.MeshBasicMaterial).opacity = Math.min(1, fade * 2.5);
+        }
+        return;
+      }
+
       const cp = catchP(cd.pos[2]);
       if (p >= cp) {
         mesh.visible = false;
         if (paint) {
           const g = Math.min(1, (p - cp) / 0.02);
           paint.visible = g > 0;
-          paint.position.set(cd.pos[0], cd.pos[1], 0);
+          paint.position.set(cd.pos[0], cd.pos[1], foilZ(p));
           paint.scale.setScalar(sizes.current[i] * Math.max(0.001, 0.2 + 0.8 * g));
           (paint.material as THREE.MeshBasicMaterial).opacity = Math.min(1, g * 2.5);
         }

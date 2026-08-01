@@ -18,6 +18,28 @@ const shot1At = (p: number): Shot => {
   return { pos: [sway, h, fz + d], target: [0, 0, fz] };
 };
 
+// S2 平面模式: 镜头俯视箔面, 太阳二维画在箔中央展开
+const shot2At = (p: number): Shot => {
+  const fz = foilZ(p);
+  const t = SMOOTH(Math.min(1, Math.max(0, (p - 0.4) / 0.22)));
+  return lerpCam(
+    { pos: [-18, 22, fz + 34], target: [0, 0, fz] },
+    { pos: [0, 14, fz + 18], target: [0, 0, fz] },
+    t,
+  );
+};
+
+// S3 沿箔面横移, 掠过行星二维画
+const shot3At = (p: number): Shot => {
+  const fz = foilZ(p);
+  const e = SMOOTH(Math.min(1, Math.max(0, (p - 0.62) / 0.2)));
+  return lerpCam(
+    { pos: [0, 14, fz + 18], target: [0, 0, fz] },
+    { pos: [18, 9, fz + 12], target: [14, 0, fz] },
+    e,
+  );
+};
+
 export const camAt = (p: number): Shot => {
   const fz = foilZ(p);
   const E = CAM_EPSILON;
@@ -43,50 +65,41 @@ export const camAt = (p: number): Shot => {
     return shot1At(p);
   }
   if (p <= 0.4 + E) {
-    // S1→S2
+    // S1→S2 转向箔面
     return lerpCam(
       shot1At(0.4),
-      { pos: [-28, 14, 44], target: [0, 0, 0] },
+      shot2At(0.4 + E),
       SMOOTH((p - 0.4) / E),
     );
   }
   if (p <= 0.62) {
-    // S2 太阳特写
-    return lerpCam(
-      { pos: [-28, 14, 44], target: [0, 0, 0] },
-      { pos: [0, 5, 2], target: [0, 0, 0] },
-      SMOOTH((p - 0.4) / 0.22),
-    );
+    // S2
+    return shot2At(p);
   }
   if (p <= 0.62 + E) {
     // S2→S3
     return lerpCam(
-      { pos: [0, 5, 2], target: [0, 0, 0] },
-      { pos: [-18, 6, fz + 10], target: [-8.46, 0, fz] },
+      shot2At(0.62),
+      shot3At(0.62 + E),
       SMOOTH((p - 0.62) / E),
     );
   }
   if (p <= 0.82) {
-    // S3 行星特写
-    const e = SMOOTH((p - 0.62) / 0.2);
-    return lerpCam(
-      { pos: [-18, 6, fz + 10], target: [-8.46, 0, fz] },
-      { pos: [4, 6, fz + 10], target: [13, 0, fz] },
-      e,
-    );
+    // S3
+    return shot3At(p);
   }
   if (p <= 0.82 + E) {
-    // S3→S4
+    // S3→S4 拉远
     return lerpCam(
-      { pos: [4, 6, fz + 10], target: [13, 0, fz] },
-      { pos: [8, 22, -42], target: [0, 0, -60] },
+      shot3At(0.82),
+      { pos: [8, 26, fz - 60], target: [0, 0, fz] },
       SMOOTH((p - 0.82) / E),
     );
   }
-  // S4 大远景
+  // S4 大全景: 程心回望整幅二维画卷
   return lerpCam(
-    { pos: [8, 22, -42], target: [0, 0, -60] },
-    { pos: [-120, 60, -145], target: [0, 0, -60] },
+    { pos: [8, 26, fz - 60], target: [0, 0, fz] },
+    { pos: [-120, 60, fz - 100], target: [0, 0, fz] },
     SMOOTH((p - 0.82) / 0.18),
   );
 };

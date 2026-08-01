@@ -9,6 +9,9 @@ export const SWEEP1 = 0.78;
 // 太阳二维化时刻
 export const SUN_CATCH_P = 0.53;
 
+// 平面模式时刻: 40s 之后隐藏 3D 太阳系, 只保留箔面与二维画
+export const PLANAR_P = 0.5;
+
 // 机位过渡时长
 export const CAM_EPSILON = 0.022;
 
