@@ -1,130 +1,155 @@
 import React from "react";
-import { AbsoluteFill, useCurrentFrame, useVideoConfig } from "remotion";
+import {
+  AbsoluteFill,
+  interpolate,
+  useCurrentFrame,
+  useVideoConfig,
+  staticFile,
+} from "remotion";
+import { Audio } from "@remotion/media";
 import { TOTAL_FRAMES, DURATION } from "./timeline";
 import Scene3D from "./Scene3D";
 
-// ==================== 文字数据 ====================
-const CAPTIONS: [number, number, string][] = [
-  [0.03, 0.09, "掩体计划 · 在巨行星阴影中苟活的人类,以为能躲过黑暗森林的打击"],
-  [0.28, 0.36, "二向箔投入太阳系"],
-  [0.40, 0.47, "二维化从冥王星轨道附近开始,如瘟疫般蔓延"],
-  [0.74, 0.80, "太空城市与人类,被展开成二维的图案"],
-];
-
-const QUOTES: [number, number, string][] = [
+// ==================== 字幕数据 ====================
+// 按 TTS 朗读节奏分段，帧范围基于字数和语速估算（+5% rate ≈ 5.2 字/秒）
+const SUBTITLES: [number, number, string][] = [
   [
-    0.535,
-    0.645,
-    "太阳在二维平面上展开了,像一幅在上帝的画板上绘成的画。核心、辐射层、对流层……这是一幅最壮丽也最恐怖的画。",
+    0,
+    440,
+    "在黑暗森林威慑建立之后，人类启动了掩体计划。他们在木星、土星等巨行星的阴影中建造太空城市，以为这样就能躲避来自高等文明的打击。然而他们不知道，真正的末日远比想象中更加彻底。",
   ],
   [
-    0.66,
-    0.78,
-    "地球在二维空间中展开,像一只巨眼的虹膜——蓝色的大洋,褐色的大陆,白色的云层,都精致地画在那个圆盘上。",
+    445,
+    750,
+    "那一天，歌者向太阳系投下了一枚二向箔。它看起来只是一张薄如蝉翼的半透明纸片，却能将三维空间不可逆转地坍缩为二维。",
+  ],
+  [
+    755,
+    1040,
+    "二维化从太阳系边缘开始，如瘟疫般蔓延。行星一个一个被吸入那无底的平面，在无限的光滑表面上留下它们生前的轮廓。",
+  ],
+  [
+    1045,
+    1350,
+    "太阳是最后一个被二维化的，它在平面上展开了——核心、辐射层、对流层、光球层，像一幅在上帝画板上绘成的画。最壮丽，也最恐怖。",
+  ],
+  [
+    1355,
+    1640,
+    "地球也在二维空间中展开，像一只巨眼的虹膜。蓝色的大洋、褐色的大陆、白色的云层，都精致地画在那个圆盘上。",
+  ],
+  [
+    1645,
+    1840,
+    "太空城市里的人类也被展开成二维的图案，生命的最后印记凝固在无限延伸的平面上。",
+  ],
+  [
+    1845,
+    2138,
+    "那是坟墓，也是纪念碑，是人类文明最宏伟的墓志铭。",
   ],
 ];
 
-// ==================== 文字叠加组件 ====================
-const OverlayText: React.FC<{ p: number }> = ({ p }) => {
-  const titleOpacity = p >= 0.1 && p <= 0.26 ? 1 : 0;
+// 最后一条字幕结束后的静默期，显示三体署名
+const EPILOGUE_START = 2150;
+const EPILOGUE_END = 2800;
 
-  let caption = "";
-  for (const [a, b, t] of CAPTIONS) {
-    if (p >= a && p <= b) caption = t;
+// ==================== 字幕组件 ====================
+const SubtitleBar: React.FC = () => {
+  const frame = useCurrentFrame();
+
+  let text = "";
+  let visible = false;
+  for (const [start, end, t] of SUBTITLES) {
+    if (frame >= start && frame <= end) {
+      text = t;
+      visible = true;
+      break;
+    }
   }
-  const captionOpacity = caption ? 1 : 0;
 
-  let quote = "";
-  for (const [a, b, t] of QUOTES) {
-    if (p >= a && p <= b) quote = t;
-  }
-  const quoteOpacity = quote ? 1 : 0;
+  // 淡入淡出：首尾各 8 帧
+  const fadeIn = interpolate(frame, [0, 8], [0, 1], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+  });
+  const lastSubtitleEnd = SUBTITLES[SUBTITLES.length - 1][1];
+  const fadeOut = interpolate(frame, [lastSubtitleEnd - 8, lastSubtitleEnd], [1, 0], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+  });
 
-  const finalOpacity = p >= 0.92 ? 1 : 0;
+  const epilogueOpacity = interpolate(
+    frame,
+    [EPILOGUE_START, EPILOGUE_START + 30, EPILOGUE_END - 30, EPILOGUE_END],
+    [0, 1, 1, 0],
+    { extrapolateLeft: "clamp", extrapolateRight: "clamp" },
+  );
+
+  if (!visible && frame < EPILOGUE_START) return null;
 
   return (
-    <div style={{ position: "absolute", inset: 0, pointerEvents: "none" }}>
-      <div
-        style={{
-          position: "absolute",
-          right: 22,
-          bottom: 78,
-          textAlign: "right",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "flex-end",
-          gap: 10,
-          maxWidth: "46vw",
-        }}
-      >
+    <>
+      {visible && (
         <div
           style={{
-            fontSize: 56,
-            fontWeight: 200,
-            letterSpacing: "0.4em",
-            color: "#eaf3ff",
-            opacity: titleOpacity,
-            textShadow: "0 0 30px rgba(150,210,255,0.55), 0 0 90px rgba(90,170,255,0.35)",
+            position: "absolute",
+            bottom: 100,
+            left: 0,
+            right: 0,
+            display: "flex",
+            justifyContent: "center",
+            opacity: fadeIn * fadeOut * 0.95,
           }}
         >
-          二向箔
-        </div>
-        <div
-          style={{
-            fontSize: 20,
-            fontWeight: 300,
-            letterSpacing: "0.25em",
-            color: "#cfe0f5",
-            opacity: captionOpacity,
-            textShadow: "0 0 20px rgba(120,180,255,0.5)",
-            minHeight: 28,
-          }}
-        >
-          {caption || " "}
-        </div>
-        <div
-          style={{
-            fontSize: 18,
-            fontWeight: 300,
-            letterSpacing: "0.15em",
-            lineHeight: 1.8,
-            color: "#eef4ff",
-            opacity: quoteOpacity,
-            maxWidth: "38vw",
-            textAlign: "right",
-            textShadow: "0 0 24px rgba(150,200,255,0.5), 0 2px 24px rgba(0,0,0,0.85)",
-            minHeight: 36,
-          }}
-        >
-          {quote || " "}
-        </div>
-        <div style={{ opacity: finalOpacity }}>
           <div
             style={{
-              fontSize: 30,
+              maxWidth: "76vw",
+              padding: "18px 36px",
+              background: "rgba(0,0,0,0.6)",
+              borderRadius: 10,
+              textAlign: "center",
+              fontSize: 26,
               fontWeight: 300,
-              letterSpacing: "0.2em",
-              lineHeight: 1.8,
+              letterSpacing: "0.06em",
+              lineHeight: 1.7,
               color: "#eaf3ff",
-              textShadow: "0 0 24px rgba(150,210,255,0.5)",
+              textShadow: "0 0 16px rgba(150,200,255,0.4)",
             }}
           >
-            那是坟墓,也是纪念碑,是人类文明最宏伟的墓志铭。
+            {text}
           </div>
+        </div>
+      )}
+
+      {/* 尾声 */}
+      {frame >= EPILOGUE_START && (
+        <div
+          style={{
+            position: "absolute",
+            bottom: 100,
+            left: 0,
+            right: 0,
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            opacity: epilogueOpacity,
+          }}
+        >
           <div
             style={{
-              marginTop: 12,
-              fontSize: 14,
+              fontSize: 22,
               fontWeight: 300,
-              letterSpacing: "0.4em",
+              letterSpacing: "0.3em",
               color: "#8aa3c4",
+              textShadow: "0 0 12px rgba(120,160,220,0.3)",
             }}
           >
             ——《三体III · 死神永生》
           </div>
         </div>
-      </div>
-    </div>
+      )}
+    </>
   );
 };
 
@@ -136,8 +161,9 @@ const DualVectorFoil: React.FC = () => {
 
   return (
     <AbsoluteFill style={{ background: "#02030a" }}>
+      <Audio src={staticFile("dual-vector-foil/narration.mp3")} />
       <Scene3D p={Math.min(p, 1)} />
-      <OverlayText p={p} />
+      <SubtitleBar />
     </AbsoluteFill>
   );
 };
