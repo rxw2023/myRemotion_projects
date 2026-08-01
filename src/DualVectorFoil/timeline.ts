@@ -1,6 +1,6 @@
-// 全片常量
-export const DURATION = 100; // 秒
-export const TOTAL_FRAMES = 3000; // 30fps * 100s
+// 全片常量（TTS 71.3s + 尾声缓冲 ~8.7s）
+export const DURATION = 80; // 秒
+export const TOTAL_FRAMES = 2400; // 30fps * 80s
 
 // 箔面扫掠时间区间
 export const SWEEP0 = 0.16;

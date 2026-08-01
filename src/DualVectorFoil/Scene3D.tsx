@@ -374,7 +374,7 @@ const Scene3D: React.FC<{ p: number }> = ({ p }) => {
   return (
     <Canvas
       camera={{ position: [30, 45, 110], fov: 50, near: 0.1, far: 3000 }}
-      style={{ position: "absolute", inset: 0 }}
+      style={{ width: "100%", height: "100%" }}
     >
       <color attach="background" args={[0x02030a]} />
       <Scene p={p} />
