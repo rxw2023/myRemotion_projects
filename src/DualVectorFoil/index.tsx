@@ -151,7 +151,7 @@ const DualVectorFoil: React.FC = () => {
 
   return (
     <AbsoluteFill style={{ background: "#02030a" }}>
-      <Audio src={staticFile("shared/bgm.mp3")} volume={0.08} loop />
+      <Audio src={staticFile("dual-vector-foil/bgm-dark-forest.mp3")} volume={0.2} />
       <Audio src={staticFile("dual-vector-foil/narration.mp3")} />
       <Scene3D p={Math.min(p, 1)} />
       <SubtitleBar />
