@@ -94,7 +94,7 @@ const SubtitleBar: React.FC = () => {
         <div
           style={{
             position: "absolute",
-            bottom: 100,
+            bottom: 60,
             left: 0,
             right: 0,
             display: "flex",
@@ -127,7 +127,7 @@ const SubtitleBar: React.FC = () => {
         <div
           style={{
             position: "absolute",
-            bottom: 100,
+            bottom: 60,
             left: 0,
             right: 0,
             display: "flex",
