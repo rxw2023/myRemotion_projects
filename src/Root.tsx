@@ -17,6 +17,7 @@ import { MemoryOrganization } from "./MemoryOrganization";
 import { ExternalStorage } from "./ExternalStorage";
 import { GitHubPRWorkflow } from "./GitHubPRWorkflow";
 import { FrontendIsms, TOTAL_FRAMES as FrontendIsmsFrames } from "./FrontendIsms";
+import DualVectorFoil, { TOTAL_FRAMES as DualVectorFoilFrames } from "./DualVectorFoil";
 
 // ==================== 配置类型 ====================
 
@@ -148,6 +149,14 @@ const compositions: CompConfig[] = [
   },
 
   // ---- 横版视频 ----
+  {
+    id: "DualVectorFoil",
+    component: DualVectorFoil,
+    durationInFrames: DualVectorFoilFrames,
+    orientation: "landscape",
+    category: "video",
+    description: "二向箔 · 太阳系二维化 — 三体系列名场面，3D可视化重现",
+  },
   {
     id: "AITextGen",
     component: AITextGen,
