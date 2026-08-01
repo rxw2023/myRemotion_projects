@@ -69,14 +69,14 @@ const SubtitleBar: React.FC = () => {
       <div
         style={{
           position: "absolute",
-          bottom: 56,
+          bottom: 90,
           left: 0,
           right: 0,
           display: "flex",
           justifyContent: "center",
           zIndex: 100,
           opacity,
-          padding: "0 80px",
+          padding: "0 140px",
         }}
       >
         <div
@@ -85,7 +85,7 @@ const SubtitleBar: React.FC = () => {
             backdropFilter: "blur(10px)",
             borderRadius: 10,
             padding: "14px 36px",
-            maxWidth: "88%",
+            maxWidth: "72%",
             textAlign: "center",
             border: `1px solid ${C.accent}20`,
           }}
@@ -93,7 +93,7 @@ const SubtitleBar: React.FC = () => {
           <span
             style={{
               color: C.text,
-              fontSize: 32,
+              fontSize: 26,
               fontWeight: 500,
               letterSpacing: 1.5,
               lineHeight: 1.7,
@@ -118,7 +118,7 @@ const SubtitleBar: React.FC = () => {
     <div
       style={{
         position: "absolute",
-        bottom: 56,
+        bottom: 90,
         left: 0,
         right: 0,
         display: "flex",
