@@ -84,9 +84,9 @@ const Foil: React.FC<{ p: number }> = ({ p }) => {
     return new THREE.BufferGeometry().setFromPoints(pts);
   }, []);
 
-  const fade = SMOOTH(Math.min(1, Math.max(0, (p - 0.12) / 0.06)));
+  const fade = SMOOTH(Math.min(1, Math.max(0, p / 0.02)));
   const grow = foilGrow(p);
-  const visible = p > 0.12;
+  const visible = p > 0.02;
 
   useFrame(() => {
     if (sheetMatRef.current) sheetMatRef.current.opacity = 0.42 * fade;

@@ -30,28 +30,10 @@ const shot3At = (p: number): Shot => {
   );
 };
 
-// S0 入场追踪特写: 镜头从远景冲向箔片, 跟随它进入太阳系, 从信封大小持续长大
-const entryTracking = (p: number): Shot => {
+// S0 深空追逐: 镜头跟随箔片从深空加速飞向太阳系, 从信封大小持续长大
+const chaseShot = (p: number): Shot => {
   const fz = foilZ(p);
-
-  if (p <= 0.12) {
-    // S0 远景: 快速接近太阳系
-    return lerpCam(
-      { pos: [0, 62, 130], target: [0, 0, 0] },
-      { pos: [0, 25, 78], target: [0, 0, 0] },
-      SMOOTH(p / 0.12),
-    );
-  }
-  if (p <= 0.125) {
-    // 俯冲: 镜头冲向入场箔片
-    return lerpCam(
-      { pos: [0, 25, 78], target: [0, 0, 0] },
-      { pos: [0, 6, fz + 26], target: [0, 0, fz] },
-      SMOOTH((p - 0.12) / 0.005),
-    );
-  }
-  // 追踪特写: 跟随箔片移动(z 扫掠) + 持续长大, 收尾到 S2 起始位
-  const t = SMOOTH(Math.min(1, Math.max(0, (p - 0.125) / 0.275)));
+  const t = SMOOTH(Math.min(1, Math.max(0, p / 0.4)));
   const sway = -18 * t;
   const h = 6 + 16 * t;
   const d = 26 + 8 * t;
@@ -63,8 +45,8 @@ export const camAt = (p: number): Shot => {
   const E = CAM_EPSILON;
 
   if (p <= 0.4) {
-    // S0 远景 → 箔片入场追踪特写
-    return entryTracking(p);
+    // S0 深空追逐
+    return chaseShot(p);
   }
   if (p <= 0.4 + E) {
     // →S2
