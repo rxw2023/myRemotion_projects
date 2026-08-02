@@ -40,17 +40,34 @@ const shot3At = (p: number): Shot => {
   );
 };
 
+// S0 开场特写: 信封大小的箔片特写 → 长大后退, 太阳系浮现
+const openShot = (p: number): Shot => {
+  const fz = foilZ(p); // 12
+  if (p < 0.04) {
+    // 特写: 镜头几乎不动, 盯着小箔片, 标题浮现
+    const t = SMOOTH(p / 0.04);
+    return lerpCam(
+      { pos: [0, 2, fz + 12], target: [0, 0, fz] },
+      { pos: [0, 3, fz + 13], target: [0, 0, fz] },
+      t,
+    );
+  }
+  // 后退: 箔片长大, 镜头拉远, 太阳系浮现
+  const t = SMOOTH((p - 0.04) / 0.16);
+  return lerpCam(
+    { pos: [0, 3, fz + 13], target: [0, 0, fz] },
+    { pos: [0, 32, 78], target: [0, 0, 0] },
+    t,
+  );
+};
+
 export const camAt = (p: number): Shot => {
   const fz = foilZ(p);
   const E = CAM_EPSILON;
 
   if (p <= 0.2) {
-    // S0 远景开场
-    return lerpCam(
-      { pos: [0, 62, 130], target: [0, 0, 0] },
-      { pos: [0, 32, 78], target: [0, 0, 0] },
-      SMOOTH(p / 0.2),
-    );
+    // S0 开场特写
+    return openShot(p);
   }
   if (p <= 0.2 + E) {
     // S0→S1
