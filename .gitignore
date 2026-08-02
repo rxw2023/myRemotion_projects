@@ -8,3 +8,4 @@ out
 
 # Ignore generated TTS audio files
 public/**/*.mp3
+.superpowers/
