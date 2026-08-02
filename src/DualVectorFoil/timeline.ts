@@ -22,12 +22,12 @@ export const CAM_EPSILON = 0.022;
 export const SMOOTH = (t: number): number =>
   t <= 0 ? 0 : t >= 1 ? 1 : t * t * (3 - 2 * t);
 
-// 计算箔面 z 位置: 从深空(180)加速飞向太阳系(60), 然后扫掠 60 → -60
+// 计算箔面 z 位置: 从深空(300)加速飞向太阳系(60), 然后扫掠 60 → -60
 export const foilZ = (p: number): number => {
   if (p < SWEEP0) {
     // t² 曲线: 速度越来越快(加速接近)
     const t = Math.min(1, Math.max(0, p / SWEEP0));
-    return 180 - 120 * t * t;
+    return 300 - 240 * t * t;
   }
   const t = Math.min(1, Math.max(0, (p - SWEEP0) / (SWEEP1 - SWEEP0)));
   return 60 - 120 * t;
@@ -37,11 +37,11 @@ export const foilZ = (p: number): number => {
 export const catchP = (z: number): number =>
   SWEEP0 + ((60 - z) / 120) * (SWEEP1 - SWEEP0);
 
-// 箔面大小: 从深空一路长大, 信封(0.02) → 全尺寸(1.0)
+// 箔面大小: 从深空一路长大, 极小(0.012) → 全尺寸(1.0)
 export const foilGrow = (p: number): number => {
   if (p < SWEEP0) {
     const t = Math.min(1, Math.max(0, p / SWEEP0));
-    return 0.02 + 0.10 * t; // 0.02 → 0.12
+    return 0.012 + 0.108 * t; // 0.012 → 0.12
   }
   const t = Math.min(1, Math.max(0, (p - SWEEP0) / (SWEEP1 - SWEEP0)));
   return 0.12 + 0.88 * t; // 0.12 → 1.0

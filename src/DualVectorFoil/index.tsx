@@ -2,6 +2,7 @@ import React from "react";
 import {
   AbsoluteFill,
   interpolate,
+  Sequence,
   useCurrentFrame,
   useVideoConfig,
   staticFile,
@@ -152,6 +153,13 @@ const DualVectorFoil: React.FC = () => {
   return (
     <AbsoluteFill style={{ background: "#02030a", filter: "brightness(1.2) contrast(1.12)" }}>
       <Audio src={staticFile("dual-vector-foil/bgm-dark-forest.mp3")} volume={0.25} />
+      {/* 冲击低音: 箔片抵达太阳系 + 太阳二维化 */}
+      <Sequence from={384}>
+        <Audio src={staticFile("dual-vector-foil/sfx/boom.wav")} volume={0.5} />
+      </Sequence>
+      <Sequence from={1272}>
+        <Audio src={staticFile("dual-vector-foil/sfx/boom.wav")} volume={0.6} />
+      </Sequence>
       <Scene3D p={Math.min(p, 1)} />
       <SubtitleBar />
     </AbsoluteFill>
