@@ -2,6 +2,7 @@ import React from "react";
 import {
   AbsoluteFill,
   interpolate,
+  Sequence,
   useCurrentFrame,
   useVideoConfig,
   staticFile,
@@ -150,9 +151,23 @@ const DualVectorFoil: React.FC = () => {
   const p = frame / (fps * DURATION);
 
   return (
-    <AbsoluteFill style={{ background: "#02030a" }}>
+    <AbsoluteFill style={{ background: "#02030a", filter: "brightness(1.2) contrast(1.12)" }}>
       <Audio src={staticFile("dual-vector-foil/bgm-dark-forest.mp3")} volume={0.2} />
       <Audio src={staticFile("dual-vector-foil/narration.mp3")} />
+      {/* 音效: 低音氛围床 + 箔面/太阳关键时刻 */}
+      <Audio src={staticFile("dual-vector-foil/sfx/drone.wav")} volume={0.22} loop />
+      <Sequence from={384}>
+        <Audio src={staticFile("dual-vector-foil/sfx/whoosh.wav")} volume={0.5} />
+      </Sequence>
+      <Sequence from={1200}>
+        <Audio src={staticFile("dual-vector-foil/sfx/whoosh.wav")} volume={0.45} />
+      </Sequence>
+      <Sequence from={1272}>
+        <Audio src={staticFile("dual-vector-foil/sfx/boom.wav")} volume={0.6} />
+      </Sequence>
+      <Sequence from={2000}>
+        <Audio src={staticFile("dual-vector-foil/sfx/whoosh.wav")} volume={0.4} />
+      </Sequence>
       <Scene3D p={Math.min(p, 1)} />
       <SubtitleBar />
     </AbsoluteFill>

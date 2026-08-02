@@ -66,7 +66,7 @@ const Stars: React.FC = () => {
 
   return (
     <points geometry={geo}>
-      <pointsMaterial color={0xffffff} size={1.1} sizeAttenuation transparent opacity={0.9} />
+      <pointsMaterial color={0xffffff} size={1.3} sizeAttenuation transparent opacity={1} />
     </points>
   );
 };
@@ -91,8 +91,8 @@ const Foil: React.FC<{ p: number }> = ({ p }) => {
   const visible = p > 0.12;
 
   useFrame(() => {
-    if (sheetMatRef.current) sheetMatRef.current.opacity = 0.32 * fade;
-    if (rimMatRef.current) rimMatRef.current.opacity = 0.9 * fade;
+    if (sheetMatRef.current) sheetMatRef.current.opacity = 0.42 * fade;
+    if (rimMatRef.current) rimMatRef.current.opacity = 0.95 * fade;
   });
 
   if (!visible) return null;
@@ -101,10 +101,10 @@ const Foil: React.FC<{ p: number }> = ({ p }) => {
     <group position={[0, 0, foilZ(p)]} scale={[grow, grow, 1]}>
       <mesh>
         <planeGeometry args={[180, 180]} />
-        <meshBasicMaterial ref={sheetMatRef} map={sheetTex} transparent opacity={0.32 * fade} depthWrite={false} />
+        <meshBasicMaterial ref={sheetMatRef} map={sheetTex} transparent opacity={0.42 * fade} depthWrite={false} />
       </mesh>
       <lineLoop geometry={rimGeo}>
-        <lineBasicMaterial ref={rimMatRef} color={0x9aa6c0} transparent opacity={0.9 * fade} />
+        <lineBasicMaterial ref={rimMatRef} color={0x9aa6c0} transparent opacity={0.95 * fade} />
       </lineLoop>
     </group>
   );
@@ -148,7 +148,7 @@ const Sun3D: React.FC<{ p: number }> = ({ p }) => {
       const g = Math.min(1, (p - SUN_CATCH_P) / 0.12);
       if (paint) {
         paint.visible = g > 0.02;
-        paint.scale.setScalar(9 * Math.max(0.001, 0.12 + 0.88 * g));
+        paint.scale.setScalar(10.5 * Math.max(0.001, 0.12 + 0.88 * g));
         (paint.material as THREE.MeshBasicMaterial).opacity = Math.min(1, g * 2.2);
       }
       if (paintGlow) {
@@ -190,8 +190,8 @@ const Sun3D: React.FC<{ p: number }> = ({ p }) => {
         <sphereGeometry args={[3, 48, 48]} />
         <meshBasicMaterial color={0xffd76a} />
       </mesh>
-      <sprite ref={glowRef} scale={[46, 46, 1]}>
-        <spriteMaterial map={glowTex} transparent opacity={0.8} depthWrite={false} blending={THREE.AdditiveBlending} />
+      <sprite ref={glowRef} scale={[52, 52, 1]}>
+        <spriteMaterial map={glowTex} transparent opacity={0.9} depthWrite={false} blending={THREE.AdditiveBlending} />
       </sprite>
       {/* 二维画 */}
       <mesh ref={paintRef} visible={false} position={[0, 0, 0]}>
@@ -253,7 +253,7 @@ const Planets: React.FC<{ p: number }> = ({ p }) => {
           const fade = SMOOTH(Math.min(1, (p - PLANAR_P) / 0.03));
           paint.visible = true;
           paint.position.set(px, 0, foilZ(p));
-          paint.scale.setScalar(d.paintR * Math.max(0.001, 0.15 + 0.85 * fade));
+          paint.scale.setScalar(d.paintR * 1.25 * Math.max(0.001, 0.15 + 0.85 *fade));
           (paint.material as THREE.MeshBasicMaterial).opacity = Math.min(1, fade * 2.5);
         }
         return;
@@ -272,7 +272,7 @@ const Planets: React.FC<{ p: number }> = ({ p }) => {
           const g = Math.min(1, (p - cp) / 0.06);
           paint.visible = g > 0.02;
           paint.position.set(px, 0, foilZ(p));
-          paint.scale.setScalar(d.paintR * Math.max(0.001, 0.15 + 0.85 * g));
+          paint.scale.setScalar(d.paintR * 1.25 * Math.max(0.001, 0.15 + 0.85 *g));
           (paint.material as THREE.MeshBasicMaterial).opacity = Math.min(1, g * 2.2);
         }
       } else {
@@ -393,8 +393,8 @@ const Scene: React.FC<{ p: number }> = ({ p }) => {
   return (
     <>
       <Stars />
-      <ambientLight intensity={0.6} color={0x8899bb} />
-      <pointLight position={[0, 0, 0]} intensity={2.2} distance={220} color={0xffe3b0} />
+      <ambientLight intensity={0.9} color={0x9ab0d8} />
+      <pointLight position={[0, 0, 0]} intensity={2.6} distance={220} color={0xffe3b0} />
       <Sun3D p={p} />
       <Planets p={p} />
       <Cities p={p} />
