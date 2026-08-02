@@ -3,11 +3,12 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { useVideoConfig } from "remotion";
 import * as THREE from "three";
 import {
+  SWEEP0,
+  SWEEP1,
   SUN_CATCH_P,
   PLANAR_P,
   SMOOTH,
   foilZ,
-  foilGrow,
   catchP,
 } from "./timeline";
 import {
@@ -84,25 +85,26 @@ const Foil: React.FC<{ p: number }> = ({ p }) => {
     return new THREE.BufferGeometry().setFromPoints(pts);
   }, []);
 
-  // 从第 0 帧就存在: 信封大小, 不断长大
-  // 开场快淡入, 小箔片时更亮(它是特写主角)
-  const fade = SMOOTH(Math.min(1, Math.max(0, p / 0.015)));
-  const grow = foilGrow(p);
-  const smallBoost = Math.max(0, 1 - grow * 6); // 越小越亮
+  const fade = SMOOTH(Math.min(1, Math.max(0, (p - 0.12) / 0.06)));
+  const sw = Math.min(1, Math.max(0, (p - SWEEP0) / (SWEEP1 - SWEEP0)));
+  const grow = 0.12 + 0.88 * sw;
+  const visible = p > 0.12;
 
   useFrame(() => {
-    if (sheetMatRef.current) sheetMatRef.current.opacity = (0.32 + 0.35 * smallBoost) * fade;
-    if (rimMatRef.current) rimMatRef.current.opacity = (0.9 + 0.6 * smallBoost) * fade;
+    if (sheetMatRef.current) sheetMatRef.current.opacity = 0.32 * fade;
+    if (rimMatRef.current) rimMatRef.current.opacity = 0.9 * fade;
   });
+
+  if (!visible) return null;
 
   return (
     <group position={[0, 0, foilZ(p)]} scale={[grow, grow, 1]}>
       <mesh>
         <planeGeometry args={[180, 180]} />
-        <meshBasicMaterial ref={sheetMatRef} map={sheetTex} transparent opacity={(0.32 + 0.35 * smallBoost) * fade} depthWrite={false} />
+        <meshBasicMaterial ref={sheetMatRef} map={sheetTex} transparent opacity={0.32 * fade} depthWrite={false} />
       </mesh>
       <lineLoop geometry={rimGeo}>
-        <lineBasicMaterial ref={rimMatRef} color={0x9aa6c0} transparent opacity={(0.9 + 0.6 * smallBoost) * fade} />
+        <lineBasicMaterial ref={rimMatRef} color={0x9aa6c0} transparent opacity={0.9 * fade} />
       </lineLoop>
     </group>
   );
@@ -212,10 +214,8 @@ const Planets: React.FC<{ p: number }> = ({ p }) => {
   const planetRefs = useRef<(THREE.Mesh | null)[]>([]);
   const ringRefs = useRef<(THREE.LineLoop | null)[]>([]);
   const paintRefs = useRef<(THREE.Mesh | null)[]>([]);
-  const paintGlowRefs = useRef<(THREE.Sprite | null)[]>([]);
 
   const paintTextures = useMemo(() => PLANETS.map((d) => planetTexture(d.paintOpts)), []);
-  const paintGlowTex = useMemo(() => glowTexture("#cfe8ff"), []);
 
   const orbitGeos = useMemo(
     () =>
@@ -236,7 +236,6 @@ const Planets: React.FC<{ p: number }> = ({ p }) => {
       const d = PLANETS[i];
       const ring = ringRefs.current[i];
       const paint = paintRefs.current[i];
-      const paintGlow = paintGlowRefs.current[i];
 
       // 公转 (仅片头)
       const t = SMOOTH(Math.min(1, p / 0.12));
@@ -257,12 +256,6 @@ const Planets: React.FC<{ p: number }> = ({ p }) => {
           paint.scale.setScalar(d.paintR * Math.max(0.001, 0.15 + 0.85 * fade));
           (paint.material as THREE.MeshBasicMaterial).opacity = Math.min(1, fade * 2.5);
         }
-        if (paintGlow) {
-          paintGlow.visible = true;
-          paintGlow.position.set(px, 0, foilZ(p));
-          paintGlow.scale.setScalar(d.paintR * 2.4 * (0.15 + 0.85 * SMOOTH(Math.min(1, (p - PLANAR_P) / 0.03))));
-          paintGlow.material.opacity = Math.min(1, ((p - PLANAR_P) / 0.03)) * 0.5;
-        }
         return;
       }
 
@@ -275,18 +268,12 @@ const Planets: React.FC<{ p: number }> = ({ p }) => {
         (sphere.material as THREE.MeshLambertMaterial).opacity = 1 - sq;
         sphere.visible = sq < 1;
         if (ring) ring.visible = sq < 1;
-        const g = Math.min(1, (p - cp) / 0.06);
         if (paint) {
+          const g = Math.min(1, (p - cp) / 0.06);
           paint.visible = g > 0.02;
           paint.position.set(px, 0, foilZ(p));
           paint.scale.setScalar(d.paintR * Math.max(0.001, 0.15 + 0.85 * g));
           (paint.material as THREE.MeshBasicMaterial).opacity = Math.min(1, g * 2.2);
-        }
-        if (paintGlow) {
-          paintGlow.visible = g > 0.02;
-          paintGlow.position.set(px, 0, foilZ(p));
-          paintGlow.scale.setScalar(d.paintR * 2.4 * Math.max(0.001, 0.15 + 0.85 * g));
-          paintGlow.material.opacity = Math.min(1, g * 1.6) * 0.5;
         }
       } else {
         sphere.scale.set(1, 1, 1);
@@ -294,7 +281,6 @@ const Planets: React.FC<{ p: number }> = ({ p }) => {
         sphere.visible = true;
         if (ring) ring.visible = true;
         if (paint) paint.visible = false;
-        if (paintGlow) paintGlow.visible = false;
       }
     });
   });
@@ -314,9 +300,6 @@ const Planets: React.FC<{ p: number }> = ({ p }) => {
             <circleGeometry args={[1, 48]} />
             <meshBasicMaterial map={paintTextures[i]} transparent opacity={0} depthWrite={false} />
           </mesh>
-          <sprite ref={(el) => { paintGlowRefs.current[i] = el; }} scale={[1, 1, 1]} visible={false}>
-            <spriteMaterial map={paintGlowTex} transparent opacity={0} depthWrite={false} blending={THREE.AdditiveBlending} />
-          </sprite>
         </React.Fragment>
       ))}
     </>

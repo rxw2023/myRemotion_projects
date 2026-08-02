@@ -19,23 +19,13 @@ export const CAM_EPSILON = 0.022;
 export const SMOOTH = (t: number): number =>
   t <= 0 ? 0 : t >= 1 ? 1 : t * t * (3 - 2 * t);
 
-// 计算箔面 z 位置: 开场贴近镜头(12), 随后扫掠 12 → -60
+// 计算箔面 z 位置
 export const foilZ = (p: number): number => {
-  if (p < SWEEP0) return 12;
+  if (p < SWEEP0) return 60;
   const t = Math.min(1, Math.max(0, (p - SWEEP0) / (SWEEP1 - SWEEP0)));
-  return 12 - 72 * t;
+  return 60 - 120 * t;
 };
 
 // 计算某个 z 坐标的行星被二维化的时刻
 export const catchP = (z: number): number =>
-  SWEEP0 + ((12 - z) / 72) * (SWEEP1 - SWEEP0);
-
-// 箔面大小: 信封(0.02) → 全尺寸(1.0), 开场长大, 扫掠继续长大
-export const foilGrow = (p: number): number => {
-  if (p < SWEEP0) {
-    const t = Math.min(1, Math.max(0, p / SWEEP0));
-    return 0.02 + 0.09 * t; // 0.02 → 0.11
-  }
-  const t = Math.min(1, Math.max(0, (p - SWEEP0) / (SWEEP1 - SWEEP0)));
-  return 0.11 + 0.89 * t; // 0.11 → 1.0
-};
+  SWEEP0 + ((60 - z) / 120) * (SWEEP1 - SWEEP0);
