@@ -8,16 +8,6 @@ const lerpCam = (a: Shot, b: Shot, s: number): Shot => ({
   target: a.target.map((v, j) => v + (b.target[j] - v) * s) as Vec3,
 });
 
-// S1 贴箔近景
-const shot1At = (p: number): Shot => {
-  const fz = foilZ(p);
-  const t = (p - 0.2) / 0.2;
-  const h = 20 - 4 * t;
-  const d = 30 - 6 * t;
-  const sway = Math.sin(t * Math.PI * 5) * 3;
-  return { pos: [sway, h, fz + d], target: [0, 0, fz] };
-};
-
 // S2 平面模式: 镜头俯视箔面, 太阳二维画在箔中央展开
 const shot2At = (p: number): Shot => {
   const fz = foilZ(p);
@@ -40,34 +30,46 @@ const shot3At = (p: number): Shot => {
   );
 };
 
+// S0 入场追踪特写: 镜头从远景冲向箔片, 跟随它进入太阳系, 从信封大小持续长大
+const entryTracking = (p: number): Shot => {
+  const fz = foilZ(p);
+
+  if (p <= 0.12) {
+    // S0 远景: 快速接近太阳系
+    return lerpCam(
+      { pos: [0, 62, 130], target: [0, 0, 0] },
+      { pos: [0, 25, 78], target: [0, 0, 0] },
+      SMOOTH(p / 0.12),
+    );
+  }
+  if (p <= 0.125) {
+    // 俯冲: 镜头冲向入场箔片
+    return lerpCam(
+      { pos: [0, 25, 78], target: [0, 0, 0] },
+      { pos: [0, 6, fz + 26], target: [0, 0, fz] },
+      SMOOTH((p - 0.12) / 0.005),
+    );
+  }
+  // 追踪特写: 跟随箔片移动(z 扫掠) + 持续长大, 收尾到 S2 起始位
+  const t = SMOOTH(Math.min(1, Math.max(0, (p - 0.125) / 0.275)));
+  const sway = -18 * t;
+  const h = 6 + 16 * t;
+  const d = 26 + 8 * t;
+  return { pos: [sway, h, fz + d], target: [0, 0, fz] };
+};
+
 export const camAt = (p: number): Shot => {
   const fz = foilZ(p);
   const E = CAM_EPSILON;
 
-  if (p <= 0.2) {
-    // S0 远景开场
-    return lerpCam(
-      { pos: [0, 62, 130], target: [0, 0, 0] },
-      { pos: [0, 32, 78], target: [0, 0, 0] },
-      SMOOTH(p / 0.2),
-    );
-  }
-  if (p <= 0.2 + E) {
-    // S0→S1
-    return lerpCam(
-      { pos: [0, 32, 78], target: [0, 0, 0] },
-      shot1At(0.2 + E),
-      SMOOTH((p - 0.2) / E),
-    );
-  }
   if (p <= 0.4) {
-    // S1
-    return shot1At(p);
+    // S0 远景 → 箔片入场追踪特写
+    return entryTracking(p);
   }
   if (p <= 0.4 + E) {
-    // S1→S2 转向箔面
+    // →S2
     return lerpCam(
-      shot1At(0.4),
+      { pos: [-18, 22, fz + 34], target: [0, 0, fz] },
       shot2At(0.4 + E),
       SMOOTH((p - 0.4) / E),
     );

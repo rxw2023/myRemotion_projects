@@ -12,6 +12,9 @@ export const SUN_CATCH_P = 0.53;
 // 平面模式时刻: 40s 之后隐藏 3D 太阳系, 只保留箔面与二维画
 export const PLANAR_P = 0.5;
 
+// 箔面可见时刻(入场)
+export const FOIL_VISIBLE_P = 0.12;
+
 // 机位过渡时长
 export const CAM_EPSILON = 0.022;
 
@@ -29,3 +32,14 @@ export const foilZ = (p: number): number => {
 // 计算某个 z 坐标的行星被二维化的时刻
 export const catchP = (z: number): number =>
   SWEEP0 + ((60 - z) / 120) * (SWEEP1 - SWEEP0);
+
+// 箔面大小: 入场时信封大小(0.04), 持续长大到全尺寸(1.0)
+export const foilGrow = (p: number): number => {
+  if (p < FOIL_VISIBLE_P) return 0.04;
+  if (p < SWEEP0) {
+    const t = Math.min(1, Math.max(0, (p - FOIL_VISIBLE_P) / (SWEEP0 - FOIL_VISIBLE_P)));
+    return 0.04 + 0.08 * t; // 0.04 → 0.12
+  }
+  const t = Math.min(1, Math.max(0, (p - SWEEP0) / (SWEEP1 - SWEEP0)));
+  return 0.12 + 0.88 * t; // 0.12 → 1.0
+};

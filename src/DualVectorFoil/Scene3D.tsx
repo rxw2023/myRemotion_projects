@@ -3,12 +3,11 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { useVideoConfig } from "remotion";
 import * as THREE from "three";
 import {
-  SWEEP0,
-  SWEEP1,
   SUN_CATCH_P,
   PLANAR_P,
   SMOOTH,
   foilZ,
+  foilGrow,
   catchP,
 } from "./timeline";
 import {
@@ -86,8 +85,7 @@ const Foil: React.FC<{ p: number }> = ({ p }) => {
   }, []);
 
   const fade = SMOOTH(Math.min(1, Math.max(0, (p - 0.12) / 0.06)));
-  const sw = Math.min(1, Math.max(0, (p - SWEEP0) / (SWEEP1 - SWEEP0)));
-  const grow = 0.12 + 0.88 * sw;
+  const grow = foilGrow(p);
   const visible = p > 0.12;
 
   useFrame(() => {
