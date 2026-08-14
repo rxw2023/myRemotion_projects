@@ -18,6 +18,7 @@ import { ExternalStorage } from "./ExternalStorage";
 import { GitHubPRWorkflow } from "./GitHubPRWorkflow";
 import { FrontendIsms, TOTAL_FRAMES as FrontendIsmsFrames } from "./FrontendIsms";
 import DualVectorFoil, { TOTAL_FRAMES as DualVectorFoilFrames } from "./DualVectorFoil";
+import { CachePrinciple, TOTAL_FRAMES as CachePrincipleFrames } from "./CachePrinciple";
 
 // ==================== 配置类型 ====================
 
@@ -146,6 +147,14 @@ const compositions: CompConfig[] = [
     orientation: "portrait",
     category: "video",
     description: "50种前端设计主义全展示 — 从新粗野主义到复古胶片",
+  },
+  {
+    id: "CachePrinciple",
+    component: CachePrinciple,
+    durationInFrames: CachePrincipleFrames,
+    orientation: "portrait",
+    category: "video",
+    description: "Cache缓存科普（新粗野主义）— 局部性原理、映射方式、地址结构、替换算法、写策略",
   },
 
   // ---- 横版视频 ----

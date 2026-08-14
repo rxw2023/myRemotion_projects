@@ -294,7 +294,7 @@ const StyleCard: React.FC<{ style: StyleData; frame: number }> = ({ style, frame
             letterSpacing: "0.1em",
           }}
         >
-          #{String(style.id).padStart(2, "0")} / {TOTAL_STYLES}
+          #{("0" + style.id).slice(-2)} / {TOTAL_STYLES}
         </div>
 
         {/* 中文名 */}
