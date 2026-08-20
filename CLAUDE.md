@@ -11,8 +11,8 @@ pnpm run lint         # ESLint + TypeScript check
 pnpm run build        # Bundle the project for deployment
 pnpm run upgrade      # Upgrade Remotion to latest version
 
-# Render a specific composition
-npx remotion render <composition-id> out/<name>.mp4
+# Render a specific composition (uses locally installed Google Chrome)
+npx remotion render <composition-id> out/<name>.mp4 --browser-executable="C:\Program Files\Google\Chrome\Application\chrome.exe"
 ```
 
 ## Architecture
@@ -61,6 +61,7 @@ Key Remotion APIs used: `useCurrentFrame`, `useVideoConfig`, `interpolate`, `spr
 ## Configuration
 
 - `remotion.config.ts` — enables Tailwind v4, sets JPEG image format, overwrite output
+- Rendering always uses the locally installed Google Chrome: `--browser-executable="C:\Program Files\Google\Chrome\Application\chrome.exe"` (do not let Remotion download Chrome for Testing)
 - `eslint.config.mjs` — extends `@remotion/eslint-config-flat`
 - `tsconfig.json` — ES2018 target, CommonJS modules, strict mode, `noUnusedLocals: true`
 - `.prettierrc` — 2-space indent, no tabs, bracket spacing
