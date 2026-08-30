@@ -19,6 +19,7 @@ import { GitHubPRWorkflow } from "./GitHubPRWorkflow";
 import { FrontendIsms, TOTAL_FRAMES as FrontendIsmsFrames } from "./FrontendIsms";
 import DualVectorFoil, { TOTAL_FRAMES as DualVectorFoilFrames } from "./DualVectorFoil";
 import { CachePrinciple, TOTAL_FRAMES as CachePrincipleFrames } from "./CachePrinciple";
+import { DeepSeekMoment, TOTAL_FRAMES as DeepSeekMomentFrames } from "./DeepSeekMoment";
 
 // ==================== 配置类型 ====================
 
@@ -173,6 +174,16 @@ const compositions: CompConfig[] = [
     orientation: "landscape",
     category: "video",
     description: "AI生成文本教学演示",
+  },
+
+  // ---- 横版视频：Vox 风格纪录片 ----
+  {
+    id: "DeepSeekMoment",
+    component: DeepSeekMoment,
+    durationInFrames: DeepSeekMomentFrames,
+    orientation: "landscape",
+    category: "video",
+    description: "DeepSeek 时刻 — Vox 风格纪录片：一家量化基金孵化的小团队，如何用一个开源模型让万亿算力叙事重算账",
   },
 
   // ---- 横版播客 ----

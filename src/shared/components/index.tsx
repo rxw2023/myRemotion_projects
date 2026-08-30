@@ -136,3 +136,34 @@ export const SubtitleBar: React.FC<{
     </div>
   );
 };
+
+// ==================== 视差图层组件（通用版） ====================
+// depth 越大，该层随虚拟相机位移越快；实现多层伪 3D 纵深。
+
+export const ParallaxLayer: React.FC<{
+  depth?: number;
+  style?: React.CSSProperties;
+  children: React.ReactNode;
+}> = ({ depth = 1, style, children }) => {
+  const frame = useCurrentFrame();
+  const camX = interpolate(frame, [0, 120], [0, -80], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+  });
+  const camY = interpolate(frame, [0, 120], [0, -40], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+  });
+  return (
+    <div
+      style={{
+        position: "absolute",
+        inset: 0,
+        transform: `translate(${camX * depth}px, ${camY * depth}px)`,
+        ...style,
+      }}
+    >
+      {children}
+    </div>
+  );
+};
