@@ -1,4 +1,5 @@
 import * as THREE from "three";
+import { mulberry32 } from "../shared/random";
 
 // ---- 颜色工具 ----
 export const toHex = (n: number): string => {
@@ -97,11 +98,13 @@ export const sunTexture = (): THREE.CanvasTexture => {
   });
   g.save();
   g.globalAlpha = 0.16;
+  // 种子 PRNG: 贴图必须在并行渲染的每个 Chrome 实例里长得一模一样
+  const rayRand = mulberry32(0x5eed01);
   for (let i = 0; i < 150; i++) {
-    const a = Math.random() * Math.PI * 2;
-    const rr = (0.3 + Math.random() * 0.5) * r;
-    const len = (0.05 + Math.random() * 0.13) * r;
-    g.strokeStyle = Math.random() > 0.5 ? "#ffffff" : "#ff7000";
+    const a = rayRand() * Math.PI * 2;
+    const rr = (0.3 + rayRand() * 0.5) * r;
+    const len = (0.05 + rayRand() * 0.13) * r;
+    g.strokeStyle = rayRand() > 0.5 ? "#ffffff" : "#ff7000";
     g.lineWidth = 1.4;
     g.beginPath();
     g.moveTo(r + Math.cos(a) * rr, r + Math.sin(a) * rr);
@@ -166,10 +169,11 @@ export const planetTexture = (o: PlanetPaintOpts): THREE.CanvasTexture => {
       g.arc(r + x * r, r + y * r, s * r, 0, 7);
       g.fill();
     });
+    const cloudRand = mulberry32(0x5eed02);
     for (let i = 0; i < 9; i++) {
-      const a = Math.random() * Math.PI * 2;
-      const rr = (0.2 + Math.random() * 0.6) * r;
-      const sz = (0.08 + Math.random() * 0.12) * r;
+      const a = cloudRand() * Math.PI * 2;
+      const rr = (0.2 + cloudRand() * 0.6) * r;
+      const sz = (0.08 + cloudRand() * 0.12) * r;
       const grd = g.createRadialGradient(
         r + Math.cos(a) * rr, r + Math.sin(a) * rr, 1,
         r + Math.cos(a) * rr, r + Math.sin(a) * rr, sz,
@@ -183,9 +187,10 @@ export const planetTexture = (o: PlanetPaintOpts): THREE.CanvasTexture => {
     }
     g.strokeStyle = "rgba(90,60,30,0.5)";
     g.lineWidth = 2;
+    const lineRand = mulberry32(0x5eed03);
     for (let i = 0; i < 12; i++) {
-      const a = (i / 12) * Math.PI * 2 + Math.random() * 0.3;
-      const rr = (0.5 + Math.random() * 0.35) * r;
+      const a = (i / 12) * Math.PI * 2 + lineRand() * 0.3;
+      const rr = (0.5 + lineRand() * 0.35) * r;
       g.beginPath();
       g.moveTo(r, r);
       g.lineTo(r + Math.cos(a) * rr, r + Math.sin(a) * rr);

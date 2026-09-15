@@ -19,6 +19,7 @@ import {
 } from "./textures";
 import type { PlanetPaintOpts } from "./textures";
 import { camAt } from "./cameras";
+import { mulberry32 } from "../shared/random";
 
 // ==================== 行星数据 ====================
 interface PlanetData {
@@ -50,10 +51,13 @@ const Stars: React.FC = () => {
   const geo = useMemo(() => {
     const N = 2600;
     const pos = new Float32Array(N * 3);
+    // 种子 PRNG: 原来用 Math.random()，每个并行渲染实例会得到各自一套星空，
+    // 相邻帧区间拼接处会出现星空突变
+    const rand = mulberry32(0x57a45);
     for (let i = 0; i < N; i++) {
-      const r = 160 + Math.random() * 320;
-      const th = Math.random() * Math.PI * 2;
-      const ph = Math.acos(2 * Math.random() - 1);
+      const r = 160 + rand() * 320;
+      const th = rand() * Math.PI * 2;
+      const ph = Math.acos(2 * rand() - 1);
       pos[i * 3] = r * Math.sin(ph) * Math.cos(th);
       pos[i * 3 + 1] = r * Math.cos(ph);
       pos[i * 3 + 2] = r * Math.sin(ph) * Math.sin(th);
@@ -314,13 +318,14 @@ const Cities: React.FC<{ p: number }> = ({ p }) => {
 
   const cityData = useMemo(() => {
     const data: { pos: [number, number, number]; sz: number }[] = [];
+    const rand = mulberry32(0xc17e5);
     for (let i = 0; i < 48; i++) {
-      const orb = CITY_ORBS[i % CITY_ORBS.length] + (Math.random() * 0.8 - 0.4);
-      const a = Math.PI * (1.35 + Math.random() * 0.3);
+      const orb = CITY_ORBS[i % CITY_ORBS.length] + (rand() * 0.8 - 0.4);
+      const a = Math.PI * (1.35 + rand() * 0.3);
       const x = orb * Math.cos(a);
       const z = orb * Math.sin(a);
-      const y = (Math.random() * 0.8 - 0.4) * 0.5;
-      data.push({ pos: [x, y, z], sz: 0.2 + Math.random() * 0.12 });
+      const y = (rand() * 0.8 - 0.4) * 0.5;
+      data.push({ pos: [x, y, z], sz: 0.2 + rand() * 0.12 });
     }
     sizes.current = data.map((d) => d.sz);
     return data;
