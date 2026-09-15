@@ -12,6 +12,7 @@
     "@remotion/gif": "4.0.425",
     "@remotion/media": "4.0.425",
     "@remotion/tailwind-v4": "4.0.425",
+    "@remotion/three": "4.0.425",
     "@remotion/transitions": "4.0.425",
     "@remotion/zod-types": "4.0.425",
     "dotenv": "^17.4.2",

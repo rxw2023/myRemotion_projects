@@ -20,6 +20,10 @@ import { FrontendIsms, TOTAL_FRAMES as FrontendIsmsFrames } from "./FrontendIsms
 import DualVectorFoil, { TOTAL_FRAMES as DualVectorFoilFrames } from "./DualVectorFoil";
 import { CachePrinciple, TOTAL_FRAMES as CachePrincipleFrames } from "./CachePrinciple";
 import { DeepSeekMoment, TOTAL_FRAMES as DeepSeekMomentFrames } from "./DeepSeekMoment";
+import {
+  ItomoriNight,
+  TOTAL_FRAMES as ItomoriNightFrames,
+} from "./ItomoriNight";
 
 // ==================== 配置类型 ====================
 
@@ -174,6 +178,17 @@ const compositions: CompConfig[] = [
     orientation: "landscape",
     category: "video",
     description: "AI生成文本教学演示",
+  },
+
+  // ---- 横版视频：三维微缩景观 ----
+  {
+    id: "ItomoriNight",
+    component: ItomoriNight,
+    durationInFrames: ItomoriNightFrames,
+    orientation: "landscape",
+    category: "video",
+    description:
+      "系守湖四季 · 微缩模型 — 三渲二日式动画夜景空镜，环形山峦环抱一片正圆陨石湖，御神体山丘、鸟居岩腔与湖畔小镇，春樱夏萤秋叶冬雪各环绕一周",
   },
 
   // ---- 横版视频：Vox 风格纪录片 ----
