@@ -55,6 +55,16 @@ pip install edge-tts mutagen
 python -X utf8 scripts/*/generate*.py
 ```
 
+`public/**/*.mp3` 已在 `.gitignore` 里忽略，所以 clone 后要先生成音频再渲染，否则 `staticFile()` 找不到文件。以《像素到光子》（`GameCatEra`）为例：
+
+```bash
+python -X utf8 scripts/gamecat-audio.py              # 旁白 + 底噪，一次生成
+python -X utf8 scripts/gamecat-audio.py --only-voice # 只重新生成旁白
+python -X utf8 scripts/gamecat-audio.py --only-noise # 只重新生成底噪
+```
+
+脚本会从 `src/GameCatEra/data.ts` 里按顺序抓取 12 条 `narration` 作为旁白文本，改字幕文案后重跑即可保持配音同步。BGM 同样不入库，自己放一首到 `public/gameCatEra/bgm.mp3` 就能带上。
+
 ## 共享组件
 
 `src/shared/components/index.tsx`：

@@ -20,6 +20,7 @@ import { FrontendIsms, TOTAL_FRAMES as FrontendIsmsFrames } from "./FrontendIsms
 import DualVectorFoil, { TOTAL_FRAMES as DualVectorFoilFrames } from "./DualVectorFoil";
 import { CachePrinciple, TOTAL_FRAMES as CachePrincipleFrames } from "./CachePrinciple";
 import { DeepSeekMoment, TOTAL_FRAMES as DeepSeekMomentFrames } from "./DeepSeekMoment";
+import { GameCatEra, GameCatEraFrames } from "./GameCatEra";
 import {
   ItomoriNight,
   TOTAL_FRAMES as ItomoriNightFrames,
@@ -199,6 +200,16 @@ const compositions: CompConfig[] = [
     orientation: "landscape",
     category: "video",
     description: "DeepSeek 时刻 — Vox 风格纪录片：一家量化基金孵化的小团队，如何用一个开源模型让万亿算力叙事重算账",
+  },
+
+  // ---- 横版纪录片：正序 ----
+  {
+    id: "GameCatEra",
+    component: GameCatEra,
+    durationInFrames: GameCatEraFrames,
+    orientation: "landscape",
+    category: "video",
+    description: "像素到光子 — 一只橘猫的游戏图像史，正序：从 1970–1974 的黑白方块讲到 2023–2026 的神经渲染，含配音与底噪",
   },
 
   // ---- 横版播客 ----
