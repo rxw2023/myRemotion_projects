@@ -65,6 +65,26 @@ python -X utf8 scripts/gamecat-audio.py --only-noise # 只重新生成底噪
 
 脚本会从 `src/GameCatEra/data.ts` 里按顺序抓取 12 条 `narration` 作为旁白文本，改字幕文案后重跑即可保持配音同步。BGM 同样不入库，自己放一首到 `public/gameCatEra/bgm.mp3` 就能带上。
 
+## 频道片头（ChannelIntro）
+
+10 秒频道片头。竖版 `ChannelIntro` / 横版 `ChannelIntroWide`，两版共用同一套代码，只换锚点。
+
+```bash
+# 渲染 MP4 前必须先把 TEMP 指到工作区内
+# （沙箱里的 ffmpeg 写不进系统 %TEMP%，否则报 Permission denied）
+$env:TEMP = Join-Path (Get-Location) ".tmp"; $env:TMP = $env:TEMP
+New-Item -ItemType Directory -Force -Path $env:TEMP | Out-Null
+
+$chrome = "C:\Program Files\Google\Chrome\Application\chrome.exe"
+npx remotion render ChannelIntro     out/mrdave-intro-10s.mp4      --browser-executable="$chrome"
+npx remotion render ChannelIntroWide out/mrdave-intro-10s-wide.mp4 --browser-executable="$chrome"
+
+# 不装 ffprobe，直接读 ISO-BMFF 盒子验收时长 / 分辨率 / 音轨
+node scripts/channel-intro/verify_mp4.mjs out/mrdave-intro-10s.mp4
+```
+
+音床 `public/channel/intro-10s.wav` 已入库（纯 numpy 合成，不依赖 TTS），改音效后重跑 `python -X utf8 scripts/channel-intro/generate_intro_sfx.py`。头像与色板全部取自频道真实数据，完整设计说明见 [`docs/CHANNEL_INTRO.md`](docs/CHANNEL_INTRO.md)。
+
 ## 共享组件
 
 `src/shared/components/index.tsx`：

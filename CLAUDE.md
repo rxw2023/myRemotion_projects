@@ -15,6 +15,24 @@ pnpm run upgrade      # Upgrade Remotion to latest version
 npx remotion render <composition-id> out/<name>.mp4 --browser-executable="C:\Program Files\Google\Chrome\Application\chrome.exe"
 ```
 
+### ⚠️ 渲染 MP4 前必须把 TEMP 指到工作区内
+
+Node 能写系统的 `%TEMP%`，但 ffmpeg 是在**沙箱里跑的子进程**，写不进去。症状是：
+
+```
+Error opening output ...\react-motion-renderXXXX\pre-encode.mp4: Permission denied
+    at waitForPrestitcherIfNecessary (.../@remotion/renderer/dist/render-media.js:263:23)
+```
+
+看起来像"输出路径没权限"、真因是**临时目录**没权限。渲染视频（不是 `still`）前先跑：
+
+```powershell
+$env:TEMP = Join-Path (Get-Location) ".tmp"; $env:TMP = $env:TEMP
+New-Item -ItemType Directory -Force -Path $env:TEMP | Out-Null
+```
+
+`npx remotion still ... .png` 不走 ffmpeg，所以不受影响 —— 这也是为什么"静帧能出、视频出不来"。
+
 ## Architecture
 
 This is a **Remotion** video project — videos are authored as React components and rendered to MP4. Each video lives in `src/<VideoName>/index.tsx` and exports a `React.FC` (no props needed for TTS-driven videos).

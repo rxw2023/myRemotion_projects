@@ -6,6 +6,12 @@ dist
 # Ignore the output video from Git but not videos you import into src/.
 out/*
 
+# Scratch TEMP dir used when rendering MP4 (see CLAUDE.md).
+# ffmpeg runs sandboxed and cannot write to the system %TEMP%, so renders
+# point $env:TEMP here. Safe to delete any time; it is recreated on demand.
+.tmp/
+*.tmp
+
 
 # Ignore generated TTS audio files
 public/**/*.mp3

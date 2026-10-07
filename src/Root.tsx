@@ -25,6 +25,8 @@ import {
   ItomoriNight,
   TOTAL_FRAMES as ItomoriNightFrames,
 } from "./ItomoriNight";
+import { ChannelIntro } from "./ChannelIntro";
+import { TOTAL_FRAMES as ChannelIntroFrames } from "./ChannelIntro/tokens";
 
 // ==================== 配置类型 ====================
 
@@ -57,6 +59,24 @@ const RESOLUTION: Record<Orientation, { width: number; height: number }> = {
 // ==================== 注册表 ====================
 
 const compositions: CompConfig[] = [
+  // ---- 频道片头（10 秒，两种画幅同源） ----
+  {
+    id: "ChannelIntro",
+    component: ChannelIntro,
+    durationInFrames: ChannelIntroFrames,
+    orientation: "portrait",
+    category: "video",
+    description: "MRDave先生 · 频道片头（竖版）— 终端初始化 → 二向箔显影，10.000s 整",
+  },
+  {
+    id: "ChannelIntroWide",
+    component: ChannelIntro,
+    durationInFrames: ChannelIntroFrames,
+    orientation: "landscape",
+    category: "video",
+    description: "MRDave先生 · 频道片头（横版）— 终端初始化 → 二向箔显影，10.000s 整",
+  },
+
   // ---- 竖版科普视频 ----
   {
     id: "GPTEvolution",
