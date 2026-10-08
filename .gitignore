@@ -12,6 +12,10 @@ out/*
 .tmp/
 *.tmp
 
+# Chrome/Puppeteer dumps its stderr here when the system %TEMP% is not
+# writable (same sandbox cause as .tmp/ above). Regenerated on every render.
+debug.log
+
 
 # Ignore generated TTS audio files
 public/**/*.mp3

@@ -27,6 +27,8 @@ import {
 } from "./ItomoriNight";
 import { ChannelIntro } from "./ChannelIntro";
 import { TOTAL_FRAMES as ChannelIntroFrames } from "./ChannelIntro/tokens";
+import { StyleSample, STYLE_KEYS, STYLE_META, STYLE_SAMPLE_FRAMES } from "./ChannelIntroStyles";
+import { PixelIntro, pixelIntroSchema } from "./PixelIntro";
 
 // ==================== 配置类型 ====================
 
@@ -59,7 +61,29 @@ const RESOLUTION: Record<Orientation, { width: number; height: number }> = {
 // ==================== 注册表 ====================
 
 const compositions: CompConfig[] = [
-  // ---- 频道片头（10 秒，两种画幅同源） ----
+  // ---- 频道片头 · 像素游戏版（当前在用，10 秒，两种画幅同源，内容层可切换） ----
+  {
+    id: "PixelIntro",
+    component: PixelIntro,
+    durationInFrames: ChannelIntroFrames,
+    orientation: "portrait",
+    category: "video",
+    description: "MRDave先生 · 频道片头【像素游戏】竖版 — 开机自检 → 溶解 → 逐块显影，10.000s 整",
+    schema: pixelIntroSchema,
+    defaultProps: { pack: "arcade" },
+  },
+  {
+    id: "PixelIntroWide",
+    component: PixelIntro,
+    durationInFrames: ChannelIntroFrames,
+    orientation: "landscape",
+    category: "video",
+    description: "MRDave先生 · 频道片头【像素游戏】横版 — 开机自检 → 溶解 → 逐块显影，10.000s 整",
+    schema: pixelIntroSchema,
+    defaultProps: { pack: "arcade" },
+  },
+
+  // ---- 频道片头 · 丝网印刷版（原版，10 秒，两种画幅同源） ----
   {
     id: "ChannelIntro",
     component: ChannelIntro,
@@ -76,6 +100,17 @@ const compositions: CompConfig[] = [
     category: "video",
     description: "MRDave先生 · 频道片头（横版）— 终端初始化 → 二向箔显影，10.000s 整",
   },
+
+  // ---- 片头风格候选样张（静态帧，只为出图比较，不做动画） ----
+  ...STYLE_KEYS.map((k) => ({
+    id: `StyleSample-${k}`,
+    component: StyleSample,
+    durationInFrames: STYLE_SAMPLE_FRAMES,
+    orientation: "portrait" as Orientation,
+    category: "demo" as Category,
+    description: `片头风格样张 ${STYLE_META[k].no} · ${STYLE_META[k].name}（${STYLE_META[k].en}）— ${STYLE_META[k].feel}`,
+    defaultProps: { style: k },
+  })),
 
   // ---- 竖版科普视频 ----
   {
