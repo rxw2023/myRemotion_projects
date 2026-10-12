@@ -77,7 +77,8 @@ python -X utf8 scripts/gamecat-audio.py --only-noise # 只重新生成底噪
 两版的时间轴与音床是同一份，所以**换风格只改"每个时刻怎么演"，不用重做声音**。
 
 > 中间还做过一版**工程蓝图**（图纸自绘 → 线框球 → 二向箔压平），已按用户要求**完全删除**：源码、设计稿、composition 注册都不在了。
-> 想回看那种视觉语言，只剩 12 风格候选样张里的 `StyleSample-blueprint`（静态一格，见下）。
+>
+> 另外还做过一轮 **12 种风格的静态候选样张**（`src/ChannelIntroStyles/`，注册为 12 个 `StyleSample-*` 静态 composition）用于选型。选型结束后这些样张也**已按用户要求删除** —— 片头只保留上表这两版。
 
 **像素游戏版的内容层是可切换的**：`PixelIntro` 带一个 zod `schema` + `defaultProps`，在 Remotion Studio 的 props 面板里改 `pack` 就能换：
 
@@ -90,28 +91,6 @@ python -X utf8 scripts/gamecat-audio.py --only-noise # 只重新生成底噪
 三包都只用**游戏机的通用界面词汇**，不含"这一期讲什么"，也不含 UID。
 
 像素中文（「先生」「知识科普向」）是**预生成的点阵遮罩**，由 `scripts/channel-intro/make_pixel_text.py` 产出（`public/channel/px-name.png` / `px-sign.png`）——CSS 的 `image-rendering: pixelated` 只对位图生效，矢量字放大依然是平滑的。同一脚本还会写一张 `out/pixel-text-preview.png` 深底放大图供人眼复核。
-
-另有 **12 种风格的静态候选样张**（见 `src/ChannelIntroStyles/`）。十二张画的是同一件事、同一组内容（`SAMPLE`：EP.07 / 缓存原理 / 副题 / 时长），只有视觉语言不同 —— 所以"哪种风格排得出正文、哪种适合这个频道"是可比的。
-
-| 编号 | 风格 | composition | 编号 | 风格 | composition |
-| --- | --- | --- | --- | --- | --- |
-| 01 | 瑞士网格 | `StyleSample-swiss` | 07 | 霓虹夜市 | `StyleSample-neon` |
-| 02 | 磷光终端 | `StyleSample-crt` | 08 | 复古未来 | `StyleSample-retrofuture` |
-| 03 | 工程蓝图 | `StyleSample-blueprint` | 09 | 像素游戏 | `StyleSample-pixel` |
-| 04 | 孟菲斯波普 | `StyleSample-memphis` | 10 | 蒸汽波 | `StyleSample-vaporwave` |
-| 05 | 杂志封面 | `StyleSample-editorial` | 11 | 水墨宣纸 | `StyleSample-ink` |
-| 06 | 手绘白板 | `StyleSample-whiteboard` | 12 | 漫画分格 | `StyleSample-comic` |
-
-出图例（3 步，约 3 分钟）：
-
-```bash
-$chrome = "C:\Program Files\Google\Chrome\Application\chrome.exe"
-foreach ($k in "swiss","crt","blueprint","memphis","editorial","whiteboard",
-               "neon","retrofuture","pixel","vaporwave","ink","comic") {
-  npx remotion still "StyleSample-$k" "out/style-samples/$k.png" --frame=12 --browser-executable="$chrome"
-}
-python -X utf8 scripts/channel-intro/styles_sheet.py   # → out/channel-intro-style-options.png
-```
 
 `public/channel/globe-px32.png` / `globe-px64.png` 由 `scripts/channel-intro/make_globe_pixel.py` 预生成（像素风不能靠 CSS 的 `image-rendering` 临时缩，headless Chrome 里不可靠）。
 

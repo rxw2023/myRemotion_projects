@@ -27,7 +27,6 @@ import {
 } from "./ItomoriNight";
 import { ChannelIntro } from "./ChannelIntro";
 import { TOTAL_FRAMES as ChannelIntroFrames } from "./ChannelIntro/tokens";
-import { StyleSample, STYLE_KEYS, STYLE_META, STYLE_SAMPLE_FRAMES } from "./ChannelIntroStyles";
 import { PixelIntro, pixelIntroSchema } from "./PixelIntro";
 
 // ==================== 配置类型 ====================
@@ -100,17 +99,6 @@ const compositions: CompConfig[] = [
     category: "video",
     description: "MRDave先生 · 频道片头（横版）— 终端初始化 → 二向箔显影，10.000s 整",
   },
-
-  // ---- 片头风格候选样张（静态帧，只为出图比较，不做动画） ----
-  ...STYLE_KEYS.map((k) => ({
-    id: `StyleSample-${k}`,
-    component: StyleSample,
-    durationInFrames: STYLE_SAMPLE_FRAMES,
-    orientation: "portrait" as Orientation,
-    category: "demo" as Category,
-    description: `片头风格样张 ${STYLE_META[k].no} · ${STYLE_META[k].name}（${STYLE_META[k].en}）— ${STYLE_META[k].feel}`,
-    defaultProps: { style: k },
-  })),
 
   // ---- 竖版科普视频 ----
   {
