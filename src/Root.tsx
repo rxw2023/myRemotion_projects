@@ -6,6 +6,7 @@ import { Logo, myCompSchema2 } from "./HelloWorld/components/Logo";
 import { GPTEvolution } from "./GPTEvolution";
 import { StorageKnowledge } from "./StorageKnowledge";
 import { ComputerStructure } from "./ComputerStructure";
+import { ComputerStructureCover } from "./ComputerStructure/Cover";
 import { Liangzhu } from "./Liangzhu";
 import { AITextGen } from "./AITextGen";
 import { OpenClaw } from "./OpenClaw";
@@ -148,6 +149,24 @@ const compositions: CompConfig[] = [
     orientation: "portrait",
     category: "video",
     description: "计算机系统层次结构",
+  },
+  {
+    // 静态封面，出 PNG：npx remotion still ComputerStructureCover out/computer-structure-cover.png
+    id: "ComputerStructureCover",
+    component: ComputerStructureCover,
+    durationInFrames: 1,
+    orientation: "portrait",
+    category: "demo",
+    description: "《计算机系统层次结构》视频封面 1080×1920（still 出图）",
+  },
+  {
+    // 横版封面：npx remotion still ComputerStructureCoverWide out/computer-structure-cover-wide.png
+    id: "ComputerStructureCoverWide",
+    component: ComputerStructureCover,
+    durationInFrames: 1,
+    orientation: "landscape",
+    category: "demo",
+    description: "《计算机系统层次结构》视频封面 1920×1080（still 出图）",
   },
   {
     id: "Liangzhu",
