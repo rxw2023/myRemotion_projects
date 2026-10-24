@@ -20,3 +20,7 @@ debug.log
 # Ignore generated TTS audio files
 public/**/*.mp3
 
+# Claude Code compatibility junctions created by `npx remotion skills add`
+# (Windows junctions cannot be versioned; recreate with the command above).
+.claude/
+
