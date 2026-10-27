@@ -25,3 +25,10 @@ public/**/*.mp3
 # (Windows junctions cannot be versioned; recreate with the command above).
 .claude/
 
+# One-off bundles from `npx remotion bundle --out-dir=.bundleN`
+# (128 MB each; only used to render stills quickly, never needed long-term).
+.bundle*/
+
+# Agent working memory / session notes (local state, like .claude/)
+.workbuddy/
+

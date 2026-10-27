@@ -1,0 +1,234 @@
+﻿=== SKILLS DIFF: local .agents/skills (4.0.513) vs upstream remotion-dev/skills main (4.0.538) ===
+local files: 271   upstream files: 285
+added (upstream only): 14
+removed (local only): 0
+changed: 108  (version-only: 9)
+
+=== ADDED (present upstream, missing locally) ===
+remotion-best-practices/remotion-interactivity/inline-effects.md
+remotion-best-practices/remotion-interactivity/timeline-structure.md
+remotion-best-practices/remotion-markup/arabic-text.md
+remotion-best-practices/remotion-markup/color-correction.md
+remotion-best-practices/remotion-markup/connected-compositions.md
+remotion-best-practices/remotion-markup/motion-blur.md
+remotion-best-practices/remotion-markup/timing-props.md
+remotion-interactivity/inline-effects.md
+remotion-interactivity/timeline-structure.md
+remotion-markup/arabic-text.md
+remotion-markup/color-correction.md
+remotion-markup/connected-compositions.md
+remotion-markup/motion-blur.md
+remotion-markup/timing-props.md
+
+=== REMOVED (present locally, gone upstream) ===
+
+=== CHANGED ===
+remotion-best-practices/agents/openai.yaml  [CONTENT] 318 -> 318 bytes, 
+remotion-best-practices/remotion-captions/agents/openai.yaml  [CONTENT] 312 -> 312 bytes, 
+remotion-best-practices/remotion-captions/display-captions.md  [CONTENT] 5681 -> 6109 bytes, 
+remotion-best-practices/remotion-captions/import-srt-captions.md  [CONTENT] 2342 -> 2304 bytes, 
+remotion-best-practices/remotion-captions/REFERENCE.md  [CONTENT] 989 -> 1194 bytes, 
+remotion-best-practices/remotion-captions/transcribe-captions.md  [CONTENT] 1967 -> 5705 bytes, 
+remotion-best-practices/remotion-create/agents/openai.yaml  [CONTENT] 317 -> 317 bytes, 
+remotion-best-practices/remotion-create/REFERENCE.md  [CONTENT] 2109 -> 3048 bytes, 
+remotion-best-practices/remotion-docs/agents/openai.yaml  [CONTENT] 314 -> 314 bytes, 
+remotion-best-practices/remotion-docs/REFERENCE.md  [version-only] 1401 -> 1401 bytes, 
+remotion-best-practices/remotion-interactivity/agents/openai.yaml  [CONTENT] 327 -> 327 bytes, 
+remotion-best-practices/remotion-interactivity/REFERENCE.md  [CONTENT] 7776 -> 14161 bytes, 
+remotion-best-practices/remotion-maps/agents/openai.yaml  [CONTENT] 300 -> 300 bytes, 
+remotion-best-practices/remotion-maps/REFERENCE.md  [version-only] 1066 -> 1066 bytes, 
+remotion-best-practices/remotion-maps/techniques/mapbox/TECHNIQUE.md  [CONTENT] 13615 -> 13577 bytes, 
+remotion-best-practices/remotion-maps/techniques/maplibre/TECHNIQUE.md  [CONTENT] 13868 -> 14327 bytes, 
+remotion-best-practices/remotion-markup/agents/openai.yaml  [CONTENT] 317 -> 317 bytes, 
+remotion-best-practices/remotion-markup/audio.md  [CONTENT] 3786 -> 4311 bytes, 
+remotion-best-practices/remotion-markup/compositions.md  [CONTENT] 3311 -> 5312 bytes, 
+remotion-best-practices/remotion-markup/cropping.md  [CONTENT] 1136 -> 1360 bytes, 
+remotion-best-practices/remotion-markup/effects.md  [CONTENT] 9155 -> 11171 bytes, 
+remotion-best-practices/remotion-markup/embedding-videos.md  [CONTENT] 3678 -> 3903 bytes, 
+remotion-best-practices/remotion-markup/ffmpeg.md  [CONTENT] 1137 -> 1150 bytes, 
+remotion-best-practices/remotion-markup/html-in-canvas.md  [CONTENT] 3809 -> 3082 bytes, 
+remotion-best-practices/remotion-markup/images.md  [CONTENT] 1539 -> 1639 bytes, 
+remotion-best-practices/remotion-markup/light-leaks.md  [CONTENT] 3318 -> 3252 bytes, 
+remotion-best-practices/remotion-markup/multi-scene-video.md  [CONTENT] 2116 -> 1056 bytes, 
+remotion-best-practices/remotion-markup/REFERENCE.md  [CONTENT] 11404 -> 13840 bytes, 
+remotion-best-practices/remotion-markup/remotion-maps/agents/openai.yaml  [CONTENT] 300 -> 300 bytes, 
+remotion-best-practices/remotion-markup/remotion-maps/REFERENCE.md  [version-only] 1066 -> 1066 bytes, 
+remotion-best-practices/remotion-markup/remotion-maps/techniques/mapbox/TECHNIQUE.md  [CONTENT] 13615 -> 13577 bytes, 
+remotion-best-practices/remotion-markup/remotion-maps/techniques/maplibre/TECHNIQUE.md  [CONTENT] 13868 -> 14327 bytes, 
+remotion-best-practices/remotion-markup/sequencing.md  [CONTENT] 3998 -> 1321 bytes, 
+remotion-best-practices/remotion-markup/sfx.md  [CONTENT] 1857 -> 1874 bytes, 
+remotion-best-practices/remotion-markup/silence-detection.md  [CONTENT] 2619 -> 2664 bytes, 
+remotion-best-practices/remotion-markup/transitions.md  [CONTENT] 7121 -> 9084 bytes, 
+remotion-best-practices/remotion-markup/video-editing.md  [CONTENT] 3494 -> 5981 bytes, 
+remotion-best-practices/remotion-markup/voiceover.md  [CONTENT] 3441 -> 3745 bytes, 
+remotion-best-practices/remotion-multimedia/agents/openai.yaml  [CONTENT] 324 -> 324 bytes, 
+remotion-best-practices/remotion-multimedia/get-audio-duration.md  [CONTENT] 1415 -> 1568 bytes, 
+remotion-best-practices/remotion-multimedia/get-video-dimensions.md  [CONTENT] 1694 -> 1869 bytes, 
+remotion-best-practices/remotion-multimedia/get-video-duration.md  [CONTENT] 1437 -> 1530 bytes, 
+remotion-best-practices/remotion-multimedia/REFERENCE.md  [version-only] 725 -> 725 bytes, 
+remotion-best-practices/remotion-render/agents/openai.yaml  [CONTENT] 293 -> 293 bytes, 
+remotion-best-practices/remotion-render/REFERENCE.md  [CONTENT] 497 -> 746 bytes, 
+remotion-best-practices/remotion-saas/agents/openai.yaml  [CONTENT] 290 -> 290 bytes, 
+remotion-best-practices/remotion-saas/framework.md  [CONTENT] 1209 -> 927 bytes, 
+remotion-best-practices/remotion-saas/REFERENCE.md  [version-only] 1086 -> 1086 bytes, 
+remotion-best-practices/remotion-studio/agents/openai.yaml  [CONTENT] 244 -> 244 bytes, 
+remotion-best-practices/remotion-studio/REFERENCE.md  [CONTENT] 982 -> 1643 bytes, 
+remotion-best-practices/remotion-upgrade/agents/openai.yaml  [CONTENT] 289 -> 289 bytes, 
+remotion-best-practices/remotion-upgrade/REFERENCE.md  [CONTENT] 1911 -> 1961 bytes, 
+remotion-best-practices/SKILL.md  [CONTENT] 2542 -> 4324 bytes, 
+remotion-captions/agents/openai.yaml  [CONTENT] 312 -> 312 bytes, 
+remotion-captions/display-captions.md  [CONTENT] 5681 -> 6109 bytes, 
+remotion-captions/import-srt-captions.md  [CONTENT] 2342 -> 2304 bytes, 
+remotion-captions/SKILL.md  [CONTENT] 989 -> 1179 bytes, 
+remotion-captions/transcribe-captions.md  [CONTENT] 1967 -> 5705 bytes, 
+remotion-create/agents/openai.yaml  [CONTENT] 317 -> 317 bytes, 
+remotion-create/SKILL.md  [CONTENT] 2145 -> 2786 bytes, 
+remotion-docs/agents/openai.yaml  [CONTENT] 314 -> 314 bytes, 
+remotion-docs/SKILL.md  [CONTENT] 1425 -> 1386 bytes, 
+remotion-interactivity/agents/openai.yaml  [CONTENT] 327 -> 327 bytes, 
+remotion-interactivity/SKILL.md  [CONTENT] 7776 -> 14035 bytes, 
+remotion-maps/agents/openai.yaml  [CONTENT] 300 -> 300 bytes, 
+remotion-maps/SKILL.md  [version-only] 1066 -> 1066 bytes, 
+remotion-maps/techniques/mapbox/TECHNIQUE.md  [CONTENT] 13615 -> 13577 bytes, 
+remotion-maps/techniques/maplibre/TECHNIQUE.md  [CONTENT] 13868 -> 14327 bytes, 
+remotion-maps/techniques/static-map/TECHNIQUE.md  [CONTENT] 1180 -> 1099 bytes, 
+remotion-markup/agents/openai.yaml  [CONTENT] 317 -> 317 bytes, 
+remotion-markup/audio.md  [CONTENT] 3786 -> 4311 bytes, 
+remotion-markup/calculate-metadata.md  [CONTENT] 3634 -> 3486 bytes, 
+remotion-markup/compositions.md  [CONTENT] 3311 -> 5268 bytes, 
+remotion-markup/cropping.md  [CONTENT] 1132 -> 1318 bytes, 
+remotion-markup/effects.md  [CONTENT] 9155 -> 11171 bytes, 
+remotion-markup/embedding-videos.md  [CONTENT] 3678 -> 3903 bytes, 
+remotion-markup/ffmpeg.md  [CONTENT] 1137 -> 1150 bytes, 
+remotion-markup/html-in-canvas.md  [CONTENT] 3809 -> 3082 bytes, 
+remotion-markup/images.md  [CONTENT] 1539 -> 1639 bytes, 
+remotion-markup/light-leaks.md  [CONTENT] 3318 -> 3252 bytes, 
+remotion-markup/multi-scene-video.md  [CONTENT] 2116 -> 1005 bytes, 
+remotion-markup/remotion-maps/agents/openai.yaml  [CONTENT] 300 -> 300 bytes, 
+remotion-markup/remotion-maps/REFERENCE.md  [version-only] 1066 -> 1066 bytes, 
+remotion-markup/remotion-maps/techniques/mapbox/TECHNIQUE.md  [CONTENT] 13615 -> 13577 bytes, 
+remotion-markup/remotion-maps/techniques/maplibre/TECHNIQUE.md  [CONTENT] 13868 -> 14327 bytes, 
+remotion-markup/remotion-maps/techniques/static-map/TECHNIQUE.md  [CONTENT] 1167 -> 1120 bytes, 
+remotion-markup/sequencing.md  [CONTENT] 3998 -> 1270 bytes, 
+remotion-markup/sfx.md  [CONTENT] 1857 -> 1874 bytes, 
+remotion-markup/silence-detection.md  [CONTENT] 2619 -> 2664 bytes, 
+remotion-markup/SKILL.md  [CONTENT] 11420 -> 13625 bytes, 
+remotion-markup/text-highlights.md  [CONTENT] 1903 -> 1865 bytes, 
+remotion-markup/transitions.md  [CONTENT] 7121 -> 9033 bytes, 
+remotion-markup/video-editing.md  [CONTENT] 3494 -> 5791 bytes, 
+remotion-markup/voiceover.md  [CONTENT] 3441 -> 3697 bytes, 
+remotion-multimedia/agents/openai.yaml  [CONTENT] 324 -> 324 bytes, 
+remotion-multimedia/get-audio-duration.md  [CONTENT] 1415 -> 1568 bytes, 
+remotion-multimedia/get-video-dimensions.md  [CONTENT] 1694 -> 1869 bytes, 
+remotion-multimedia/get-video-duration.md  [CONTENT] 1437 -> 1530 bytes, 
+remotion-multimedia/SKILL.md  [version-only] 725 -> 725 bytes, 
+remotion-render/agents/openai.yaml  [CONTENT] 293 -> 293 bytes, 
+remotion-render/SKILL.md  [CONTENT] 497 -> 746 bytes, 
+remotion-saas/agents/openai.yaml  [CONTENT] 290 -> 290 bytes, 
+remotion-saas/framework.md  [CONTENT] 1209 -> 927 bytes, 
+remotion-saas/SKILL.md  [version-only] 1086 -> 1086 bytes, 
+remotion-studio/agents/openai.yaml  [CONTENT] 244 -> 244 bytes, 
+remotion-studio/SKILL.md  [CONTENT] 982 -> 1643 bytes, 
+remotion-upgrade/agents/openai.yaml  [CONTENT] 289 -> 289 bytes, 
+remotion-upgrade/SKILL.md  [CONTENT] 1911 -> 1961 bytes, 
+
+=== CHANGED CONTENT (not version-only) ===
+remotion-best-practices/agents/openai.yaml
+remotion-best-practices/remotion-captions/agents/openai.yaml
+remotion-best-practices/remotion-captions/display-captions.md
+remotion-best-practices/remotion-captions/import-srt-captions.md
+remotion-best-practices/remotion-captions/REFERENCE.md
+remotion-best-practices/remotion-captions/transcribe-captions.md
+remotion-best-practices/remotion-create/agents/openai.yaml
+remotion-best-practices/remotion-create/REFERENCE.md
+remotion-best-practices/remotion-docs/agents/openai.yaml
+remotion-best-practices/remotion-interactivity/agents/openai.yaml
+remotion-best-practices/remotion-interactivity/REFERENCE.md
+remotion-best-practices/remotion-maps/agents/openai.yaml
+remotion-best-practices/remotion-maps/techniques/mapbox/TECHNIQUE.md
+remotion-best-practices/remotion-maps/techniques/maplibre/TECHNIQUE.md
+remotion-best-practices/remotion-markup/agents/openai.yaml
+remotion-best-practices/remotion-markup/audio.md
+remotion-best-practices/remotion-markup/compositions.md
+remotion-best-practices/remotion-markup/cropping.md
+remotion-best-practices/remotion-markup/effects.md
+remotion-best-practices/remotion-markup/embedding-videos.md
+remotion-best-practices/remotion-markup/ffmpeg.md
+remotion-best-practices/remotion-markup/html-in-canvas.md
+remotion-best-practices/remotion-markup/images.md
+remotion-best-practices/remotion-markup/light-leaks.md
+remotion-best-practices/remotion-markup/multi-scene-video.md
+remotion-best-practices/remotion-markup/REFERENCE.md
+remotion-best-practices/remotion-markup/remotion-maps/agents/openai.yaml
+remotion-best-practices/remotion-markup/remotion-maps/techniques/mapbox/TECHNIQUE.md
+remotion-best-practices/remotion-markup/remotion-maps/techniques/maplibre/TECHNIQUE.md
+remotion-best-practices/remotion-markup/sequencing.md
+remotion-best-practices/remotion-markup/sfx.md
+remotion-best-practices/remotion-markup/silence-detection.md
+remotion-best-practices/remotion-markup/transitions.md
+remotion-best-practices/remotion-markup/video-editing.md
+remotion-best-practices/remotion-markup/voiceover.md
+remotion-best-practices/remotion-multimedia/agents/openai.yaml
+remotion-best-practices/remotion-multimedia/get-audio-duration.md
+remotion-best-practices/remotion-multimedia/get-video-dimensions.md
+remotion-best-practices/remotion-multimedia/get-video-duration.md
+remotion-best-practices/remotion-render/agents/openai.yaml
+remotion-best-practices/remotion-render/REFERENCE.md
+remotion-best-practices/remotion-saas/agents/openai.yaml
+remotion-best-practices/remotion-saas/framework.md
+remotion-best-practices/remotion-studio/agents/openai.yaml
+remotion-best-practices/remotion-studio/REFERENCE.md
+remotion-best-practices/remotion-upgrade/agents/openai.yaml
+remotion-best-practices/remotion-upgrade/REFERENCE.md
+remotion-best-practices/SKILL.md
+remotion-captions/agents/openai.yaml
+remotion-captions/display-captions.md
+remotion-captions/import-srt-captions.md
+remotion-captions/SKILL.md
+remotion-captions/transcribe-captions.md
+remotion-create/agents/openai.yaml
+remotion-create/SKILL.md
+remotion-docs/agents/openai.yaml
+remotion-docs/SKILL.md
+remotion-interactivity/agents/openai.yaml
+remotion-interactivity/SKILL.md
+remotion-maps/agents/openai.yaml
+remotion-maps/techniques/mapbox/TECHNIQUE.md
+remotion-maps/techniques/maplibre/TECHNIQUE.md
+remotion-maps/techniques/static-map/TECHNIQUE.md
+remotion-markup/agents/openai.yaml
+remotion-markup/audio.md
+remotion-markup/calculate-metadata.md
+remotion-markup/compositions.md
+remotion-markup/cropping.md
+remotion-markup/effects.md
+remotion-markup/embedding-videos.md
+remotion-markup/ffmpeg.md
+remotion-markup/html-in-canvas.md
+remotion-markup/images.md
+remotion-markup/light-leaks.md
+remotion-markup/multi-scene-video.md
+remotion-markup/remotion-maps/agents/openai.yaml
+remotion-markup/remotion-maps/techniques/mapbox/TECHNIQUE.md
+remotion-markup/remotion-maps/techniques/maplibre/TECHNIQUE.md
+remotion-markup/remotion-maps/techniques/static-map/TECHNIQUE.md
+remotion-markup/sequencing.md
+remotion-markup/sfx.md
+remotion-markup/silence-detection.md
+remotion-markup/SKILL.md
+remotion-markup/text-highlights.md
+remotion-markup/transitions.md
+remotion-markup/video-editing.md
+remotion-markup/voiceover.md
+remotion-multimedia/agents/openai.yaml
+remotion-multimedia/get-audio-duration.md
+remotion-multimedia/get-video-dimensions.md
+remotion-multimedia/get-video-duration.md
+remotion-render/agents/openai.yaml
+remotion-render/SKILL.md
+remotion-saas/agents/openai.yaml
+remotion-saas/framework.md
+remotion-studio/agents/openai.yaml
+remotion-studio/SKILL.md
+remotion-upgrade/agents/openai.yaml
+remotion-upgrade/SKILL.md
