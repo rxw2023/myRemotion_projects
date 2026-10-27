@@ -29,6 +29,10 @@ import {
 import { ChannelIntro } from "./ChannelIntro";
 import { TOTAL_FRAMES as ChannelIntroFrames } from "./ChannelIntro/tokens";
 import { PixelIntro, pixelIntroSchema } from "./PixelIntro";
+import {
+  IntegerFloatRepr,
+  TOTAL_FRAMES as IntegerFloatReprFrames,
+} from "./ReprBasics";
 
 // ==================== 配置类型 ====================
 
@@ -223,6 +227,15 @@ const compositions: CompConfig[] = [
     orientation: "portrait",
     category: "video",
     description: "Cache缓存科普（新粗野主义）— 局部性原理、映射方式、地址结构、替换算法、写策略",
+  },
+  {
+    id: "IntegerFloatRepr",
+    component: IntegerFloatRepr,
+    durationInFrames: IntegerFloatReprFrames,
+    orientation: "portrait",
+    category: "video",
+    description:
+      "数据的表示 — 整数（无符号数/补码/原码/移码）与 IEEE 754 浮点数（三段结构、手算 2.25、异常值、精度误差、加减四步）",
   },
 
   // ---- 横版视频 ----

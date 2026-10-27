@@ -1,0 +1,1250 @@
+{
+  "s00": {
+    "duration": 20.88,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "同样八个比特，能表示多少？",
+        "offset": 1000000,
+        "duration": 32432693
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "答案是：取决于你怎么解释它。",
+        "offset": 32932693,
+        "duration": 27884616
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "当成无符号数，是一百二十九。",
+        "offset": 60817309,
+        "duration": 31370193
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "当成补码，是负一百二十七。",
+        "offset": 92187503,
+        "duration": 28004808
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "当成原码是负一，当成 BCD 是八十一。",
+        "offset": 120192312,
+        "duration": 39423078
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "今天把两件事讲透：整数怎么存，浮点数怎么存。",
+        "offset": 159615390,
+        "duration": 48557694
+      }
+    ],
+    "cues": [
+      {
+        "text": "同样八个比特，能表示多少？",
+        "start": 0.1,
+        "end": 3.343
+      },
+      {
+        "text": "答案是：取决于你怎么解释它。",
+        "start": 3.343,
+        "end": 6.082
+      },
+      {
+        "text": "当成无符号数，是一百二十九。",
+        "start": 6.082,
+        "end": 9.219
+      },
+      {
+        "text": "当成补码，是负一百二十七。",
+        "start": 9.219,
+        "end": 12.019
+      },
+      {
+        "text": "当成原码是负一，当成 BCD 是八十一。",
+        "start": 12.019,
+        "end": 15.962
+      },
+      {
+        "text": "今天把两件事讲透：整数怎么存，浮点数怎么存。",
+        "start": 15.962,
+        "end": 20.88
+      }
+    ]
+  },
+  "s01": {
+    "duration": 26.28,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "先分清两个概念：字面值，和二进制位。",
+        "offset": 1000000,
+        "duration": 41206732
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "字面值是我们写在纸上的负七十三，带正负号。",
+        "offset": 41706732,
+        "duration": 46274040
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "二进制位，是机器里真正存的一串零和一。",
+        "offset": 87980772,
+        "duration": 39423078
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "原码、补码、无符号数，不是三种不同的数据。",
+        "offset": 127403850,
+        "duration": 43629809
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "它们是对同一组比特的三种解释规则。",
+        "offset": 171033660,
+        "duration": 31370193
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "所以关键不是这串位是什么，而是编译器用哪套规则读它。",
+        "offset": 202403853,
+        "duration": 59855771
+      }
+    ],
+    "cues": [
+      {
+        "text": "先分清两个概念：字面值，和二进制位。",
+        "start": 0.1,
+        "end": 4.221
+      },
+      {
+        "text": "字面值是我们写在纸上的负七十三，带正负号。",
+        "start": 4.221,
+        "end": 8.798
+      },
+      {
+        "text": "二进制位，是机器里真正存的一串零和一。",
+        "start": 8.798,
+        "end": 12.74
+      },
+      {
+        "text": "原码、补码、无符号数，不是三种不同的数据。",
+        "start": 12.74,
+        "end": 17.103
+      },
+      {
+        "text": "它们是对同一组比特的三种解释规则。",
+        "start": 17.103,
+        "end": 20.24
+      },
+      {
+        "text": "所以关键不是这串位是什么，而是编译器用哪套规则读它。",
+        "start": 20.24,
+        "end": 26.28
+      }
+    ]
+  },
+  "s02": {
+    "duration": 27.192,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "先看最简单的：无符号数，也就是纯二进制。",
+        "offset": 1000000,
+        "duration": 43129809
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "第 i 位的权重，是二的 i 次方。",
+        "offset": 43629809,
+        "duration": 31610578
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "从右往左，一、二、四、八，一路翻倍。",
+        "offset": 75240387,
+        "duration": 49879809
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "每一位乘以权重再求和，就得到数值。",
+        "offset": 125120196,
+        "duration": 34855770
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "八个位里，最高位的权重是一百二十八。",
+        "offset": 159975967,
+        "duration": 36177885
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "一后面六个零再加一个一，等于一百二十九。",
+        "offset": 196153853,
+        "duration": 37860578
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "八位无符号的范围，是零到二百五十五。",
+        "offset": 234014431,
+        "duration": 37379809
+      }
+    ],
+    "cues": [
+      {
+        "text": "先看最简单的：无符号数，也就是纯二进制。",
+        "start": 0.1,
+        "end": 4.413
+      },
+      {
+        "text": "第 i 位的权重，是二的 i 次方。",
+        "start": 4.413,
+        "end": 7.524
+      },
+      {
+        "text": "从右往左，一、二、四、八，一路翻倍。",
+        "start": 7.524,
+        "end": 12.512
+      },
+      {
+        "text": "每一位乘以权重再求和，就得到数值。",
+        "start": 12.512,
+        "end": 15.998
+      },
+      {
+        "text": "八个位里，最高位的权重是一百二十八。",
+        "start": 15.998,
+        "end": 19.615
+      },
+      {
+        "text": "一后面六个零再加一个一，等于一百二十九。",
+        "start": 19.615,
+        "end": 23.401
+      },
+      {
+        "text": "八位无符号的范围，是零到二百五十五。",
+        "start": 23.401,
+        "end": 27.192
+      }
+    ]
+  },
+  "s03": {
+    "duration": 28.08,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "反过来，十进制转二进制用除二取余。",
+        "offset": 1000000,
+        "duration": 37841347
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "以七十三为例，连续除以二，记下每次的余数。",
+        "offset": 38341347,
+        "duration": 43990386
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "七十三除二余一，三十六除二余零。",
+        "offset": 82331733,
+        "duration": 34615385
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "十八除二余零，九除二余一。",
+        "offset": 116947119,
+        "duration": 30889424
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "四、二、一依次除下去，商到零就停。",
+        "offset": 147836543,
+        "duration": 45312501
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "余数从下往上倒着读，就是零一零零一零零一。",
+        "offset": 193149045,
+        "duration": 42788463
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "熟练之后可以直接凑二的幂：六十四加八加一。",
+        "offset": 235937508,
+        "duration": 44350963
+      }
+    ],
+    "cues": [
+      {
+        "text": "反过来，十进制转二进制用除二取余。",
+        "start": 0.1,
+        "end": 3.884
+      },
+      {
+        "text": "以七十三为例，连续除以二，记下每次的余数。",
+        "start": 3.884,
+        "end": 8.233
+      },
+      {
+        "text": "七十三除二余一，三十六除二余零。",
+        "start": 8.233,
+        "end": 11.695
+      },
+      {
+        "text": "十八除二余零，九除二余一。",
+        "start": 11.695,
+        "end": 14.784
+      },
+      {
+        "text": "四、二、一依次除下去，商到零就停。",
+        "start": 14.784,
+        "end": 19.315
+      },
+      {
+        "text": "余数从下往上倒着读，就是零一零零一零零一。",
+        "start": 19.315,
+        "end": 23.594
+      },
+      {
+        "text": "熟练之后可以直接凑二的幂：六十四加八加一。",
+        "start": 23.594,
+        "end": 28.08
+      }
+    ]
+  },
+  "s04": {
+    "duration": 29.016,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "有符号数用补码，它和纯二进制只差一个地方。",
+        "offset": 1000000,
+        "duration": 43850963
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "最高位的权重，不是正的一百二十八。",
+        "offset": 44350963,
+        "duration": 30769231
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "而是负的一百二十八。",
+        "offset": 75120195,
+        "duration": 18990385
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "把这个负号刻进脑子里，补码就通了。",
+        "offset": 94110580,
+        "duration": 29447116
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "还是那串位，一后面七个零，代表负一百二十八。",
+        "offset": 123557696,
+        "duration": 43028847
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "加上最低位的一，就是负一百二十七。",
+        "offset": 166586544,
+        "duration": 31250001
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "所以八位补码的范围，是负一百二十八到正一百二十七。",
+        "offset": 197836545,
+        "duration": 47355770
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "负数比正数多一个，因为正零和负零合并了。",
+        "offset": 245192316,
+        "duration": 44591347
+      }
+    ],
+    "cues": [
+      {
+        "text": "有符号数用补码，它和纯二进制只差一个地方。",
+        "start": 0.1,
+        "end": 4.485
+      },
+      {
+        "text": "最高位的权重，不是正的一百二十八。",
+        "start": 4.485,
+        "end": 7.512
+      },
+      {
+        "text": "而是负的一百二十八。",
+        "start": 7.512,
+        "end": 9.411
+      },
+      {
+        "text": "把这个负号刻进脑子里，补码就通了。",
+        "start": 9.411,
+        "end": 12.356
+      },
+      {
+        "text": "还是那串位，一后面七个零，代表负一百二十八。",
+        "start": 12.356,
+        "end": 16.659
+      },
+      {
+        "text": "加上最低位的一，就是负一百二十七。",
+        "start": 16.659,
+        "end": 19.784
+      },
+      {
+        "text": "所以八位补码的范围，是负一百二十八到正一百二十七。",
+        "start": 19.784,
+        "end": 24.519
+      },
+      {
+        "text": "负数比正数多一个，因为正零和负零合并了。",
+        "start": 24.519,
+        "end": 29.016
+      }
+    ]
+  },
+  "s05": {
+    "duration": 31.2,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "给定一个负数求补码，两步：取反，加一。",
+        "offset": 1000000,
+        "duration": 44211540
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "先写出它绝对值的纯二进制。",
+        "offset": 44711540,
+        "duration": 27043270
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "负七十三的绝对值是七十三，零一零零一零零一。",
+        "offset": 71754810,
+        "duration": 42908655
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "按位取反，变成一零一一零一零。",
+        "offset": 114663465,
+        "duration": 30769231
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "再加一，得到一零一一零一一一。",
+        "offset": 145432697,
+        "duration": 28725962
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "为什么叫二的补码？",
+        "offset": 174158660,
+        "duration": 16947116
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "本质是用二的八次方减去七十三。",
+        "offset": 191105776,
+        "duration": 31250001
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "在模运算里，减法就变成了加法。",
+        "offset": 222355777,
+        "duration": 31370193
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "所以加减法共用一套加法器，这是补码最大的工程价值。",
+        "offset": 253725970,
+        "duration": 57812502
+      }
+    ],
+    "cues": [
+      {
+        "text": "给定一个负数求补码，两步：取反，加一。",
+        "start": 0.1,
+        "end": 4.521
+      },
+      {
+        "text": "先写出它绝对值的纯二进制。",
+        "start": 4.521,
+        "end": 7.175
+      },
+      {
+        "text": "负七十三的绝对值是七十三，零一零零一零零一。",
+        "start": 7.175,
+        "end": 11.466
+      },
+      {
+        "text": "按位取反，变成一零一一零一零。",
+        "start": 11.466,
+        "end": 14.543
+      },
+      {
+        "text": "再加一，得到一零一一零一一一。",
+        "start": 14.543,
+        "end": 17.416
+      },
+      {
+        "text": "为什么叫二的补码？本质是用二的八次方减去七十三。",
+        "start": 17.416,
+        "end": 22.236
+      },
+      {
+        "text": "在模运算里，减法就变成了加法。",
+        "start": 22.236,
+        "end": 25.373
+      },
+      {
+        "text": "所以加减法共用一套加法器，这是补码最大的工程价值。",
+        "start": 25.373,
+        "end": 31.2
+      }
+    ]
+  },
+  "s06": {
+    "duration": 34.128,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "对比一下原码：最高位符号位，剩下是绝对值。",
+        "offset": 1000000,
+        "duration": 44812501
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "正二十五和负二十五，只差最高位。",
+        "offset": 45312501,
+        "duration": 33774039
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "原码直观，但有两个硬伤。",
+        "offset": 79086541,
+        "duration": 28365385
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "第一，零有两种编码，正零和负零，浪费一个。",
+        "offset": 107451927,
+        "duration": 47596155
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "第二，做加法要先比大小再决定谁减谁，硬件更复杂。",
+        "offset": 155048082,
+        "duration": 55288463
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "所以现代机器里，整数只用补码。",
+        "offset": 210336546,
+        "duration": 36658655
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "再补一个概念：把补码的符号位取反，得到移码。",
+        "offset": 246995201,
+        "duration": 41105770
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "移码把大小顺序变成无符号比较，专门用来存阶码。",
+        "offset": 288100972,
+        "duration": 52644232
+      }
+    ],
+    "cues": [
+      {
+        "text": "对比一下原码：最高位符号位，剩下是绝对值。",
+        "start": 0.1,
+        "end": 4.581
+      },
+      {
+        "text": "正二十五和负二十五，只差最高位。",
+        "start": 4.581,
+        "end": 7.909
+      },
+      {
+        "text": "原码直观，但有两个硬伤。",
+        "start": 7.909,
+        "end": 10.745
+      },
+      {
+        "text": "第一，零有两种编码，正零和负零，浪费一个。",
+        "start": 10.745,
+        "end": 15.505
+      },
+      {
+        "text": "第二，做加法要先比大小再决定谁减谁，硬件更复杂。",
+        "start": 15.505,
+        "end": 21.034
+      },
+      {
+        "text": "所以现代机器里，整数只用补码。",
+        "start": 21.034,
+        "end": 24.7
+      },
+      {
+        "text": "再补一个概念：把补码的符号位取反，得到移码。",
+        "start": 24.7,
+        "end": 28.81
+      },
+      {
+        "text": "移码把大小顺序变成无符号比较，专门用来存阶码。",
+        "start": 28.81,
+        "end": 34.128
+      }
+    ]
+  },
+  "s07": {
+    "duration": 31.608,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "整数说完了，实数怎么办？",
+        "offset": 1000000,
+        "duration": 27504808
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "最直接的方案是定点数。",
+        "offset": 28004808,
+        "duration": 23317308
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "约定某一位是小数点，左边整数，右边小数。",
+        "offset": 51322117,
+        "duration": 42427886
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "小数点右边，权重是二分之一、四分之一、八分之一。",
+        "offset": 93750003,
+        "duration": 50240386
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "但小数点位置固定，范围就被锁死了。",
+        "offset": 143990389,
+        "duration": 36418270
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "要表示二的负一百零二次方这种量级，得写一百多个位。",
+        "offset": 180408660,
+        "duration": 51322117
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "其中绝大部分还是零，位被白白浪费。",
+        "offset": 231730777,
+        "duration": 39423078
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "于是有了浮点数，本质是二进制的科学计数法。",
+        "offset": 271153856,
+        "duration": 44471155
+      }
+    ],
+    "cues": [
+      {
+        "text": "整数说完了，实数怎么办？",
+        "start": 0.1,
+        "end": 2.85
+      },
+      {
+        "text": "最直接的方案是定点数。",
+        "start": 2.85,
+        "end": 5.132
+      },
+      {
+        "text": "约定某一位是小数点，左边整数，右边小数。",
+        "start": 5.132,
+        "end": 9.375
+      },
+      {
+        "text": "小数点右边，权重是二分之一、四分之一、八分之一。",
+        "start": 9.375,
+        "end": 14.399
+      },
+      {
+        "text": "但小数点位置固定，范围就被锁死了。",
+        "start": 14.399,
+        "end": 18.041
+      },
+      {
+        "text": "要表示二的负一百零二次方这种量级，得写一百多个位。",
+        "start": 18.041,
+        "end": 23.173
+      },
+      {
+        "text": "其中绝大部分还是零，位被白白浪费。",
+        "start": 23.173,
+        "end": 27.115
+      },
+      {
+        "text": "于是有了浮点数，本质是二进制的科学计数法。",
+        "start": 27.115,
+        "end": 31.608
+      }
+    ]
+  },
+  "s08": {
+    "duration": 41.472,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "IEEE 七五四标准，把浮点数拆成三段。",
+        "offset": 1000000,
+        "duration": 40245193
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "符号位 s，阶码 E，尾数 M。",
+        "offset": 40745193,
+        "duration": 33413462
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "值等于负一的 s 次方，乘一点几，再乘二的 E 减偏置次方。",
+        "offset": 74158656,
+        "duration": 52764425
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "单精度三十二位：一、八、二十三，偏置一百二十七。",
+        "offset": 126923081,
+        "duration": 52524040
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "双精度六十四位：一、十一、五十二，偏置一千零二十三。",
+        "offset": 179447121,
+        "duration": 58533655
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "为什么要加偏置？",
+        "offset": 237980777,
+        "duration": 17668269
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "因为阶码要表示负指数，可它按无符号存。",
+        "offset": 255649047,
+        "duration": 42187501
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "加偏置把所有指数平移成正数，比大小就是比二进制。",
+        "offset": 297836549,
+        "duration": 52283655
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "还有个便宜：规格化后尾数总是一点几，那个一不存，白赚一位。",
+        "offset": 350120205,
+        "duration": 63942310
+      }
+    ],
+    "cues": [
+      {
+        "text": "IEEE 七五四标准，把浮点数拆成三段。",
+        "start": 0.1,
+        "end": 4.125
+      },
+      {
+        "text": "符号位 s，阶码 E，尾数 M。",
+        "start": 4.125,
+        "end": 7.416
+      },
+      {
+        "text": "值等于负一的 s 次方，乘一点几，再乘二的 E 减偏置次方。",
+        "start": 7.416,
+        "end": 12.692
+      },
+      {
+        "text": "单精度三十二位：一、八、二十三，偏置一百二十七。",
+        "start": 12.692,
+        "end": 17.945
+      },
+      {
+        "text": "双精度六十四位：一、十一、五十二，偏置一千零二十三。",
+        "start": 17.945,
+        "end": 23.798
+      },
+      {
+        "text": "为什么要加偏置？因为阶码要表示负指数，可它按无符号存。",
+        "start": 23.798,
+        "end": 29.784
+      },
+      {
+        "text": "加偏置把所有指数平移成正数，比大小就是比二进制。",
+        "start": 29.784,
+        "end": 35.012
+      },
+      {
+        "text": "还有个便宜：规格化后尾数总是一点几，那个一不存，白赚一位。",
+        "start": 35.012,
+        "end": 41.472
+      }
+    ]
+  },
+  "s09": {
+    "duration": 27.384,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "手算一遍二点二五的单精度。",
+        "offset": 1000000,
+        "duration": 24860577
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "先规格化：二点二五等于一点一二五乘以二的一次方。",
+        "offset": 25360577,
+        "duration": 48437501
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "符号位零，正数。",
+        "offset": 73798079,
+        "duration": 24158654
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "阶码是一加一百二十七，等于一百二十八。",
+        "offset": 97956734,
+        "duration": 32692308
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "一百二十八的二进制，是一后面七个零。",
+        "offset": 130649043,
+        "duration": 33774039
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "尾数去掉整数的一，剩下零零一，后面补零填满二十三位。",
+        "offset": 164423082,
+        "duration": 53245194
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "三段拼起来，写成十六进制是四零一零，后面四个零。",
+        "offset": 217668277,
+        "duration": 55528848
+      }
+    ],
+    "cues": [
+      {
+        "text": "手算一遍二点二五的单精度。",
+        "start": 0.1,
+        "end": 2.586
+      },
+      {
+        "text": "先规格化：二点二五等于一点一二五乘以二的一次方。",
+        "start": 2.586,
+        "end": 7.38
+      },
+      {
+        "text": "符号位零，正数。",
+        "start": 7.38,
+        "end": 9.796
+      },
+      {
+        "text": "阶码是一加一百二十七，等于一百二十八。",
+        "start": 9.796,
+        "end": 13.065
+      },
+      {
+        "text": "一百二十八的二进制，是一后面七个零。",
+        "start": 13.065,
+        "end": 16.442
+      },
+      {
+        "text": "尾数去掉整数的一，剩下零零一，后面补零填满二十三位。",
+        "start": 16.442,
+        "end": 21.767
+      },
+      {
+        "text": "三段拼起来，写成十六进制是四零一零，后面四个零。",
+        "start": 21.767,
+        "end": 27.384
+      }
+    ]
+  },
+  "s10": {
+    "duration": 31.128,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "阶码不是随便取的，它决定浮点数的四种身份。",
+        "offset": 1000000,
+        "duration": 39283655
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "阶码既不全零也不全一，是正常值，用隐含的一。",
+        "offset": 39783655,
+        "duration": 50600963
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "阶码全零，是非正常值：没有隐含的一。",
+        "offset": 90384618,
+        "duration": 38701924
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "指数固定成一减偏置，尾数全零就是零。",
+        "offset": 129086543,
+        "duration": 42067309
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "阶码全一、尾数全零，是正无穷或负无穷。",
+        "offset": 171153852,
+        "duration": 47956732
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "阶码全一、尾数非零，是非数字 NaN。",
+        "offset": 219110584,
+        "duration": 36899039
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "非正常值的意义，是在最小正常数和零之间铺一条过渡带。",
+        "offset": 256009624,
+        "duration": 54687502
+      }
+    ],
+    "cues": [
+      {
+        "text": "阶码不是随便取的，它决定浮点数的四种身份。",
+        "start": 0.1,
+        "end": 4.028
+      },
+      {
+        "text": "阶码既不全零也不全一，是正常值，用隐含的一。",
+        "start": 4.028,
+        "end": 9.038
+      },
+      {
+        "text": "阶码全零，是非正常值：没有隐含的一。",
+        "start": 9.038,
+        "end": 12.909
+      },
+      {
+        "text": "指数固定成一减偏置，尾数全零就是零。",
+        "start": 12.909,
+        "end": 17.115
+      },
+      {
+        "text": "阶码全一、尾数全零，是正无穷或负无穷。",
+        "start": 17.115,
+        "end": 21.911
+      },
+      {
+        "text": "阶码全一、尾数非零，是非数字 NaN。",
+        "start": 21.911,
+        "end": 25.601
+      },
+      {
+        "text": "非正常值的意义，是在最小正常数和零之间铺一条过渡带。",
+        "start": 25.601,
+        "end": 31.128
+      }
+    ]
+  },
+  "s11": {
+    "duration": 32.784,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "现在回答那个经典问题。",
+        "offset": 1000000,
+        "duration": 22096154
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "为什么零点一加零点二，不等于零点三。",
+        "offset": 22596154,
+        "duration": 32451924
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "因为一点二的二进制是无限循环的，零零一一不断重复。",
+        "offset": 55048078,
+        "duration": 47716347
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "二十三位尾数装不下，只能舍入到最近的那个数。",
+        "offset": 102764426,
+        "duration": 39302886
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "把浮点数想成数轴上一串离散的点。",
+        "offset": 142067312,
+        "duration": 36298078
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "单精度相邻两点间隔是二的负二十三次方，约一亿分之一。",
+        "offset": 178365391,
+        "duration": 51802886
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "落不到点上的数只能就近取点，误差从这里来。",
+        "offset": 230168277,
+        "duration": 44591347
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "所以判断浮点相等，要比较差值，不能直接写等号。",
+        "offset": 274759625,
+        "duration": 52644232
+      }
+    ],
+    "cues": [
+      {
+        "text": "现在回答那个经典问题。",
+        "start": 0.1,
+        "end": 2.31
+      },
+      {
+        "text": "为什么零点一加零点二，不等于零点三。",
+        "start": 2.31,
+        "end": 5.505
+      },
+      {
+        "text": "因为一点二的二进制是无限循环的，零零一一不断重复。",
+        "start": 5.505,
+        "end": 10.276
+      },
+      {
+        "text": "二十三位尾数装不下，只能舍入到最近的那个数。",
+        "start": 10.276,
+        "end": 14.207
+      },
+      {
+        "text": "把浮点数想成数轴上一串离散的点。",
+        "start": 14.207,
+        "end": 17.837
+      },
+      {
+        "text": "单精度相邻两点间隔是二的负二十三次方，约一亿分之一。",
+        "start": 17.837,
+        "end": 23.017
+      },
+      {
+        "text": "落不到点上的数只能就近取点，误差从这里来。",
+        "start": 23.017,
+        "end": 27.476
+      },
+      {
+        "text": "所以判断浮点相等，要比较差值，不能直接写等号。",
+        "start": 27.476,
+        "end": 32.784
+      }
+    ]
+  },
+  "s12": {
+    "duration": 34.416,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "浮点加减，四步：对阶、尾数运算、规格化、舍入。",
+        "offset": 1000000,
+        "duration": 58514425
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "对阶原则是：小阶向大阶看齐。",
+        "offset": 59014425,
+        "duration": 34375001
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "小阶的尾数右移，阶码变大。",
+        "offset": 93389426,
+        "duration": 30769231
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "对阶只丢精度，不会引起阶码溢出。",
+        "offset": 124158658,
+        "duration": 31610578
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "尾数运算后可能进位，要右规，阶码加一，可能上溢。",
+        "offset": 155769236,
+        "duration": 51682694
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "尾数太小要左规，阶码减一，可能下溢。",
+        "offset": 207451930,
+        "duration": 37860578
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "最后舍入，舍入进位后还要再右规一次。",
+        "offset": 245312508,
+        "duration": 38461539
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "记住：尾数溢出不等于结果溢出，只看最终阶码有没有越界。",
+        "offset": 283774048,
+        "duration": 59855771
+      }
+    ],
+    "cues": [
+      {
+        "text": "浮点加减，四步：对阶、尾数运算、规格化、舍入。",
+        "start": 0.1,
+        "end": 5.951
+      },
+      {
+        "text": "对阶原则是：小阶向大阶看齐。",
+        "start": 5.951,
+        "end": 9.339
+      },
+      {
+        "text": "小阶的尾数右移，阶码变大。",
+        "start": 9.339,
+        "end": 12.416
+      },
+      {
+        "text": "对阶只丢精度，不会引起阶码溢出。",
+        "start": 12.416,
+        "end": 15.577
+      },
+      {
+        "text": "尾数运算后可能进位，要右规，阶码加一，可能上溢。",
+        "start": 15.577,
+        "end": 20.745
+      },
+      {
+        "text": "尾数太小要左规，阶码减一，可能下溢。",
+        "start": 20.745,
+        "end": 24.531
+      },
+      {
+        "text": "最后舍入，舍入进位后还要再右规一次。",
+        "start": 24.531,
+        "end": 28.377
+      },
+      {
+        "text": "记住：尾数溢出不等于结果溢出，只看最终阶码有没有越界。",
+        "start": 28.377,
+        "end": 34.416
+      }
+    ]
+  },
+  "s13": {
+    "duration": 28.608,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "收个尾。",
+        "offset": 1000000,
+        "duration": 12721154
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "整数：无符号用纯二进制，有符号用补码。",
+        "offset": 13221154,
+        "duration": 44951924
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "最高位权重带负号，负数取反加一。",
+        "offset": 58173079,
+        "duration": 36298078
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "浮点数：符号、阶码、尾数三段，阶码加偏置，尾数隐含一。",
+        "offset": 94471157,
+        "duration": 65865387
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "非正常值、无穷、NaN 各占特殊编码，精度看尾数位数。",
+        "offset": 160336544,
+        "duration": 58894232
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "把这几个点串起来，选择题就是送分题。",
+        "offset": 219230777,
+        "duration": 35096155
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "有帮助的话点个赞，我们下期见。",
+        "offset": 254326932,
+        "duration": 31129808
+      }
+    ],
+    "cues": [
+      {
+        "text": "收个尾。",
+        "start": 0.1,
+        "end": 1.372
+      },
+      {
+        "text": "整数：无符号用纯二进制，有符号用补码。",
+        "start": 1.372,
+        "end": 5.817
+      },
+      {
+        "text": "最高位权重带负号，负数取反加一。",
+        "start": 5.817,
+        "end": 9.447
+      },
+      {
+        "text": "浮点数：符号、阶码、尾数三段，",
+        "start": 9.447,
+        "end": 13.106
+      },
+      {
+        "text": "阶码加偏置，尾数隐含一。",
+        "start": 13.106,
+        "end": 16.034
+      },
+      {
+        "text": "非正常值、无穷、NaN 各占特殊编码，精度看尾数位数。",
+        "start": 16.034,
+        "end": 21.923
+      },
+      {
+        "text": "把这几个点串起来，选择题就是送分题。",
+        "start": 21.923,
+        "end": 25.433
+      },
+      {
+        "text": "有帮助的话点个赞，我们下期见。",
+        "start": 25.433,
+        "end": 28.608
+      }
+    ]
+  }
+}
