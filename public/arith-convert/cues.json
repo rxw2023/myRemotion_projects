@@ -1,0 +1,1114 @@
+{
+  "s01": {
+    "duration": 20.664,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "一位加一位，输入是两个比特。",
+        "offset": 1000000,
+        "duration": 29187501
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "输出有两个：一个叫和，一个叫进位。",
+        "offset": 29687501,
+        "duration": 35937501
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "和用异或门：相同得零，不同得一。",
+        "offset": 65625002,
+        "duration": 37379809
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "进位用与门：只有两个一相加，才进位。",
+        "offset": 103004811,
+        "duration": 37139424
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "两个门拼起来，就是半加器。",
+        "offset": 140144235,
+        "duration": 27764424
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "但它有个缺陷：它听不到低位传来的进位。",
+        "offset": 167908660,
+        "duration": 38100962
+      }
+    ],
+    "cues": [
+      {
+        "text": "一位加一位，输入是两个比特。",
+        "start": 0.1,
+        "end": 3.019
+      },
+      {
+        "text": "输出有两个：一个叫和，一个叫进位。",
+        "start": 3.019,
+        "end": 6.563
+      },
+      {
+        "text": "和用异或门：相同得零，不同得一。",
+        "start": 6.563,
+        "end": 10.3
+      },
+      {
+        "text": "进位用与门：只有两个一相加，才进位。",
+        "start": 10.3,
+        "end": 14.014
+      },
+      {
+        "text": "两个门拼起来，就是半加器。",
+        "start": 14.014,
+        "end": 16.791
+      },
+      {
+        "text": "但它有个缺陷：它听不到低位传来的进位。",
+        "start": 16.791,
+        "end": 20.664
+      }
+    ]
+  },
+  "s00": {
+    "duration": 21.048,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "计算机的算术单元里，其实只有一种运算。",
+        "offset": 1000000,
+        "duration": 36158655
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "减法、乘法、除法，最后都被拆成了加法。",
+        "offset": 36658655,
+        "duration": 43509616
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "所以这一期先讲加法器怎么搭，再讲类型转换怎么算。",
+        "offset": 80168272,
+        "duration": 52163463
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "一个是硬件怎么算，一个是同一串位怎么被换个读法。",
+        "offset": 132331735,
+        "duration": 43870193
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "先看最小的一步：一位加一位。",
+        "offset": 176201929,
+        "duration": 33774039
+      }
+    ],
+    "cues": [
+      {
+        "text": "计算机的算术单元里，其实只有一种运算。",
+        "start": 0.1,
+        "end": 3.716
+      },
+      {
+        "text": "减法、乘法、除法，最后都被拆成了加法。",
+        "start": 3.716,
+        "end": 8.017
+      },
+      {
+        "text": "所以这一期先讲加法器怎么搭，再讲类型转换怎么算。",
+        "start": 8.017,
+        "end": 13.233
+      },
+      {
+        "text": "一个是硬件怎么算，一个是同一串位怎么被换个读法。",
+        "start": 13.233,
+        "end": 17.62
+      },
+      {
+        "text": "先看最小的一步：一位加一位。",
+        "start": 17.62,
+        "end": 21.048
+      }
+    ]
+  },
+  "s02": {
+    "duration": 26.76,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "补上第三个输入，来自低位的进位 Cin。",
+        "offset": 1000000,
+        "duration": 40125001
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "和等于 A 异或 B，再异或 Cin。",
+        "offset": 40625001,
+        "duration": 37139424
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "进位等于 A 与 B，或者 A 异或 B 再与 Cin。",
+        "offset": 77764425,
+        "duration": 43750001
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "八个输入组合逐条列出来，就是全加器的真值表。",
+        "offset": 121514427,
+        "duration": 45673078
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "看进位这一列：三个输入里有两个以上是一，就进位。",
+        "offset": 167187506,
+        "duration": 51322117
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "换句话说，全加器就是一个三输入的多数表决门。",
+        "offset": 218509623,
+        "duration": 48437501
+      }
+    ],
+    "cues": [
+      {
+        "text": "补上第三个输入，来自低位的进位 Cin。",
+        "start": 0.1,
+        "end": 4.113
+      },
+      {
+        "text": "和等于 A 异或 B，再异或 Cin。",
+        "start": 4.113,
+        "end": 7.776
+      },
+      {
+        "text": "进位等于 A 与 B，或者 A 异或 B 再与 Cin。",
+        "start": 7.776,
+        "end": 12.151
+      },
+      {
+        "text": "八个输入组合逐条列出来，就是全加器的真值表。",
+        "start": 12.151,
+        "end": 16.719
+      },
+      {
+        "text": "看进位这一列：三个输入里有两个以上是一，就进位。",
+        "start": 16.719,
+        "end": 21.851
+      },
+      {
+        "text": "换句话说，全加器就是一个三输入的多数表决门。",
+        "start": 21.851,
+        "end": 26.76
+      }
+    ]
+  },
+  "s04": {
+    "duration": 25.704,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "同一个加法器，既能算无符号数，也能算补码。",
+        "offset": 1000000,
+        "duration": 44812501
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "因为电路只认零和一，它不知道你在算什么类型。",
+        "offset": 45312501,
+        "duration": 39543270
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "一一一一加一，无符号是一百二十八加一，得一百二十九。",
+        "offset": 84855772,
+        "duration": 43990386
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "补码里，它是负一加一，得零，还留下一个进位。",
+        "offset": 128846158,
+        "duration": 44471155
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "位模式一样，只是解释规则不同。",
+        "offset": 173317314,
+        "duration": 29807693
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "运算电路不区分类型，区分类型的是标志位和指令。",
+        "offset": 203125007,
+        "duration": 53365386
+      }
+    ],
+    "cues": [
+      {
+        "text": "同一个加法器，既能算无符号数，也能算补码。",
+        "start": 0.1,
+        "end": 4.581
+      },
+      {
+        "text": "因为电路只认零和一，它不知道你在算什么类型。",
+        "start": 4.581,
+        "end": 8.486
+      },
+      {
+        "text": "一一一一加一，无符号是一百二十八加一，得一百二十九。",
+        "start": 8.486,
+        "end": 12.885
+      },
+      {
+        "text": "补码里，它是负一加一，得零，还留下一个进位。",
+        "start": 12.885,
+        "end": 17.332
+      },
+      {
+        "text": "位模式一样，只是解释规则不同。",
+        "start": 17.332,
+        "end": 20.313
+      },
+      {
+        "text": "运算电路不区分类型，区分类型的是标志位和指令。",
+        "start": 20.313,
+        "end": 25.704
+      }
+    ]
+  },
+  "s03": {
+    "duration": 22.032,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "把 n 个全加器串起来，就是 n 位加法器。",
+        "offset": 1000000,
+        "duration": 38322116
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "每一位的进位输出，接到下一位的进位输入。",
+        "offset": 38822116,
+        "duration": 39663462
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "这叫行波进位，进位像波纹一样从最低位爬到最高位。",
+        "offset": 78485579,
+        "duration": 50000001
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "延迟逐级累加，位数越多，最高位等得越久。",
+        "offset": 128485581,
+        "duration": 42788463
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "所以加法看着最简单，却常常是时序上的瓶颈。",
+        "offset": 171274044,
+        "duration": 48437501
+      }
+    ],
+    "cues": [
+      {
+        "text": "把 n 个全加器串起来，就是 n 位加法器。",
+        "start": 0.1,
+        "end": 3.932
+      },
+      {
+        "text": "每一位的进位输出，接到下一位的进位输入。",
+        "start": 3.932,
+        "end": 7.849
+      },
+      {
+        "text": "这叫行波进位，进位像波纹一样从最低位爬到最高位。",
+        "start": 7.849,
+        "end": 12.849
+      },
+      {
+        "text": "延迟逐级累加，位数越多，最高位等得越久。",
+        "start": 12.849,
+        "end": 17.127
+      },
+      {
+        "text": "所以加法看着最简单，却常常是时序上的瓶颈。",
+        "start": 17.127,
+        "end": 22.032
+      }
+    ]
+  },
+  "s05": {
+    "duration": 31.152,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "有符号运算，需要四个标志位说明结果的性质。",
+        "offset": 1000000,
+        "duration": 42168270
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "ZF 零标志：结果每一位都是零，它就置一。",
+        "offset": 42668270,
+        "duration": 43750001
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "SF 符号标志：直接取结果的最高位。",
+        "offset": 86418272,
+        "duration": 34615385
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "CF 进位标志：加法取最高位进位，减法取借位。",
+        "offset": 121033658,
+        "duration": 51322117
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "OF 溢出标志：最高位进位，异或次高位进位。",
+        "offset": 172355775,
+        "duration": 46153847
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "为什么是异或？",
+        "offset": 218509623,
+        "duration": 15865385
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "只有一进一出不一致，符号才被真的顶翻。",
+        "offset": 234375008,
+        "duration": 36538462
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "正加正得负，负加负得正，都是溢出。",
+        "offset": 270913471,
+        "duration": 40024039
+      }
+    ],
+    "cues": [
+      {
+        "text": "有符号运算，需要四个标志位说明结果的性质。",
+        "start": 0.1,
+        "end": 4.317
+      },
+      {
+        "text": "ZF 零标志：结果每一位都是零，它就置一。",
+        "start": 4.317,
+        "end": 8.642
+      },
+      {
+        "text": "SF 符号标志：直接取结果的最高位。",
+        "start": 8.642,
+        "end": 12.103
+      },
+      {
+        "text": "CF 进位标志：加法取最高位进位，减法取借位。",
+        "start": 12.103,
+        "end": 17.236
+      },
+      {
+        "text": "OF 溢出标志：最高位进位，异或次高位进位。",
+        "start": 17.236,
+        "end": 21.851
+      },
+      {
+        "text": "为什么是异或？只有一进一出不一致，符号才被真的顶翻。",
+        "start": 21.851,
+        "end": 27.091
+      },
+      {
+        "text": "正加正得负，负加负得正，都是溢出。",
+        "start": 27.091,
+        "end": 31.152
+      }
+    ]
+  },
+  "s07": {
+    "duration": 28.296,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "乘法本质是移位相加。",
+        "offset": 1000000,
+        "duration": 27504808
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "手算一一零一乘一一一零，是四次部分积错位排好再求和。",
+        "offset": 28004808,
+        "duration": 50480771
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "没有硬件支持时，编译器用循环：看最低位，是就加，再移位。",
+        "offset": 78485579,
+        "duration": 63822117
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "顺序乘法器就是这么做的，一个周期出一位结果。",
+        "offset": 142307697,
+        "duration": 42187501
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "阵列乘法器把全加器铺成二维网格，所有部分积同时算。",
+        "offset": 184495199,
+        "duration": 55408655
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "用面积换时间，这是硬件里最经典的一笔交易。",
+        "offset": 239903854,
+        "duration": 42548078
+      }
+    ],
+    "cues": [
+      {
+        "text": "乘法本质是移位相加。",
+        "start": 0.1,
+        "end": 2.85
+      },
+      {
+        "text": "手算一一零一乘一一一零，是四次部分积错位排好再求和。",
+        "start": 2.85,
+        "end": 7.849
+      },
+      {
+        "text": "没有硬件支持时，编译器用循环：看最低位，是就加，再移位。",
+        "start": 7.849,
+        "end": 14.231
+      },
+      {
+        "text": "顺序乘法器就是这么做的，一个周期出一位结果。",
+        "start": 14.231,
+        "end": 18.45
+      },
+      {
+        "text": "阵列乘法器把全加器铺成二维网格，所有部分积同时算。",
+        "start": 18.45,
+        "end": 23.99
+      },
+      {
+        "text": "用面积换时间，这是硬件里最经典的一笔交易。",
+        "start": 23.99,
+        "end": 28.296
+      }
+    ]
+  },
+  "s08": {
+    "duration": 28.872,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "除法是乘法的逆运算，也是最慢的那一个。",
+        "offset": 1000000,
+        "duration": 35798078
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "手算长除法：从高位开始，够减就商一，不够就商零。",
+        "offset": 36298078,
+        "duration": 54086540
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "硬件版本每轮做三件事：余数左移、引入下一位、减去除数。",
+        "offset": 90384618,
+        "duration": 59495194
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "减法结果的符号，决定这一位商是零还是一。",
+        "offset": 149879813,
+        "duration": 44230770
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "循环到全部位处理完，商和余数同时出炉。",
+        "offset": 194110584,
+        "duration": 40024039
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "所以早期 CPU 里，除法要几十个周期，比加法慢一个数量级。",
+        "offset": 234134623,
+        "duration": 53966348
+      }
+    ],
+    "cues": [
+      {
+        "text": "除法是乘法的逆运算，也是最慢的那一个。",
+        "start": 0.1,
+        "end": 3.68
+      },
+      {
+        "text": "手算长除法：从高位开始，够减就商一，不够就商零。",
+        "start": 3.68,
+        "end": 9.038
+      },
+      {
+        "text": "硬件版本每轮做三件事：余数左移、引入下一位、减去除数。",
+        "start": 9.038,
+        "end": 14.988
+      },
+      {
+        "text": "减法结果的符号，决定这一位商是零还是一。",
+        "start": 14.988,
+        "end": 19.411
+      },
+      {
+        "text": "循环到全部位处理完，商和余数同时出炉。",
+        "start": 19.411,
+        "end": 23.413
+      },
+      {
+        "text": "所以早期 CPU 里，除法要几十个周期，比加法慢一个数量级。",
+        "start": 23.413,
+        "end": 28.872
+      }
+    ]
+  },
+  "s09": {
+    "duration": 26.712,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "硬件讲完，换到软件视角：类型转换。",
+        "offset": 1000000,
+        "duration": 40485578
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "第一个结论，也最容易被忽略：位模式不变。",
+        "offset": 40985578,
+        "duration": 39663462
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "把负一强制转成无符号，内存里还是八个一。",
+        "offset": 80649041,
+        "duration": 42307693
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "变的是编译器怎么读：有符号读成负一，无符号读成二百五十五。",
+        "offset": 122956735,
+        "duration": 56370194
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "所以八位有符号转无符号，负数会跳到一个很大的正数。",
+        "offset": 179326929,
+        "duration": 50480771
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "这不是错误，是同一串位的另一种解释。",
+        "offset": 229807700,
+        "duration": 36778847
+      }
+    ],
+    "cues": [
+      {
+        "text": "硬件讲完，换到软件视角：类型转换。",
+        "start": 0.1,
+        "end": 4.149
+      },
+      {
+        "text": "第一个结论，也最容易被忽略：位模式不变。",
+        "start": 4.149,
+        "end": 8.065
+      },
+      {
+        "text": "把负一强制转成无符号，内存里还是八个一。",
+        "start": 8.065,
+        "end": 12.296
+      },
+      {
+        "text": "变的是编译器怎么读：有符号读成负一，无符号读成二百五十五。",
+        "start": 12.296,
+        "end": 17.933
+      },
+      {
+        "text": "所以八位有符号转无符号，负数会跳到一个很大的正数。",
+        "start": 17.933,
+        "end": 22.981
+      },
+      {
+        "text": "这不是错误，是同一串位的另一种解释。",
+        "start": 22.981,
+        "end": 26.712
+      }
+    ]
+  },
+  "s06": {
+    "duration": 28.608,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "有了全加器，减法就不需要单独的电路。",
+        "offset": 1000000,
+        "duration": 36038462
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "A 减 B，等于 A 加 B 的补码，也就是取反再加一。",
+        "offset": 36538462,
+        "duration": 46033655
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "所以在 B 前面加一排异或门，用 Sub 做开关。",
+        "offset": 82572118,
+        "duration": 47355770
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "Sub 等于零，B 原样通过；等于一，B 每一位都取反。",
+        "offset": 129927889,
+        "duration": 50600963
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "同时把 Sub 接到最低位的进位输入，加一也顺手完成。",
+        "offset": 180528852,
+        "duration": 49639424
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "一个加法器通吃加减，代价是减法下 CF 变成了借位。",
+        "offset": 230168277,
+        "duration": 55408655
+      }
+    ],
+    "cues": [
+      {
+        "text": "有了全加器，减法就不需要单独的电路。",
+        "start": 0.1,
+        "end": 3.704
+      },
+      {
+        "text": "A 减 B，等于 A 加 B 的补码，也就是取反再加一。",
+        "start": 3.704,
+        "end": 8.257
+      },
+      {
+        "text": "所以在 B 前面加一排异或门，用 Sub 做开关。",
+        "start": 8.257,
+        "end": 12.993
+      },
+      {
+        "text": "Sub 等于零，B 原样通过；等于一，B 每一位都取反。",
+        "start": 12.993,
+        "end": 18.053
+      },
+      {
+        "text": "同时把 Sub 接到最低位的进位输入，加一也顺手完成。",
+        "start": 18.053,
+        "end": 23.017
+      },
+      {
+        "text": "一个加法器通吃加减，代价是减法下 CF 变成了借位。",
+        "start": 23.017,
+        "end": 28.608
+      }
+    ]
+  },
+  "s10": {
+    "duration": 28.056,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "类型转换只有两种命运：改解释，或者改位。",
+        "offset": 1000000,
+        "duration": 46134617
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "同宽度的有符号无符号互换，只改解释，位不动。",
+        "offset": 46634617,
+        "duration": 47235578
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "位不动，值就按另一套规则重算，可能突变。",
+        "offset": 93870195,
+        "duration": 42427886
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "所以无符号和有符号比较大小，结果常常反直觉。",
+        "offset": 136298081,
+        "duration": 47475963
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "负一会变成最大的无符号数，比任何正数都大。",
+        "offset": 183774045,
+        "duration": 41466347
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "写循环时，无符号做递减判断，很容易变成死循环。",
+        "offset": 225240392,
+        "duration": 54807694
+      }
+    ],
+    "cues": [
+      {
+        "text": "类型转换只有两种命运：改解释，或者改位。",
+        "start": 0.1,
+        "end": 4.713
+      },
+      {
+        "text": "同宽度的有符号无符号互换，只改解释，位不动。",
+        "start": 4.713,
+        "end": 9.387
+      },
+      {
+        "text": "位不动，值就按另一套规则重算，可能突变。",
+        "start": 9.387,
+        "end": 13.63
+      },
+      {
+        "text": "所以无符号和有符号比较大小，结果常常反直觉。",
+        "start": 13.63,
+        "end": 18.377
+      },
+      {
+        "text": "负一会变成最大的无符号数，比任何正数都大。",
+        "start": 18.377,
+        "end": 22.524
+      },
+      {
+        "text": "写循环时，无符号做递减判断，很容易变成死循环。",
+        "start": 22.524,
+        "end": 28.056
+      }
+    ]
+  },
+  "s12": {
+    "duration": 25.344,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "长度不同的整数互转，规则只有两条。",
+        "offset": 1000000,
+        "duration": 37240385
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "短转长：符号扩展，高位补符号位；无符号就补零。",
+        "offset": 37740385,
+        "duration": 53966348
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "长转短：高位直接截断，低位保留。",
+        "offset": 91706734,
+        "duration": 39903847
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "截断不报错，但值会被悄悄改写。",
+        "offset": 131610581,
+        "duration": 33774039
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "浮点这边，float 转 double 精确，反过来可能丢精度。",
+        "offset": 165384621,
+        "duration": 44110578
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "因为 double 的尾数更长，塞回 float 只能舍入。",
+        "offset": 209495199,
+        "duration": 43389424
+      }
+    ],
+    "cues": [
+      {
+        "text": "长度不同的整数互转，规则只有两条。",
+        "start": 0.1,
+        "end": 3.824
+      },
+      {
+        "text": "短转长：符号扩展，高位补符号位；无符号就补零。",
+        "start": 3.824,
+        "end": 9.171
+      },
+      {
+        "text": "长转短：高位直接截断，低位保留。",
+        "start": 9.171,
+        "end": 13.161
+      },
+      {
+        "text": "截断不报错，但值会被悄悄改写。",
+        "start": 13.161,
+        "end": 16.538
+      },
+      {
+        "text": "浮点这边，float 转 double 精确，反过来可能丢精度。",
+        "start": 16.538,
+        "end": 20.95
+      },
+      {
+        "text": "因为 double 的尾数更长，塞回 float 只能舍入。",
+        "start": 20.95,
+        "end": 25.344
+      }
+    ]
+  },
+  "s11": {
+    "duration": 28.464,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "整型和浮点之间转换，风险就实打实了。",
+        "offset": 1000000,
+        "duration": 38923078
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "float 尾数二十三位，加上隐含的一，能精确表示二十四位整数。",
+        "offset": 39423078,
+        "duration": 55048078
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "二的二十四次方以内的整数，转成 float 不丢精度。",
+        "offset": 94471157,
+        "duration": 42548078
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "超过这个范围，低位就被挤掉了。",
+        "offset": 137019235,
+        "duration": 30408654
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "反过来，浮点转整型，小数部分直接截断，不是四舍五入。",
+        "offset": 167427890,
+        "duration": 59615386
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "一旦超出整型范围，就是溢出，C 语言里属于未定义行为。",
+        "offset": 227043277,
+        "duration": 56971155
+      }
+    ],
+    "cues": [
+      {
+        "text": "整型和浮点之间转换，风险就实打实了。",
+        "start": 0.1,
+        "end": 3.992
+      },
+      {
+        "text": "float 尾数二十三位，加上隐含的一，能精确表示二十四位整数。",
+        "start": 3.992,
+        "end": 9.447
+      },
+      {
+        "text": "二的二十四次方以内的整数，转成 float 不丢精度。",
+        "start": 9.447,
+        "end": 13.702
+      },
+      {
+        "text": "超过这个范围，低位就被挤掉了。",
+        "start": 13.702,
+        "end": 16.743
+      },
+      {
+        "text": "反过来，浮点转整型，小数部分直接截断，不是四舍五入。",
+        "start": 16.743,
+        "end": 22.704
+      },
+      {
+        "text": "一旦超出整型范围，就是溢出，C 语言里属于未定义行为。",
+        "start": 22.704,
+        "end": 28.464
+      }
+    ]
+  },
+  "s13": {
+    "duration": 28.8,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "最后是语法层面：隐式转换和显式转换。",
+        "offset": 1000000,
+        "duration": 39043270
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "隐式转换发生在混合运算里，编译器按规则自动提升。",
+        "offset": 39543270,
+        "duration": 53004809
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "注意，规则不是简单地往精度高的那一方转。",
+        "offset": 92548080,
+        "duration": 39543270
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "有符号和无符号混合时，有符号会被转成无符号，这才是坑。",
+        "offset": 132091350,
+        "duration": 55649040
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "显式转换由你指定目标类型，风险也随之转移给你。",
+        "offset": 187740391,
+        "duration": 47956732
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "精度丢失、数据截断、数值溢出，编译器都不拦。",
+        "offset": 235697124,
+        "duration": 51682694
+      }
+    ],
+    "cues": [
+      {
+        "text": "最后是语法层面：隐式转换和显式转换。",
+        "start": 0.1,
+        "end": 4.004
+      },
+      {
+        "text": "隐式转换发生在混合运算里，编译器按规则自动提升。",
+        "start": 4.004,
+        "end": 9.255
+      },
+      {
+        "text": "注意，规则不是简单地往精度高的那一方转。",
+        "start": 9.255,
+        "end": 13.209
+      },
+      {
+        "text": "有符号和无符号混合时，有符号会被转成无符号，这才是坑。",
+        "start": 13.209,
+        "end": 18.774
+      },
+      {
+        "text": "显式转换由你指定目标类型，风险也随之转移给你。",
+        "start": 18.774,
+        "end": 23.57
+      },
+      {
+        "text": "精度丢失、数据截断、数值溢出，编译器都不拦。",
+        "start": 23.57,
+        "end": 28.8
+      }
+    ]
+  },
+  "s14": {
+    "duration": 33.744,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "收个尾。",
+        "offset": 1000000,
+        "duration": 12721154
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "运算电路：半加器两个门，全加器三个输入，串起来就是加法器。",
+        "offset": 13221154,
+        "duration": 59014425
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "减法靠取反加一，乘法靠移位相加，除法靠移位试减。",
+        "offset": 72235579,
+        "duration": 52283655
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "标志位里，OF 是最高位进位异或次高位进位。",
+        "offset": 124519235,
+        "duration": 45673078
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "类型转换：位模式不变是常态，变的是解释。",
+        "offset": 170192313,
+        "duration": 46995194
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "变长度就符号扩展或截断，跨类型就可能丢精度。",
+        "offset": 217187507,
+        "duration": 47355770
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "这两块串起来，选择题和综合题都有抓手。",
+        "offset": 264543278,
+        "duration": 41225963
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "有帮助的话点个赞，我们下期见。",
+        "offset": 305769241,
+        "duration": 31129808
+      }
+    ],
+    "cues": [
+      {
+        "text": "收个尾。",
+        "start": 0.1,
+        "end": 1.372
+      },
+      {
+        "text": "运算电路：半加器两个门，全加器三个输入，串起来就是加法器。",
+        "start": 1.372,
+        "end": 7.224
+      },
+      {
+        "text": "减法靠取反加一，乘法靠移位相加，除法靠移位试减。",
+        "start": 7.224,
+        "end": 12.452
+      },
+      {
+        "text": "标志位里，OF 是最高位进位异或次高位进位。",
+        "start": 12.452,
+        "end": 17.019
+      },
+      {
+        "text": "类型转换：位模式不变是常态，变的是解释。",
+        "start": 17.019,
+        "end": 21.719
+      },
+      {
+        "text": "变长度就符号扩展或截断，跨类型就可能丢精度。",
+        "start": 21.719,
+        "end": 26.454
+      },
+      {
+        "text": "这两块串起来，选择题和综合题都有抓手。",
+        "start": 26.454,
+        "end": 30.577
+      },
+      {
+        "text": "有帮助的话点个赞，我们下期见。",
+        "start": 30.577,
+        "end": 33.744
+      }
+    ]
+  }
+}

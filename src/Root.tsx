@@ -33,6 +33,10 @@ import {
   IntegerFloatRepr,
   TOTAL_FRAMES as IntegerFloatReprFrames,
 } from "./ReprBasics";
+import {
+  ArithConvert,
+  TOTAL_FRAMES as ArithConvertFrames,
+} from "./ArithConvert";
 
 // ==================== 配置类型 ====================
 
@@ -236,6 +240,15 @@ const compositions: CompConfig[] = [
     category: "video",
     description:
       "数据的表示 — 整数（无符号数/补码/原码/移码）与 IEEE 754 浮点数（三段结构、手算 2.25、异常值、精度误差、加减四步）",
+  },
+  {
+    id: "ArithConvert",
+    component: ArithConvert,
+    durationInFrames: ArithConvertFrames,
+    orientation: "portrait",
+    category: "video",
+    description:
+      "数据的表示 · 第二期 — 运算电路（半加器/全加器/行波进位/标志位/减法/乘法/除法）与类型转换（位模式不变、长度扩展截断、整型浮点、隐式显式）",
   },
 
   // ---- 横版视频 ----
