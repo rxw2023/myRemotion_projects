@@ -11,7 +11,12 @@ pnpm run lint         # ESLint + TypeScript check
 pnpm run build        # Bundle the project for deployment
 pnpm run upgrade      # Upgrade Remotion to latest version
 
-# Render a specific composition (uses locally installed Google Chrome)
+# 渲染（推荐）：自动把 TEMP 指到 .tmp、用 10 并发、结束后清理临时文件
+pnpm run render TCPBasics                 # → out/tcp-basics.mp4（自动 kebab-case）
+pnpm run render TCPBasics tcp-basics      # 指定输出名
+pnpm run render TCPBasics --clean         # 结束时连打包缓存一起清掉
+
+# 手动渲染（脚本不可用时）
 npx remotion render <composition-id> out/<name>.mp4 --browser-executable="C:\Program Files\Google\Chrome\Application\chrome.exe"
 ```
 
@@ -30,6 +35,8 @@ Error opening output ...\react-motion-renderXXXX\pre-encode.mp4: Permission deni
 $env:TEMP = Join-Path (Get-Location) ".tmp"; $env:TMP = $env:TEMP
 New-Item -ItemType Directory -Force -Path $env:TEMP | Out-Null
 ```
+
+用 `pnpm run render` 时这一步已内置，无需手工设置。
 
 `npx remotion still ... .png` 不走 ffmpeg，所以不受影响 —— 这也是为什么"静帧能出、视频出不来"。
 

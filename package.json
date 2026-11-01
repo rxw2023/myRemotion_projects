@@ -35,6 +35,7 @@
   "scripts": {
     "dev": "remotion studio",
     "build": "remotion bundle",
+    "render": "node scripts/render.mjs",
     "upgrade": "remotion upgrade",
     "lint": "eslint src && tsc"
   },

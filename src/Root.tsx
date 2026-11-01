@@ -37,6 +37,7 @@ import {
   ArithConvert,
   TOTAL_FRAMES as ArithConvertFrames,
 } from "./ArithConvert";
+import { TCPBasics, TOTAL_FRAMES as TCPBasicsFrames } from "./TCPBasics";
 
 // ==================== 配置类型 ====================
 
@@ -249,6 +250,15 @@ const compositions: CompConfig[] = [
     category: "video",
     description:
       "数据的表示 · 第二期 — 运算电路（半加器/全加器/行波进位/标志位/减法/乘法/除法）与类型转换（位模式不变、长度扩展截断、整型浮点、隐式显式）",
+  },
+  {
+    id: "TCPBasics",
+    component: TCPBasics,
+    durationInFrames: TCPBasicsFrames,
+    orientation: "portrait",
+    category: "video",
+    description:
+      "TCP 可靠传输 — 四条规矩、首部与标志位、三次握手、四次挥手与 2MSL、滑动窗口与序列号回绕、三个窗口、累计确认、超时重传与 RTO、校验和、慢开始/拥塞避免/超时归零/快速重传与快速恢复",
   },
 
   // ---- 横版视频 ----

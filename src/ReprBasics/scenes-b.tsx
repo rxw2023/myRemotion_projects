@@ -890,7 +890,7 @@ export const S12: React.FC = () => {
   return (
     <Scene id="s12" no="12" title="浮点加减四步" en="Add / subtract pipeline">
       <div style={{ width: W }}>
-        {steps.map((s, i) => {
+        {steps.map((s) => {
           const op = interpolate(frame, [s.at - 4, s.at + 10], [0, 1], clamp);
           const x = interpolate(frame, [s.at - 4, s.at + 12], [-24, 0], clamp);
           return (

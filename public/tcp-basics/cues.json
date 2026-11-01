@@ -1,0 +1,1948 @@
+{
+  "s00": {
+    "duration": 23.424,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "传输层有两位主角，TCP 管可靠，UDP 管快。",
+        "offset": 1000000,
+        "duration": 47216347
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "TCP 站在不可靠的 IP 之上，要造出一条可靠的管道。",
+        "offset": 47716347,
+        "duration": 47716347
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "它得解决四件事：连得上、送得到、不乱序、不把网络压垮。",
+        "offset": 95432695,
+        "duration": 58052886
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "这一期按四条线走：连接、传输、流量、拥塞。",
+        "offset": 153485582,
+        "duration": 51442309
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "先看它给自己立下的四条规矩。",
+        "offset": 204927892,
+        "duration": 28725962
+      }
+    ],
+    "cues": [
+      {
+        "text": "传输层有两位主角，TCP 管可靠，UDP 管快。",
+        "start": 0.1,
+        "end": 4.822
+      },
+      {
+        "text": "TCP 站在不可靠的 IP 之上，要造出一条可靠的管道。",
+        "start": 4.822,
+        "end": 9.543
+      },
+      {
+        "text": "它得解决四件事：连得上、送得到、不乱序、不把网络压垮。",
+        "start": 9.543,
+        "end": 15.349
+      },
+      {
+        "text": "这一期按四条线走：连接、传输、流量、拥塞。",
+        "start": 15.349,
+        "end": 20.493
+      },
+      {
+        "text": "先看它给自己立下的四条规矩。",
+        "start": 20.493,
+        "end": 23.424
+      }
+    ]
+  },
+  "s02": {
+    "duration": 31.992,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "打开一个 TCP 报文段，固定首部二十字节。",
+        "offset": 1000000,
+        "duration": 40245193
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "最长能到六十字节，多出来的是选项。",
+        "offset": 40745193,
+        "duration": 32451924
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "前四个字节是源端口和目的端口，各十六位。",
+        "offset": 73197118,
+        "duration": 42427886
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "它们负责找到两端的进程。",
+        "offset": 115625004,
+        "duration": 23557693
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "接着是序列号，三十二位，指向本报文段数据的第一个字节。",
+        "offset": 139182697,
+        "duration": 50120194
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "然后是确认号，三十二位，表示下一个想收到的字节序号。",
+        "offset": 189302891,
+        "duration": 47956732
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "确认号只有在确认标志置一时才有意义。",
+        "offset": 237259624,
+        "duration": 37019232
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "后面依次是首部长度、保留位、六个标志位。",
+        "offset": 274278856,
+        "duration": 45072117
+      }
+    ],
+    "cues": [
+      {
+        "text": "打开一个 TCP 报文段，固定首部二十字节。",
+        "start": 0.1,
+        "end": 4.125
+      },
+      {
+        "text": "最长能到六十字节，多出来的是选项。",
+        "start": 4.125,
+        "end": 7.32
+      },
+      {
+        "text": "前四个字节是源端口和目的端口，各十六位。",
+        "start": 7.32,
+        "end": 11.563
+      },
+      {
+        "text": "它们负责找到两端的进程。",
+        "start": 11.563,
+        "end": 13.918
+      },
+      {
+        "text": "接着是序列号，三十二位，指向本报文段数据的第一个字节。",
+        "start": 13.918,
+        "end": 18.93
+      },
+      {
+        "text": "然后是确认号，三十二位，表示下一个想收到的字节序号。",
+        "start": 18.93,
+        "end": 23.726
+      },
+      {
+        "text": "确认号只有在确认标志置一时才有意义。",
+        "start": 23.726,
+        "end": 27.428
+      },
+      {
+        "text": "后面依次是首部长度、保留位、六个标志位。",
+        "start": 27.428,
+        "end": 31.992
+      }
+    ]
+  },
+  "s01": {
+    "duration": 30.888,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "第一条，面向连接。",
+        "offset": 1000000,
+        "duration": 21014423
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "发数据之前先握手，发完之后要挥手。",
+        "offset": 21514423,
+        "duration": 32932693
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "第二条，可靠交付。",
+        "offset": 54447117,
+        "duration": 22355770
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "无差错、不丢失、不重复、按顺序。",
+        "offset": 76802887,
+        "duration": 36418270
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "第三条，面向字节流。",
+        "offset": 113221157,
+        "duration": 23798077
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "它不关心你的消息边界在哪里。",
+        "offset": 137019235,
+        "duration": 24759616
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "第四条，全双工。",
+        "offset": 161778852,
+        "duration": 23076923
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "一条连接里，两边同时收发。",
+        "offset": 184855776,
+        "duration": 30649039
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "面向字节流这条最关键，后面所有机制都建立在它上面。",
+        "offset": 215504815,
+        "duration": 51802886
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "因为编号是按字节编的，不是按报文段编的。",
+        "offset": 267307702,
+        "duration": 41105770
+      }
+    ],
+    "cues": [
+      {
+        "text": "第一条，面向连接。发数据之前先握手，发完之后要挥手。",
+        "start": 0.1,
+        "end": 5.445
+      },
+      {
+        "text": "第二条，可靠交付。无差错、不丢失、不重复、按顺序。",
+        "start": 5.445,
+        "end": 11.322
+      },
+      {
+        "text": "第三条，面向字节流。它不关心你的消息边界在哪里。",
+        "start": 11.322,
+        "end": 16.178
+      },
+      {
+        "text": "第四条，全双工。一条连接里，两边同时收发。",
+        "start": 16.178,
+        "end": 21.55
+      },
+      {
+        "text": "面向字节流这条最关键，后面所有机制都建立在它上面。",
+        "start": 21.55,
+        "end": 26.731
+      },
+      {
+        "text": "因为编号是按字节编的，不是按报文段编的。",
+        "start": 26.731,
+        "end": 30.888
+      }
+    ]
+  },
+  "s03": {
+    "duration": 31.8,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "六个标志位里，最常用的是三个：同步、确认、终止。",
+        "offset": 1000000,
+        "duration": 53466348
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "同步用于建连，终止用于断连，确认表示确认号有效。",
+        "offset": 53966348,
+        "duration": 52283655
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "还有三个：紧急、推送、复位。",
+        "offset": 106250003,
+        "duration": 37139424
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "复位比较暴力，直接强制断开连接。",
+        "offset": 143389428,
+        "duration": 33173078
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "再往后是窗口字段，十六位。",
+        "offset": 176562506,
+        "duration": 29326924
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "接收方用它告诉对方，我还能收多少字节。",
+        "offset": 205889430,
+        "duration": 36899039
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "这就是流量控制的抓手。",
+        "offset": 242788470,
+        "duration": 22235577
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "最后是校验和、紧急指针，再加上可变的选项和填充。",
+        "offset": 265024048,
+        "duration": 52403848
+      }
+    ],
+    "cues": [
+      {
+        "text": "六个标志位里，最常用的是三个：同步、确认、终止。",
+        "start": 0.1,
+        "end": 5.447
+      },
+      {
+        "text": "同步用于建连，终止用于断连，确认表示确认号有效。",
+        "start": 5.447,
+        "end": 10.625
+      },
+      {
+        "text": "还有三个：紧急、推送、复位。",
+        "start": 10.625,
+        "end": 14.339
+      },
+      {
+        "text": "复位比较暴力，直接强制断开连接。",
+        "start": 14.339,
+        "end": 17.656
+      },
+      {
+        "text": "再往后是窗口字段，十六位。",
+        "start": 17.656,
+        "end": 20.589
+      },
+      {
+        "text": "接收方用它告诉对方，我还能收多少字节。",
+        "start": 20.589,
+        "end": 24.279
+      },
+      {
+        "text": "这就是流量控制的抓手。",
+        "start": 24.279,
+        "end": 26.502
+      },
+      {
+        "text": "最后是校验和、紧急指针，再加上可变的选项和填充。",
+        "start": 26.502,
+        "end": 31.8
+      }
+    ]
+  },
+  "s04": {
+    "duration": 32.208,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "连接怎么建立？",
+        "offset": 1000000,
+        "duration": 15966346
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "靠三次握手。",
+        "offset": 16466346,
+        "duration": 15504808
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "第一次，客户端发一个同步标志置一的报文，带初始序列号 x。",
+        "offset": 31971155,
+        "duration": 52644232
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "自己的状态从关闭，变成同步已发送。",
+        "offset": 84615387,
+        "duration": 35336539
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "服务端原来在监听，收到之后回一个同步加确认。",
+        "offset": 119951927,
+        "duration": 44471155
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "里面带自己的初始序列号 y，确认号填 x 加一。",
+        "offset": 164423082,
+        "duration": 43509616
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "服务端状态变成同步已收到。",
+        "offset": 207932699,
+        "duration": 29447116
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "第三次，客户端回一个确认，确认号填 y 加一。",
+        "offset": 237379816,
+        "duration": 45673078
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "两边都进入已建立状态，连接就通了。",
+        "offset": 283052894,
+        "duration": 38581732
+      }
+    ],
+    "cues": [
+      {
+        "text": "连接怎么建立？靠三次握手。",
+        "start": 0.1,
+        "end": 3.197
+      },
+      {
+        "text": "第一次，客户端发一个同步标志置一的报文，带初始序列号 x。",
+        "start": 3.197,
+        "end": 8.462
+      },
+      {
+        "text": "自己的状态从关闭，变成同步已发送。",
+        "start": 8.462,
+        "end": 11.995
+      },
+      {
+        "text": "服务端原来在监听，收到之后回一个同步加确认。",
+        "start": 11.995,
+        "end": 16.442
+      },
+      {
+        "text": "里面带自己的初始序列号 y，确认号填 x 加一。",
+        "start": 16.442,
+        "end": 20.793
+      },
+      {
+        "text": "服务端状态变成同步已收到。",
+        "start": 20.793,
+        "end": 23.738
+      },
+      {
+        "text": "第三次，客户端回一个确认，确认号填 y 加一。",
+        "start": 23.738,
+        "end": 28.305
+      },
+      {
+        "text": "两边都进入已建立状态，连接就通了。",
+        "start": 28.305,
+        "end": 32.208
+      }
+    ]
+  },
+  "s05": {
+    "duration": 39.528,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "三次握手的本质，是双方各自确认两个方向都能通。",
+        "offset": 1000000,
+        "duration": 46615386
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "第一次，服务端确认了客户端能发。",
+        "offset": 47115386,
+        "duration": 34014424
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "第二次，客户端确认了服务端能收也能发。",
+        "offset": 81129810,
+        "duration": 43149040
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "第三次，服务端确认了客户端收到了自己的序列号。",
+        "offset": 124278850,
+        "duration": 44591347
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "只握两次行不行？",
+        "offset": 168870198,
+        "duration": 17908654
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "服务端就无法确认自己的同步报文被收到。",
+        "offset": 186778853,
+        "duration": 37379809
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "初始序列号一般随机选，用来区分新旧连接。",
+        "offset": 224158662,
+        "duration": 43269232
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "注意一个常考细节：初始序列号 x 是给同步报文用的。",
+        "offset": 267427894,
+        "duration": 48677886
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "第一个数据字节的序号是 x 加一。",
+        "offset": 316105780,
+        "duration": 33293270
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "第三次握手其实可以带数据，只是多数实现不带。",
+        "offset": 349399051,
+        "duration": 45312501
+      }
+    ],
+    "cues": [
+      {
+        "text": "三次握手的本质，是双方各自确认两个方向都能通。",
+        "start": 0.1,
+        "end": 4.762
+      },
+      {
+        "text": "第一次，服务端确认了客户端能发。",
+        "start": 4.762,
+        "end": 8.113
+      },
+      {
+        "text": "第二次，客户端确认了服务端能收也能发。",
+        "start": 8.113,
+        "end": 12.428
+      },
+      {
+        "text": "第三次，服务端确认了客户端收到了自己的序列号。",
+        "start": 12.428,
+        "end": 16.887
+      },
+      {
+        "text": "只握两次行不行？服务端就无法确认自己的同步报文被收到。",
+        "start": 16.887,
+        "end": 22.416
+      },
+      {
+        "text": "初始序列号一般随机选，用来区分新旧连接。",
+        "start": 22.416,
+        "end": 26.743
+      },
+      {
+        "text": "注意一个常考细节：初始序列号 x 是给同步报文用的。",
+        "start": 26.743,
+        "end": 31.611
+      },
+      {
+        "text": "第一个数据字节的序号是 x 加一。",
+        "start": 31.611,
+        "end": 34.94
+      },
+      {
+        "text": "第三次握手其实可以带数据，只是多数实现不带。",
+        "start": 34.94,
+        "end": 39.528
+      }
+    ]
+  },
+  "s07": {
+    "duration": 40.584,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "两个方向的数据都停了，但客户端还多挂着一个状态：时间等待。",
+        "offset": 1000000,
+        "duration": 55149040
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "它要等两倍的最长报文段寿命，才真正关闭。",
+        "offset": 55649040,
+        "duration": 40144232
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "原因有两条。",
+        "offset": 95793272,
+        "duration": 17067308
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "第一，最后那个确认可能丢。",
+        "offset": 112860581,
+        "duration": 25000000
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "丢了，服务端会重发终止报文。",
+        "offset": 137860581,
+        "duration": 31730770
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "还在时间等待的一方，能再补一个确认回去。",
+        "offset": 169591352,
+        "duration": 36177885
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "第二，等这段时间过去，这条连接残留的旧报文全部过期。",
+        "offset": 205769238,
+        "duration": 55288463
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "不会串到后面新建的连接上。",
+        "offset": 261057701,
+        "duration": 24038462
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "那为什么握手三次、挥手四次？",
+        "offset": 285096164,
+        "duration": 30288462
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "因为服务端收到终止报文时，自己的数据可能还没发完。",
+        "offset": 315384626,
+        "duration": 48317309
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "确认可以先回，终止必须等数据发完再发。",
+        "offset": 363701936,
+        "duration": 41586539
+      }
+    ],
+    "cues": [
+      {
+        "text": "两个方向的数据都停了，但客户端还多挂着一个状态：时间等待。",
+        "start": 0.1,
+        "end": 5.615
+      },
+      {
+        "text": "它要等两倍的最长报文段寿命，才真正关闭。",
+        "start": 5.615,
+        "end": 9.579
+      },
+      {
+        "text": "原因有两条。第一，最后那个确认可能丢。",
+        "start": 9.579,
+        "end": 13.786
+      },
+      {
+        "text": "丢了，服务端会重发终止报文。",
+        "start": 13.786,
+        "end": 16.959
+      },
+      {
+        "text": "还在时间等待的一方，能再补一个确认回去。",
+        "start": 16.959,
+        "end": 20.577
+      },
+      {
+        "text": "第二，等这段时间过去，这条连接残留的旧报文全部过期。",
+        "start": 20.577,
+        "end": 26.106
+      },
+      {
+        "text": "不会串到后面新建的连接上。",
+        "start": 26.106,
+        "end": 28.51
+      },
+      {
+        "text": "那为什么握手三次、挥手四次？",
+        "start": 28.51,
+        "end": 31.538
+      },
+      {
+        "text": "因为服务端收到终止报文时，自己的数据可能还没发完。",
+        "start": 31.538,
+        "end": 36.37
+      },
+      {
+        "text": "确认可以先回，终止必须等数据发完再发。",
+        "start": 36.37,
+        "end": 40.584
+      }
+    ]
+  },
+  "s06": {
+    "duration": 39.576,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "断开连接要四次挥手。",
+        "offset": 1000000,
+        "duration": 25461539
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "第一次，客户端发终止标志，序列号 u，表示我没数据要发了。",
+        "offset": 25961539,
+        "duration": 58533655
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "客户端进入终止等待一。",
+        "offset": 84495195,
+        "duration": 26201924
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "第二次，服务端回确认，确认号 u 加一，自己进入关闭等待。",
+        "offset": 110697119,
+        "duration": 54206732
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "客户端收到后进入终止等待二，这时连接是半关闭的。",
+        "offset": 164903852,
+        "duration": 46394232
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "服务端把剩下的数据发完，再发自己的终止报文，序列号 w。",
+        "offset": 211298084,
+        "duration": 50961540
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "服务端进入最后确认，客户端收到后进入时间等待。",
+        "offset": 262259625,
+        "duration": 48918271
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "第四次，客户端回确认，确认号 w 加一。",
+        "offset": 311177896,
+        "duration": 42067309
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "服务端收到就关闭，客户端还要再等一会儿。",
+        "offset": 353245205,
+        "duration": 41947116
+      }
+    ],
+    "cues": [
+      {
+        "text": "断开连接要四次挥手。",
+        "start": 0.1,
+        "end": 2.646
+      },
+      {
+        "text": "第一次，客户端发终止标志，序列号 u，表示我没数据要发了。",
+        "start": 2.646,
+        "end": 8.45
+      },
+      {
+        "text": "客户端进入终止等待一。",
+        "start": 8.45,
+        "end": 11.07
+      },
+      {
+        "text": "第二次，服务端回确认，确认号 u 加一，自己进入关闭等待。",
+        "start": 11.07,
+        "end": 16.49
+      },
+      {
+        "text": "客户端收到后进入终止等待二，这时连接是半关闭的。",
+        "start": 16.49,
+        "end": 21.13
+      },
+      {
+        "text": "服务端把剩下的数据发完，再发自己的终止报文，序列号 w。",
+        "start": 21.13,
+        "end": 26.226
+      },
+      {
+        "text": "服务端进入最后确认，客户端收到后进入时间等待。",
+        "start": 26.226,
+        "end": 31.118
+      },
+      {
+        "text": "第四次，客户端回确认，确认号 w 加一。",
+        "start": 31.118,
+        "end": 35.325
+      },
+      {
+        "text": "服务端收到就关闭，客户端还要再等一会儿。",
+        "start": 35.325,
+        "end": 39.576
+      }
+    ]
+  },
+  "s10": {
+    "duration": 42.432,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "窗口有三个名字，别混：发送窗口、接收窗口、拥塞窗口。",
+        "offset": 1000000,
+        "duration": 60798079
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "发送窗口等于接收窗口和拥塞窗口里较小的那个。",
+        "offset": 61298079,
+        "duration": 45432693
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "接收窗口是接收方还空着的缓冲区，写在确认报文的窗口字段里。",
+        "offset": 106730773,
+        "duration": 57812502
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "拥塞窗口是发送方自己估的网络容量，由拥塞控制来调。",
+        "offset": 164543275,
+        "duration": 53245194
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "用接收窗口去限制发送方，这就是流量控制。",
+        "offset": 217788469,
+        "duration": 42548078
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "缓冲区满了，接收方通告零窗口，发送方就得停。",
+        "offset": 260336548,
+        "duration": 47596155
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "停住之后，发送方还会周期性发零窗口探测，问一句能收了吗。",
+        "offset": 307932703,
+        "duration": 59254809
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "流量控制管两端的快慢，拥塞控制管整条网络，两回事。",
+        "offset": 367187513,
+        "duration": 56610578
+      }
+    ],
+    "cues": [
+      {
+        "text": "窗口有三个名字，别混：发送窗口、接收窗口、拥塞窗口。",
+        "start": 0.1,
+        "end": 6.18
+      },
+      {
+        "text": "发送窗口等于接收窗口和拥塞窗口里较小的那个。",
+        "start": 6.18,
+        "end": 10.673
+      },
+      {
+        "text": "接收窗口是接收方还空着的缓冲区，写在确认报文的窗口字段里。",
+        "start": 10.673,
+        "end": 16.454
+      },
+      {
+        "text": "拥塞窗口是发送方自己估的网络容量，由拥塞控制来调。",
+        "start": 16.454,
+        "end": 21.779
+      },
+      {
+        "text": "用接收窗口去限制发送方，这就是流量控制。",
+        "start": 21.779,
+        "end": 26.034
+      },
+      {
+        "text": "缓冲区满了，接收方通告零窗口，发送方就得停。",
+        "start": 26.034,
+        "end": 30.793
+      },
+      {
+        "text": "停住之后，发送方还会周期性发零窗口探测，问一句能收了吗。",
+        "start": 30.793,
+        "end": 36.719
+      },
+      {
+        "text": "流量控制管两端的快慢，拥塞控制管整条网络，两回事。",
+        "start": 36.719,
+        "end": 42.432
+      }
+    ]
+  },
+  "s09": {
+    "duration": 42.384,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "这里有个容易绕晕的点：序列号只有三十二位，会回绕。",
+        "offset": 1000000,
+        "duration": 46375001
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "把字节流想成一条无限长的带子，每个字节有一个绝对下标。",
+        "offset": 46875001,
+        "duration": 48677886
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "绝对下标不回绕，序列号是它取模后的结果。",
+        "offset": 95552888,
+        "duration": 38822116
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "发送时，绝对下标加上偏移再取模，写进报文。",
+        "offset": 134375004,
+        "duration": 47235578
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "接收时反过来，光看序列号还原不出绝对下标。",
+        "offset": 181610583,
+        "duration": 47355770
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "要结合当前窗口的位置，挑离窗口最近的那一个。",
+        "offset": 228966354,
+        "duration": 40625001
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "为什么能这么挑？",
+        "offset": 269591356,
+        "duration": 16826923
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "因为窗口远小于整个编号空间。",
+        "offset": 286418279,
+        "duration": 29086539
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "所以一个序列号在窗口附近，只会有一个合理解释。",
+        "offset": 315504819,
+        "duration": 44471155
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "总结一句：绝对下标管顺序，序列号上网线，窗口消除歧义。",
+        "offset": 359975974,
+        "duration": 63221156
+      }
+    ],
+    "cues": [
+      {
+        "text": "这里有个容易绕晕的点：序列号只有三十二位，会回绕。",
+        "start": 0.1,
+        "end": 4.738
+      },
+      {
+        "text": "把字节流想成一条无限长的带子，每个字节有一个绝对下标。",
+        "start": 4.738,
+        "end": 9.555
+      },
+      {
+        "text": "绝对下标不回绕，序列号是它取模后的结果。",
+        "start": 9.555,
+        "end": 13.438
+      },
+      {
+        "text": "发送时，绝对下标加上偏移再取模，写进报文。",
+        "start": 13.438,
+        "end": 18.161
+      },
+      {
+        "text": "接收时反过来，光看序列号还原不出绝对下标。",
+        "start": 18.161,
+        "end": 22.897
+      },
+      {
+        "text": "要结合当前窗口的位置，挑离窗口最近的那一个。",
+        "start": 22.897,
+        "end": 26.959
+      },
+      {
+        "text": "为什么能这么挑？因为窗口远小于整个编号空间。",
+        "start": 26.959,
+        "end": 31.55
+      },
+      {
+        "text": "所以一个序列号在窗口附近，只会有一个合理解释。",
+        "start": 31.55,
+        "end": 35.998
+      },
+      {
+        "text": "总结一句：绝对下标管顺序，序列号上网线，窗口消除歧义。",
+        "start": 35.998,
+        "end": 42.384
+      }
+    ]
+  },
+  "s08": {
+    "duration": 36.072,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "数据怎么发？",
+        "offset": 1000000,
+        "duration": 13802885
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "TCP 不是发一个等一个确认。",
+        "offset": 14302885,
+        "duration": 24639423
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "它维护一个窗口，窗口里的字节可以连续发出去。",
+        "offset": 38942309,
+        "duration": 42187501
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "发送方的字节流可以分成四段。",
+        "offset": 81129810,
+        "duration": 29326924
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "已发送已确认、已发送未确认、可以发还没发、暂时不能发。",
+        "offset": 110456734,
+        "duration": 53125001
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "中间两段合起来，就是发送窗口。",
+        "offset": 163581736,
+        "duration": 32091347
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "接收方也一样，分已交付、已收到未交付、等待接收、不许接收。",
+        "offset": 195673084,
+        "duration": 57692309
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "收到确认之后，窗口左边界右移，右边腾出新的空间。",
+        "offset": 253365393,
+        "duration": 50240386
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "一句话：确认推着窗口往前走，数据就流水线式地发出去了。",
+        "offset": 303605780,
+        "duration": 56490386
+      }
+    ],
+    "cues": [
+      {
+        "text": "数据怎么发？TCP 不是发一个等一个确认。",
+        "start": 0.1,
+        "end": 3.894
+      },
+      {
+        "text": "它维护一个窗口，窗口里的字节可以连续发出去。",
+        "start": 3.894,
+        "end": 8.113
+      },
+      {
+        "text": "发送方的字节流可以分成四段。",
+        "start": 8.113,
+        "end": 11.046
+      },
+      {
+        "text": "已发送已确认、已发送未确认、可以发还没发、暂时不能发。",
+        "start": 11.046,
+        "end": 16.358
+      },
+      {
+        "text": "中间两段合起来，就是发送窗口。",
+        "start": 16.358,
+        "end": 19.567
+      },
+      {
+        "text": "接收方也一样，分已交付、已收到未交付、等待接收、不许接收。",
+        "start": 19.567,
+        "end": 25.337
+      },
+      {
+        "text": "收到确认之后，窗口左边界右移，右边腾出新的空间。",
+        "start": 25.337,
+        "end": 30.361
+      },
+      {
+        "text": "一句话：确认推着窗口往前走，数据就流水线式地发出去了。",
+        "start": 30.361,
+        "end": 36.072
+      }
+    ]
+  },
+  "s13": {
+    "duration": 40.776,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "校验和负责最后一道关：数据在路上被改坏了怎么办。",
+        "offset": 1000000,
+        "duration": 45052886
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "它覆盖首部和数据，另外还要加一个伪首部。",
+        "offset": 45552886,
+        "duration": 45192309
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "伪首部里有源地址、目的地址和协议号。",
+        "offset": 90745195,
+        "duration": 43269232
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "作用是确认这个报文没被投错地方。",
+        "offset": 134014427,
+        "duration": 34975962
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "校验不过，接收方直接丢弃，不确认，等发送方重传。",
+        "offset": 168990390,
+        "duration": 52283655
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "从重传策略看，TCP 介于回退 N 帧和选择重传之间。",
+        "offset": 221274046,
+        "duration": 53485578
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "它用累计确认，像回退 N。",
+        "offset": 274759625,
+        "duration": 26682693
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "又缓存乱序段、只重传丢的那一段，像选择重传。",
+        "offset": 301442318,
+        "duration": 47355770
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "而且整个发送窗口，只给最左边那个未确认的段维护一个定时器。",
+        "offset": 348798089,
+        "duration": 58413463
+      }
+    ],
+    "cues": [
+      {
+        "text": "校验和负责最后一道关：数据在路上被改坏了怎么办。",
+        "start": 0.1,
+        "end": 4.605
+      },
+      {
+        "text": "它覆盖首部和数据，另外还要加一个伪首部。",
+        "start": 4.605,
+        "end": 9.075
+      },
+      {
+        "text": "伪首部里有源地址、目的地址和协议号。",
+        "start": 9.075,
+        "end": 13.401
+      },
+      {
+        "text": "作用是确认这个报文没被投错地方。",
+        "start": 13.401,
+        "end": 16.899
+      },
+      {
+        "text": "校验不过，接收方直接丢弃，不确认，等发送方重传。",
+        "start": 16.899,
+        "end": 22.127
+      },
+      {
+        "text": "从重传策略看，TCP 介于回退 N 帧和选择重传之间。",
+        "start": 22.127,
+        "end": 27.476
+      },
+      {
+        "text": "它用累计确认，像回退 N。",
+        "start": 27.476,
+        "end": 30.144
+      },
+      {
+        "text": "又缓存乱序段、只重传丢的那一段，像选择重传。",
+        "start": 30.144,
+        "end": 34.88
+      },
+      {
+        "text": "而且整个发送窗口，只给最左边那个未确认的段维护一个定时器。",
+        "start": 34.88,
+        "end": 40.776
+      }
+    ]
+  },
+  "s12": {
+    "duration": 33.144,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "超时时间怎么定？",
+        "offset": 1000000,
+        "duration": 17288462
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "定长了太慢，定短了会误重传。",
+        "offset": 17788462,
+        "duration": 29687501
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "TCP 采样每次往返时间，算加权平均，叫平滑往返时间。",
+        "offset": 47475963,
+        "duration": 52884617
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "再算往返时间的波动幅度，叫偏差。",
+        "offset": 100360580,
+        "duration": 36538462
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "超时时间大约等于平滑往返时间，加上四倍偏差。",
+        "offset": 136899043,
+        "duration": 45312501
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "网络抖得厉害，就把超时放宽，少误判几次。",
+        "offset": 182211545,
+        "duration": 43269232
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "还有个细节：重传过的报文，往返时间样本不能用。",
+        "offset": 225480777,
+        "duration": 47355770
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "这就是卡恩算法，避免把重传的确认错算成原报文的往返。",
+        "offset": 272836548,
+        "duration": 58173079
+      }
+    ],
+    "cues": [
+      {
+        "text": "超时时间怎么定？定长了太慢，定短了会误重传。",
+        "start": 0.1,
+        "end": 4.748
+      },
+      {
+        "text": "TCP 采样每次往返时间，算加权平均，叫平滑往返时间。",
+        "start": 4.748,
+        "end": 10.036
+      },
+      {
+        "text": "再算往返时间的波动幅度，叫偏差。",
+        "start": 10.036,
+        "end": 13.69
+      },
+      {
+        "text": "超时时间大约等于平滑往返时间，加上四倍偏差。",
+        "start": 13.69,
+        "end": 18.221
+      },
+      {
+        "text": "网络抖得厉害，就把超时放宽，少误判几次。",
+        "start": 18.221,
+        "end": 22.548
+      },
+      {
+        "text": "还有个细节：重传过的报文，往返时间样本不能用。",
+        "start": 22.548,
+        "end": 27.284
+      },
+      {
+        "text": "这就是卡恩算法，避免把重传的确认错算成原报文的往返。",
+        "start": 27.284,
+        "end": 33.144
+      }
+    ]
+  },
+  "s11": {
+    "duration": 37.176,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "可靠传输的第一块砖，是序列号和确认号。",
+        "offset": 1000000,
+        "duration": 38081732
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "确认号是累计确认，表示它之前的字节，一个不少全收到了。",
+        "offset": 38581732,
+        "duration": 50961540
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "三种情形。",
+        "offset": 89543272,
+        "duration": 15024039
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "第一种，数据段丢了。",
+        "offset": 104567311,
+        "duration": 24278847
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "接收方收不到，确认号就不动，发送方等到超时，重传。",
+        "offset": 128846158,
+        "duration": 53245194
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "第二种，乱序。",
+        "offset": 182091352,
+        "duration": 18269231
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "后面的到了，前面的缺口还在。",
+        "offset": 200360584,
+        "duration": 32091347
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "接收方反复发同一个确认号，发送方连收三个，立刻重传。",
+        "offset": 232451931,
+        "duration": 55048078
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "第三种，按序到达，确认号往前走，继续发。",
+        "offset": 287500010,
+        "duration": 43389424
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "记住一句话：确认号不动，就说明有洞。",
+        "offset": 330889435,
+        "duration": 40384616
+      }
+    ],
+    "cues": [
+      {
+        "text": "可靠传输的第一块砖，是序列号和确认号。",
+        "start": 0.1,
+        "end": 3.908
+      },
+      {
+        "text": "确认号是累计确认，表示它之前的字节，一个不少全收到了。",
+        "start": 3.908,
+        "end": 8.954
+      },
+      {
+        "text": "三种情形。第一种，数据段丢了。",
+        "start": 8.954,
+        "end": 12.885
+      },
+      {
+        "text": "接收方收不到，确认号就不动，发送方等到超时，重传。",
+        "start": 12.885,
+        "end": 18.209
+      },
+      {
+        "text": "第二种，乱序。后面的到了，前面的缺口还在。",
+        "start": 18.209,
+        "end": 23.245
+      },
+      {
+        "text": "接收方反复发同一个确认号，发送方连收三个，立刻重传。",
+        "start": 23.245,
+        "end": 28.75
+      },
+      {
+        "text": "第三种，按序到达，确认号往前走，继续发。",
+        "start": 28.75,
+        "end": 33.089
+      },
+      {
+        "text": "记住一句话：确认号不动，就说明有洞。",
+        "start": 33.089,
+        "end": 37.176
+      }
+    ]
+  },
+  "s15": {
+    "duration": 27.096,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "过了阈值，增长方式从指数换成线性。",
+        "offset": 1000000,
+        "duration": 39403847
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "每收到一个确认，窗口增加窗口大小分之一个报文段。",
+        "offset": 39903847,
+        "duration": 46754809
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "一个往返时间里大约收到窗口那么多确认。",
+        "offset": 86658657,
+        "duration": 34975962
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "加起来正好加一个报文段。",
+        "offset": 121634619,
+        "duration": 23317308
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "也就是每个往返时间加一，慢慢往上探。",
+        "offset": 144951928,
+        "duration": 40625001
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "为什么不敢快？",
+        "offset": 185576929,
+        "duration": 15504808
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "因为已经接近链路容量了。",
+        "offset": 201081738,
+        "duration": 22355770
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "再指数涨下去，很快就撞墙，然后大批丢包。",
+        "offset": 223437508,
+        "duration": 46875001
+      }
+    ],
+    "cues": [
+      {
+        "text": "过了阈值，增长方式从指数换成线性。",
+        "start": 0.1,
+        "end": 4.04
+      },
+      {
+        "text": "每收到一个确认，窗口增加窗口大小分之一个报文段。",
+        "start": 4.04,
+        "end": 8.666
+      },
+      {
+        "text": "一个往返时间里大约收到窗口那么多确认。",
+        "start": 8.666,
+        "end": 12.163
+      },
+      {
+        "text": "加起来正好加一个报文段。",
+        "start": 12.163,
+        "end": 14.495
+      },
+      {
+        "text": "也就是每个往返时间加一，慢慢往上探。",
+        "start": 14.495,
+        "end": 18.558
+      },
+      {
+        "text": "为什么不敢快？因为已经接近链路容量了。",
+        "start": 18.558,
+        "end": 22.344
+      },
+      {
+        "text": "再指数涨下去，很快就撞墙，然后大批丢包。",
+        "start": 22.344,
+        "end": 27.096
+      }
+    ]
+  },
+  "s14": {
+    "duration": 36.84,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "再说拥塞控制。",
+        "offset": 1000000,
+        "duration": 18490385
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "它管的不是一条连接，是整条链路。",
+        "offset": 18990385,
+        "duration": 33894232
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "目标不是自己快，是大家加起来不过载。",
+        "offset": 52884617,
+        "duration": 34014424
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "发送方维护一个拥塞窗口，实际发多少还要跟接收窗口取小。",
+        "offset": 86899041,
+        "duration": 56971155
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "连接刚开始，窗口从很小起步，这叫慢开始。",
+        "offset": 143870197,
+        "duration": 43870193
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "每收到一个确认，窗口加一个最大报文段。",
+        "offset": 187740391,
+        "duration": 35456732
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "一个往返时间里确认数翻倍，所以窗口是指数增长。",
+        "offset": 223197123,
+        "duration": 52163463
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "注意，是每收到一个确认加一，不是收到一个确认就翻倍。",
+        "offset": 275360587,
+        "duration": 46033655
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "涨到慢开始阈值，就换挡，进入拥塞避免。",
+        "offset": 321394242,
+        "duration": 46394232
+      }
+    ],
+    "cues": [
+      {
+        "text": "再说拥塞控制。它管的不是一条连接，是整条链路。",
+        "start": 0.1,
+        "end": 5.288
+      },
+      {
+        "text": "目标不是自己快，是大家加起来不过载。",
+        "start": 5.288,
+        "end": 8.69
+      },
+      {
+        "text": "发送方维护一个拥塞窗口，实际发多少还要跟接收窗口取小。",
+        "start": 8.69,
+        "end": 14.387
+      },
+      {
+        "text": "连接刚开始，窗口从很小起步，这叫慢开始。",
+        "start": 14.387,
+        "end": 18.774
+      },
+      {
+        "text": "每收到一个确认，窗口加一个最大报文段。",
+        "start": 18.774,
+        "end": 22.32
+      },
+      {
+        "text": "一个往返时间里确认数翻倍，所以窗口是指数增长。",
+        "start": 22.32,
+        "end": 27.536
+      },
+      {
+        "text": "注意，是每收到一个确认加一，不是收到一个确认就翻倍。",
+        "start": 27.536,
+        "end": 32.139
+      },
+      {
+        "text": "涨到慢开始阈值，就换挡，进入拥塞避免。",
+        "start": 32.139,
+        "end": 36.84
+      }
+    ]
+  },
+  "s16": {
+    "duration": 27.216,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "什么时候认为网络拥塞了？",
+        "offset": 1000000,
+        "duration": 27144231
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "最硬的信号是超时。",
+        "offset": 27644231,
+        "duration": 21153846
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "超时说明连确认都回不来，路可能已经堵死。",
+        "offset": 48798078,
+        "duration": 41346155
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "处理办法：阈值砍一半。",
+        "offset": 90144234,
+        "duration": 25000000
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "拥塞窗口直接退回一个最大报文段。",
+        "offset": 115144234,
+        "duration": 32692308
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "然后重新走慢开始，从头慢慢试。",
+        "offset": 147836543,
+        "duration": 33774039
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "这一刀砍得很狠，因为超时是最严重的信号。",
+        "offset": 181610583,
+        "duration": 38822116
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "画在图上，就是锯齿状上升，超时处垂直落下。",
+        "offset": 220432700,
+        "duration": 51201924
+      }
+    ],
+    "cues": [
+      {
+        "text": "什么时候认为网络拥塞了？最硬的信号是超时。",
+        "start": 0.1,
+        "end": 4.88
+      },
+      {
+        "text": "超时说明连确认都回不来，路可能已经堵死。",
+        "start": 4.88,
+        "end": 9.014
+      },
+      {
+        "text": "处理办法：阈值砍一半。",
+        "start": 9.014,
+        "end": 11.514
+      },
+      {
+        "text": "拥塞窗口直接退回一个最大报文段。",
+        "start": 11.514,
+        "end": 14.784
+      },
+      {
+        "text": "然后重新走慢开始，从头慢慢试。",
+        "start": 14.784,
+        "end": 18.161
+      },
+      {
+        "text": "这一刀砍得很狠，因为超时是最严重的信号。",
+        "start": 18.161,
+        "end": 22.043
+      },
+      {
+        "text": "画在图上，就是锯齿状上升，超时处垂直落下。",
+        "start": 22.043,
+        "end": 27.216
+      }
+    ]
+  },
+  "s17": {
+    "duration": 27.696,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "等定时器太慢，快速重传是另一条路。",
+        "offset": 1000000,
+        "duration": 36158655
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "接收方发现中间缺了一段，会一直重复发同一个确认号。",
+        "offset": 36658655,
+        "duration": 48076924
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "发送方连收三个重复的确认，就明白那一段丢了。",
+        "offset": 84735580,
+        "duration": 45432693
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "不用等定时器，立刻重传那一段。",
+        "offset": 130168274,
+        "duration": 30048078
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "这里的三个是冗余的，算上第一个正常的，一共收到四个相同的确认号。",
+        "offset": 160216352,
+        "duration": 56610578
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "快速重传只管重传动作，窗口怎么变，要看有没有快速恢复。",
+        "offset": 216826931,
+        "duration": 59495194
+      }
+    ],
+    "cues": [
+      {
+        "text": "等定时器太慢，快速重传是另一条路。",
+        "start": 0.1,
+        "end": 3.716
+      },
+      {
+        "text": "接收方发现中间缺了一段，会一直重复发同一个确认号。",
+        "start": 3.716,
+        "end": 8.474
+      },
+      {
+        "text": "发送方连收三个重复的确认，就明白那一段丢了。",
+        "start": 8.474,
+        "end": 13.017
+      },
+      {
+        "text": "不用等定时器，立刻重传那一段。",
+        "start": 13.017,
+        "end": 16.022
+      },
+      {
+        "text": "这里的三个是冗余的，算上第一个正常的，一共收到四个相同的确认号。",
+        "start": 16.022,
+        "end": 21.683
+      },
+      {
+        "text": "快速重传只管重传动作，窗口怎么变，要看有没有快速恢复。",
+        "start": 21.683,
+        "end": 27.696
+      }
+    ]
+  },
+  "s18": {
+    "duration": 33.576,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "快速恢复的思路是：别退回起点，太亏。",
+        "offset": 1000000,
+        "duration": 37841347
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "三个重复确认说明网络还在送数据，只是丢了一个包。",
+        "offset": 38341347,
+        "duration": 46634617
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "所以处理轻一点：阈值同样砍一半。",
+        "offset": 84975964,
+        "duration": 36418270
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "但窗口不回到起点，教材口径是直接等于砍半后的阈值。",
+        "offset": 121394235,
+        "duration": 49399040
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "然后进入拥塞避免，线性往上爬。",
+        "offset": 170793275,
+        "duration": 34134616
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "Reno 的实现多一步：窗口等于阈值加三。",
+        "offset": 204927892,
+        "duration": 35697116
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "加三是因为有三个报文段已经离开网络，被对方收下了。",
+        "offset": 240625008,
+        "duration": 45673078
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "考试按教材写就行，题目点名 Reno 才用加三。",
+        "offset": 286298087,
+        "duration": 49038463
+      }
+    ],
+    "cues": [
+      {
+        "text": "快速恢复的思路是：别退回起点，太亏。",
+        "start": 0.1,
+        "end": 3.884
+      },
+      {
+        "text": "三个重复确认说明网络还在送数据，只是丢了一个包。",
+        "start": 3.884,
+        "end": 8.498
+      },
+      {
+        "text": "所以处理轻一点：阈值同样砍一半。",
+        "start": 8.498,
+        "end": 12.139
+      },
+      {
+        "text": "但窗口不回到起点，教材口径是直接等于砍半后的阈值。",
+        "start": 12.139,
+        "end": 17.079
+      },
+      {
+        "text": "然后进入拥塞避免，线性往上爬。",
+        "start": 17.079,
+        "end": 20.493
+      },
+      {
+        "text": "Reno 的实现多一步：窗口等于阈值加三。",
+        "start": 20.493,
+        "end": 24.063
+      },
+      {
+        "text": "加三是因为有三个报文段已经离开网络，被对方收下了。",
+        "start": 24.063,
+        "end": 28.63
+      },
+      {
+        "text": "考试按教材写就行，题目点名 Reno 才用加三。",
+        "start": 28.63,
+        "end": 33.576
+      }
+    ]
+  },
+  "s19": {
+    "duration": 37.272,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "最后把整张图串一遍。",
+        "offset": 1000000,
+        "duration": 22336539
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "建立连接三次握手，断开四次挥手，收尾多等两倍报文寿命。",
+        "offset": 22836539,
+        "duration": 55288463
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "传数据靠滑动窗口，窗口取接收窗口和拥塞窗口里小的那个。",
+        "offset": 78125002,
+        "duration": 57692309
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "丢了靠序列号和确认号发现，要么超时重传，要么快速重传。",
+        "offset": 135817312,
+        "duration": 55889425
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "拥塞控制四件套：慢开始指数涨，拥塞避免线性涨。",
+        "offset": 191706737,
+        "duration": 51322117
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "超时就砍半归零，三个重复确认就快速重传加快速恢复。",
+        "offset": 243028855,
+        "duration": 57932694
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "把这些连成一条线，TCP 的题基本都有抓手。",
+        "offset": 300961549,
+        "duration": 40024039
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "有帮助的话点个赞，我们下期见。",
+        "offset": 340985589,
+        "duration": 31129808
+      }
+    ],
+    "cues": [
+      {
+        "text": "最后把整张图串一遍。",
+        "start": 0.1,
+        "end": 2.334
+      },
+      {
+        "text": "建立连接三次握手，断开四次挥手，收尾多等两倍报文寿命。",
+        "start": 2.334,
+        "end": 7.813
+      },
+      {
+        "text": "传数据靠滑动窗口，窗口取接收窗口和拥塞窗口里小的那个。",
+        "start": 7.813,
+        "end": 13.582
+      },
+      {
+        "text": "丢了靠序列号和确认号发现，要么超时重传，要么快速重传。",
+        "start": 13.582,
+        "end": 19.171
+      },
+      {
+        "text": "拥塞控制四件套：慢开始指数涨，拥塞避免线性涨。",
+        "start": 19.171,
+        "end": 24.303
+      },
+      {
+        "text": "超时就砍半归零，三个重复确认就快速重传加快速恢复。",
+        "start": 24.303,
+        "end": 30.096
+      },
+      {
+        "text": "把这些连成一条线，TCP 的题基本都有抓手。",
+        "start": 30.096,
+        "end": 34.099
+      },
+      {
+        "text": "有帮助的话点个赞，我们下期见。",
+        "start": 34.099,
+        "end": 37.272
+      }
+    ]
+  }
+}
