@@ -65,7 +65,7 @@ Portrait = 1080×1920, Landscape = 1920×1080. All at 30fps by default (override
 
 Two patterns are used across the project:
 
-1. **TTS-driven (most common):** Audio from `public/<project>/`. Scene transitions via `TransitionSeries` + `linearTiming`. Subtitles via `SubtitleBar` from shared components. Each scene is a sub-component with hardcoded frame ranges (see `PerformanceMetrics`, `GPTEvolution`).
+1. **TTS-driven (most common):** Audio from `public/<project>/`. Scene transitions via `TransitionSeries` + `linearTiming`. Subtitles via `SubtitleBar` from shared components. Each scene is a sub-component with hardcoded frame ranges (see `PerformanceMetrics`, `TCPBasics`).
 
 2. **Simple/animation-driven:** No audio/subtitles, just animated React elements. `ErisPet` plays a GIF; `HelloWorld` uses `Sequence` + `spring`.
 

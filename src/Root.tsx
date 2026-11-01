@@ -3,24 +3,16 @@ import { Composition } from "remotion";
 import React from "react";
 import { HelloWorld, myCompSchema } from "./HelloWorld";
 import { Logo, myCompSchema2 } from "./HelloWorld/components/Logo";
-import { GPTEvolution } from "./GPTEvolution";
 import { StorageKnowledge } from "./StorageKnowledge";
 import { ComputerStructure } from "./ComputerStructure";
 import { ComputerStructureCover } from "./ComputerStructure/Cover";
-import { Liangzhu } from "./Liangzhu";
-import { AITextGen } from "./AITextGen";
-import { OpenClaw } from "./OpenClaw";
 import { PerformanceMetrics } from "./PerformanceMetrics";
 import { ErisPet } from "./ErisPet";
-import { ClaudeModels } from "./ClaudeModels";
-import { FuckUCode } from "./FuckUCode";
 import { MemoryOrganization } from "./MemoryOrganization";
 import { ExternalStorage } from "./ExternalStorage";
-import { GitHubPRWorkflow } from "./GitHubPRWorkflow";
 import { FrontendIsms, TOTAL_FRAMES as FrontendIsmsFrames } from "./FrontendIsms";
 import DualVectorFoil, { TOTAL_FRAMES as DualVectorFoilFrames } from "./DualVectorFoil";
 import { CachePrinciple, TOTAL_FRAMES as CachePrincipleFrames } from "./CachePrinciple";
-import { DeepSeekMoment, TOTAL_FRAMES as DeepSeekMomentFrames } from "./DeepSeekMoment";
 import { GameCatEra, GameCatEraFrames } from "./GameCatEra";
 import {
   ItomoriNight,
@@ -112,14 +104,6 @@ const compositions: CompConfig[] = [
 
   // ---- 竖版科普视频 ----
   {
-    id: "GPTEvolution",
-    component: GPTEvolution,
-    durationInFrames: 630,
-    orientation: "portrait",
-    category: "video",
-    description: "GPT进化史科普视频",
-  },
-  {
     id: "StorageKnowledge",
     component: StorageKnowledge,
     durationInFrames: 2895,
@@ -142,14 +126,6 @@ const compositions: CompConfig[] = [
     orientation: "portrait",
     category: "video",
     description: "外部存储科普 — 机械硬盘CHS寻址、RAID、SSD对比",
-  },
-  {
-    id: "GitHubPRWorkflow",
-    component: GitHubPRWorkflow,
-    durationInFrames: 4198,
-    orientation: "portrait",
-    category: "video",
-    description: "GitHub PR 工作流科普 — Fork到Merge的正确姿势 vs 常见错误",
   },
   {
     id: "ComputerStructure",
@@ -178,14 +154,6 @@ const compositions: CompConfig[] = [
     description: "《计算机系统层次结构》视频封面 1920×1080（still 出图）",
   },
   {
-    id: "Liangzhu",
-    component: Liangzhu,
-    durationInFrames: 2899,
-    orientation: "portrait",
-    category: "video",
-    description: "良渚探秘",
-  },
-  {
     id: "PerformanceMetrics",
     component: PerformanceMetrics,
     durationInFrames: 3936,
@@ -200,22 +168,6 @@ const compositions: CompConfig[] = [
     orientation: "portrait",
     category: "video",
     description: "桌宠口腔可爱动画",
-  },
-  {
-    id: "OpenClaw",
-    component: OpenClaw,
-    durationInFrames: 3281,
-    orientation: "portrait",
-    category: "video",
-    description: "开源AI智能体框架介绍",
-  },
-  {
-    id: "FuckUCode",
-    component: FuckUCode,
-    durationInFrames: 4631,
-    orientation: "portrait",
-    category: "video",
-    description: "fuck-u-code 代码质量分析工具介绍",
   },
   {
     id: "FrontendIsms",
@@ -270,14 +222,6 @@ const compositions: CompConfig[] = [
     category: "video",
     description: "二向箔 · 太阳系二维化 — 三体系列名场面，3D可视化重现",
   },
-  {
-    id: "AITextGen",
-    component: AITextGen,
-    durationInFrames: 10625,
-    orientation: "landscape",
-    category: "video",
-    description: "AI生成文本教学演示",
-  },
 
   // ---- 横版视频：三维微缩景观 ----
   {
@@ -290,15 +234,6 @@ const compositions: CompConfig[] = [
       "系守湖四季 · 微缩模型 — 三渲二日式动画夜景空镜，环形山峦环抱一片正圆陨石湖，御神体山丘、鸟居岩腔与湖畔小镇，春樱夏萤秋叶冬雪各环绕一周",
   },
 
-  // ---- 横版视频：Vox 风格纪录片 ----
-  {
-    id: "DeepSeekMoment",
-    component: DeepSeekMoment,
-    durationInFrames: DeepSeekMomentFrames,
-    orientation: "landscape",
-    category: "video",
-    description: "DeepSeek 时刻 — Vox 风格纪录片：一家量化基金孵化的小团队，如何用一个开源模型让万亿算力叙事重算账",
-  },
 
   // ---- 横版纪录片：正序 ----
   {
@@ -310,15 +245,6 @@ const compositions: CompConfig[] = [
     description: "像素到光子 — 一只橘猫的游戏图像史，正序：从 1970–1974 的黑白方块讲到 2023–2026 的神经渲染，含配音与底噪",
   },
 
-  // ---- 横版播客 ----
-  {
-    id: "ClaudeModels",
-    component: ClaudeModels,
-    durationInFrames: 6100, // ~203s @30fps (8 scenes + quick transitions)
-    orientation: "landscape",
-    category: "video",
-    description: "Claude Fable 5 深度介绍 — 神话降临",
-  },
 
   // ---- 示例/模板 ----
   {
