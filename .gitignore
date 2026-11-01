@@ -32,3 +32,6 @@ public/**/*.mp3
 # Agent working memory / session notes (local state, like .claude/)
 .workbuddy/
 
+# 本地文档与升级审计记录，只留在本机，不随代码同步
+docs/
+
