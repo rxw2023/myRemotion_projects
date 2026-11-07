@@ -30,6 +30,10 @@ import {
   TOTAL_FRAMES as ArithConvertFrames,
 } from "./ArithConvert";
 import { TCPBasics, TOTAL_FRAMES as TCPBasicsFrames } from "./TCPBasics";
+import {
+  VirtualMemory,
+  TOTAL_FRAMES as VirtualMemoryFrames,
+} from "./VirtualMemory";
 
 // ==================== 配置类型 ====================
 
@@ -214,6 +218,15 @@ const compositions: CompConfig[] = [
   },
 
   // ---- 横版视频 ----
+  {
+    id: "VirtualMemory",
+    component: VirtualMemory,
+    durationInFrames: VirtualMemoryFrames,
+    orientation: "landscape",
+    category: "video",
+    description:
+      "虚拟存储器（横版 1920×1080）— 物理/虚拟内存、页式划分、地址结构、MMU 分工、单级与多级页表、PTBR、TLB、缺页中断、请求页式、页面置换、完整访存流程与访存次数、综合例题",
+  },
   {
     id: "DualVectorFoil",
     component: DualVectorFoil,
