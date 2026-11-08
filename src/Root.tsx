@@ -6,7 +6,7 @@ import { Logo, myCompSchema2 } from "./HelloWorld/components/Logo";
 import { StorageKnowledge } from "./StorageKnowledge";
 import { ComputerStructure } from "./ComputerStructure";
 import { ComputerStructureCover } from "./ComputerStructure/Cover";
-import { PerformanceMetrics } from "./PerformanceMetrics";
+import { PerformanceMetrics, TOTAL_FRAMES as PerformanceMetricsFrames } from "./PerformanceMetrics";
 import { ErisPet } from "./ErisPet";
 import { MemoryOrganization } from "./MemoryOrganization";
 import { ExternalStorage } from "./ExternalStorage";
@@ -160,7 +160,7 @@ const compositions: CompConfig[] = [
   {
     id: "PerformanceMetrics",
     component: PerformanceMetrics,
-    durationInFrames: 3936,
+    durationInFrames: PerformanceMetricsFrames,
     orientation: "portrait",
     category: "video",
     description: "计算机性能指标科普",

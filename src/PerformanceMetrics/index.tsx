@@ -23,6 +23,7 @@ const C = {
   accent3: "#D97706",
   accent4: "#DC2626",
   accent5: "#7C3AED",
+  accentTime: "#0D9488",
   text: "#1F2937",
   textDim: "#9CA3AF",
   textMid: "#6B7280",
@@ -35,7 +36,7 @@ const C = {
 const DURATIONS = {
   title: 322,     // 9.74s → 292f + 30f
   scene1: 751,    // 24.05s → 721f + 30f
-  scene2: 788,    // 25.30s → 758f + 30f
+  scene2: 1243,   // 40.46s → 1213f + 30f（补入 CPU 执行时间推导段）
   scene3: 647,    // 20.59s → 617f + 30f
   scene4: 896,    // 28.90s → 866f + 30f
   scene5: 566,    // 17.88s → 536f + 30f
@@ -46,15 +47,17 @@ const DURATIONS = {
 // 实际 Remotion 计算：scene1 + transition + scene2 = scene1 + scene2 - transitionFrames
 const TRANSITION_FADE = 6;
 const TRANSITION_SLIDE = 8;
+// TRANSITION_FADE = 6;
 // TOTAL = D.title + D.s1 + D.s2 + D.s3 + D.s4 + D.s5 - (5个转场帧数之和)
-// = 322+751+788+647+896+566 - (6+8+6+8+6) = 3970 - 34 = 3936
-export const TOTAL_FRAMES = 3936;
+// = 322+751+1243+647+896+566 - (6+8+6+8+6) = 4425 - 34 = 4391
+export const TOTAL_FRAMES = 4391;
 
 // ==================== 字幕文本（与 TTS 完全一致） ====================
 const SUBTITLE_TEXTS: Record<string, string> = {
   title: "本节课我们来学习计算机性能指标。性能是衡量计算机好坏的核心标准，理解这些指标，才能真正读懂芯片参数。",
   scene1: "首先是时钟周期，它是中央处理器执行指令的最基本时间单位。计算机内部的晶体振荡器利用压电效应产生规律的脉冲信号，连续两个脉冲之间的间隔就是时钟周期。主频与时钟周期互为倒数——主频越高，时钟周期越短，处理器速度越快。三吉赫的处理器每秒完成三十亿个时钟周期。",
   scene2: "了解主频之后，我们再看四个执行效率指标。每周期时钟数，也叫西皮爱，表示执行一条指令平均需要多少个时钟周期；它的倒数叫每周期指令数。每秒指令数等于主频除以每周期时钟数，反映处理器每秒能跑多少条指令。当这个数值达到百万级别，就用每秒百万指令数来衡量，也就是常说的米普斯。",
+  scene2b: "把这些量串起来，就得到真正关心的执行时间：指令条数乘以每周期时钟数，是总时钟周期数；再乘以时钟周期，就是执行时间。换成主频也一样，指令条数乘每周期时钟数，再除以主频。",
   scene3: "对于图形处理器和人工智能芯片，我们用每秒浮点运算次数来衡量性能，简称弗洛普斯。从百万级到十亿级、万亿级，每升一级就是一千倍的提升。现代超算已经突破千万亿次每秒量级，而最新的人工智能加速器正在向百亿亿次每秒冲击。",
   scene4: "字长是处理器一次操作能处理的二进制位数，常见的有三十二位和六十四位。数据通路带宽决定处理器与内存之间每个时钟周期能传多少位数据。主存容量则和地址寄存器的位数直接相关，地址空间越大，需要的地址寄存器位数越多。以一百二十八千字节、按字寻址为例，可寻址范围是六万五千五百三十六，对应的地址寄存器位数就是十六位。",
   scene5: "最后来记住几个核心公式。主频等于一除以时钟周期；每周期指令数等于一除以每周期时钟数；每秒指令数等于主频除以每周期时钟数。这三个公式贯穿整章，考研选择题和解答题都会用到，一定要熟记。",
@@ -81,6 +84,20 @@ const FadeIn: React.FC<{
       {children}
     </div>
   );
+};
+
+// 仅淡入、不位移（用于已在文档流中占位、需要保持布局稳定的元素）
+const FadeOnly: React.FC<{
+  delay: number;
+  children: React.ReactNode;
+  style?: React.CSSProperties;
+}> = ({ delay, children, style }) => {
+  const frame = useCurrentFrame();
+  const opacity = interpolate(frame, [delay, delay + 12], [0, 1], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+  });
+  return <div style={{ opacity, ...style }}>{children}</div>;
 };
 
 const SlideUp: React.FC<{
@@ -122,18 +139,27 @@ const WhiteCard: React.FC<{
   </div>
 );
 
+type SubtitleSegment = { text: string; from: number; to: number };
+
 const SubtitleBar: React.FC<{
-  sceneKey: string;
+  sceneKey?: string;
   endFrame?: number;
-}> = ({ sceneKey, endFrame = 9999 }) => {
+  /** 传入后按时间段分段显示，避免长旁白一次铺满 */
+  segments?: SubtitleSegment[];
+}> = ({ sceneKey, endFrame = 9999, segments }) => {
   const frame = useCurrentFrame();
-  const text = SUBTITLE_TEXTS[sceneKey] || "";
-  const opacity = interpolate(
-    frame,
-    [0, 10, endFrame - 5, endFrame],
-    [0, 1, 1, 0],
-    { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
-  );
+  const segs: SubtitleSegment[] =
+    segments ?? [{ text: (sceneKey && SUBTITLE_TEXTS[sceneKey]) || "", from: 0, to: endFrame }];
+
+  const active = segs.find((s) => frame >= s.from - 10 && frame <= s.to + 10);
+  const opacity = active
+    ? interpolate(frame, [active.from, active.from + 10, active.to - 5, active.to], [0, 1, 1, 0], {
+        extrapolateLeft: "clamp",
+        extrapolateRight: "clamp",
+      })
+    : 0;
+  const text = active?.text || "";
+
   return (
     <div
       style={{
@@ -322,6 +348,7 @@ const TitleScene: React.FC = () => {
             {[
               "时钟周期 & 主频",
               "CPI / IPC / IPS / MIPS",
+              "CPU 执行时间公式",
               "FLOPS 浮点运算性能",
               "字长 & 主存容量 & MAR",
               "核心公式汇总",
@@ -487,7 +514,11 @@ const ClockScene: React.FC = () => {
 
 // ==================== 场景3：CPI / IPC / IPS / MIPS ====================
 const ExecutionScene: React.FC = () => {
-  
+  const frame = useCurrentFrame();
+
+  // 每张卡片被旁白点到的帧（依据 TTS 停顿实测），用于同步高亮
+  const FOCUS_IN = [117, 231, 297, 486];
+  const FOCUS_OUT = [231, 297, 486, 700];
 
   const metrics = [
     {
@@ -533,11 +564,17 @@ const ExecutionScene: React.FC = () => {
         justifyContent: "center",
         alignItems: "center",
         padding: "60px 48px",
-        gap: 24,
+        gap: 20,
       }}
     >
       <Audio src={staticFile("performance-metrics/perf_scene2.mp3")} />
-      <SubtitleBar sceneKey="scene2" endFrame={DURATIONS.scene2 - 5} />
+      {/* 旁白分两段：四个指标（0–25s）→ 执行时间推导（25s 起），分段显示避免字幕一次铺满 */}
+      <SubtitleBar
+        segments={[
+          { text: SUBTITLE_TEXTS.scene2, from: 0, to: 750 },
+          { text: SUBTITLE_TEXTS.scene2b, from: 755, to: DURATIONS.scene2 - 5 },
+        ]}
+      />
 
       <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 6, background: `linear-gradient(90deg, ${C.accent}, ${C.accent5})` }} />
 
@@ -551,10 +588,22 @@ const ExecutionScene: React.FC = () => {
       </SlideUp>
 
       {/* 四格指标卡片 */}
-      <div style={{ width: "100%", display: "flex", flexDirection: "column", gap: 16 }}>
-        {metrics.map((m, i) => (
+      <div style={{ width: "100%", display: "flex", flexDirection: "column", gap: 12 }}>
+        {metrics.map((m, i) => {
+          const focus = interpolate(
+            frame,
+            [FOCUS_IN[i] - 8, FOCUS_IN[i] + 4, FOCUS_OUT[i] - 6, FOCUS_OUT[i]],
+            [0, 1, 1, 0],
+            { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
+          );
+          return (
           <FadeIn key={i} delay={20 + i * 18}>
-            <WhiteCard style={{ padding: "20px 28px" }}>
+            <div style={{
+              transform: `scale(${1 + 0.014 * focus})`,
+              boxShadow: `0 0 0 ${(1.5 * focus).toFixed(2)}px ${m.color}33`,
+              borderRadius: 16,
+            }}>
+            <WhiteCard style={{ padding: "16px 26px" }}>
               <div style={{ display: "flex", alignItems: "flex-start", gap: 16 }}>
                 {/* 缩写标签 */}
                 <div style={{
@@ -586,9 +635,63 @@ const ExecutionScene: React.FC = () => {
                 </div>
               </div>
             </WhiteCard>
+            </div>
           </FadeIn>
-        ))}
+          );
+        })}
       </div>
+
+      {/* CPU 执行时间：顺着上面四个指标逐步推导（25s 起，与旁白同步）
+          整块常驻文档流占位，避免卡片在推导过程中被顶动；内容按旁白分步淡入 */}
+      <FadeOnly delay={846} style={{ width: "100%" }}>
+        <div style={{
+          background: "linear-gradient(135deg, #F0FDFA, #EEF2FF)",
+          border: `2px solid ${C.accentTime}`,
+          borderRadius: 14,
+          padding: "16px 26px",
+          boxShadow: C.shadow,
+          display: "flex",
+          flexDirection: "column",
+          gap: 8,
+        }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+            <Badge
+              text="CPU 执行时间"
+              color={C.accentTime}
+              bg="#F0FDFA"
+              style={{ fontSize: 20, padding: "3px 12px" }}
+            />
+            <span style={{ fontSize: 18, color: C.textMid }}>CPU Execution Time</span>
+          </div>
+          <FadeOnly delay={852}>
+            <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+              <span style={{ fontSize: 19, fontWeight: 800, color: C.accentTime }}>①</span>
+              <span style={{ fontSize: 21, color: C.text, fontFamily: "monospace" }}>
+                指令条数 × CPI = 总时钟周期数
+              </span>
+            </div>
+          </FadeOnly>
+          <FadeOnly delay={966}>
+            <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+              <span style={{ fontSize: 19, fontWeight: 800, color: C.accentTime }}>②</span>
+              <span style={{ fontSize: 25, fontWeight: 800, color: C.text, fontFamily: "monospace" }}>
+                总时钟周期数 × 时钟周期 = 执行时间
+              </span>
+            </div>
+          </FadeOnly>
+          <FadeOnly delay={1052}>
+            <div style={{
+              fontSize: 21,
+              fontWeight: 700,
+              color: C.accentTime,
+              fontFamily: "monospace",
+              paddingLeft: 2,
+            }}>
+              = 指令条数 ÷ IPS = 指令条数 × CPI ÷ 主频
+            </div>
+          </FadeOnly>
+        </div>
+      </FadeOnly>
     </AbsoluteFill>
   );
 };
@@ -861,6 +964,12 @@ const FormulaScene: React.FC = () => {
       formula: "1 MIPS = 10⁶ IPS",
       desc: "百万级指令换算",
       color: C.accent4,
+    },
+    {
+      label: "执行时间",
+      formula: "执行时间 = 指令条数 × CPI ÷ 主频",
+      desc: "指令条数 × CPI × 时钟周期",
+      color: C.accentTime,
     },
     {
       label: "MAR",
