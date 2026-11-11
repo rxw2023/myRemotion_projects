@@ -1,7 +1,7 @@
 """从头像实测频道主色（而不是凭印象挑色）。
 
 用法:
-    python scripts/extract_palette.py public/channel/avatar.jpg
+    python scripts/extract_palette.py public/shared/avatar.jpg
 
 输出: 量化后的主色列表（hex + 占比）、以及按角色猜测的色板建议。
 灵感来源: RuiC-motion-reel 的规矩 —— 品牌色必须实测（官网样式表 / 官方图），
@@ -13,7 +13,7 @@ from collections import Counter
 
 from PIL import Image
 
-path = sys.argv[1] if len(sys.argv) > 1 else "public/channel/avatar.jpg"
+path = sys.argv[1] if len(sys.argv) > 1 else "public/shared/avatar.jpg"
 img = Image.open(path).convert("RGB")
 w, h = img.size
 print(f"source: {path}  {w}x{h}")

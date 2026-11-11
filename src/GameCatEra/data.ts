@@ -2,13 +2,13 @@
  * 《像素到光子》—— 一只橘猫的游戏图像史
  *
  * 素材：用户提供的 12 个年代的「游戏技术与画风年代表」，以及对应生成的 12 张橘猫图
- *       （public/gameCatEra/cat-00.jpg … cat-11.jpg，图上烧了年代字样，配对已逐张目视核对）。
+ *       （public/game-cat-era/cat-00.jpg … cat-11.jpg，图上烧了年代字样，配对已逐张目视核对）。
  *
  * 叙事：正序（chronological）。影片从 1970–1974 一路讲到 2023–2026。
  *       ERAS 始终按年代升序书写（便于与素材表逐行对照）；
  *       TIMELINE 才是实际出场顺序，把下面的 REVERSE 改成 true 即可切回倒叙。
  *
- * 音频：每个年代一段配音（edge-tts 生成，见 scripts/gamecat-audio.py）＋一条常驻底噪。
+ * 音频：每个年代一段配音（edge-tts 生成，见 scripts/game-cat-era/generate_audio.py）＋一条常驻底噪。
  */
 
 export type Era = {
@@ -66,7 +66,7 @@ export const ERAS: Era[] = [
     visual: ["单色", "点阵", "CRT", "极简"],
     cat: "黑白块状像素猫，几乎只是符号",
     narration: "一切从黑白方块开始。这只猫，几乎只是一个符号。",
-    image: "gameCatEra/cat-00.jpg",
+    image: "game-cat-era/cat-00.jpg",
     accent: "#E8E8E8",
     accent2: "#9AA0A6",
     bgA: "#040404",
@@ -90,7 +90,7 @@ export const ERAS: Era[] = [
     visual: ["彩色块", "低分辨率", "街机"],
     cat: "简单彩色像素猫，粗轮廓",
     narration: "彩色块出现了。轮廓很粗，但你已经能认出它。",
-    image: "gameCatEra/cat-01.jpg",
+    image: "game-cat-era/cat-01.jpg",
     accent: "#7ED321",
     accent2: "#2E6BFF",
     bgA: "#050A18",
@@ -114,7 +114,7 @@ export const ERAS: Era[] = [
     visual: ["8位早期", "纯色", "像素"],
     cat: "8位像素猫，大眼、红围巾",
     narration: "纯色、大眼、红围巾——一只猫的符号，在这里定型。",
-    image: "gameCatEra/cat-02.jpg",
+    image: "game-cat-era/cat-02.jpg",
     accent: "#FFD400",
     accent2: "#FF4FA3",
     bgA: "#0A0620",
@@ -138,7 +138,7 @@ export const ERAS: Era[] = [
     visual: ["8位成熟", "横版", "有限色板"],
     cat: "经典像素猫，平台跳跃感",
     narration: "有限色板，横版卷轴。像素开始有了表情。",
-    image: "gameCatEra/cat-03.jpg",
+    image: "game-cat-era/cat-03.jpg",
     accent: "#E0453A",
     accent2: "#FFB300",
     bgA: "#04122E",
@@ -162,7 +162,7 @@ export const ERAS: Era[] = [
     visual: ["16位像素", "视差", "伪3D"],
     cat: "精细像素猫，RPG / 动作风",
     narration: "16 位色板、视差滚动、伪 3D：像素的黄金年代。",
-    image: "gameCatEra/cat-04.jpg",
+    image: "game-cat-era/cat-04.jpg",
     accent: "#4FC3F7",
     accent2: "#B24BF3",
     bgA: "#060B18",
@@ -186,7 +186,7 @@ export const ERAS: Era[] = [
     visual: ["早期3D", "低多边形", "雾", "模糊贴图"],
     cat: "低多边形猫，方块感明显",
     narration: "第一次进入 3D。低多边形，浓雾，模糊贴图。",
-    image: "gameCatEra/cat-05.jpg",
+    image: "game-cat-era/cat-05.jpg",
     accent: "#8B8BFF",
     accent2: "#3DDC97",
     bgA: "#07070F",
@@ -210,7 +210,7 @@ export const ERAS: Era[] = [
     visual: ["3D成熟", "写实化", "开放世界雏形"],
     cat: "3D猫，贴图更清晰，动态光影",
     narration: "多边形终于够用了。贴图清晰，光影开始会动。",
-    image: "gameCatEra/cat-06.jpg",
+    image: "game-cat-era/cat-06.jpg",
     accent: "#00C2A8",
     accent2: "#FF8A3D",
     bgA: "#050F16",
@@ -234,7 +234,7 @@ export const ERAS: Era[] = [
     visual: ["HD", "光晕", "在线", "电影化"],
     cat: "高清3D猫，毛发初现",
     narration: "高清降临，光晕铺开。毛发第一次长在猫身上。",
-    image: "gameCatEra/cat-07.jpg",
+    image: "game-cat-era/cat-07.jpg",
     accent: "#8CD800",
     accent2: "#00C2FF",
     bgA: "#05120A",
@@ -258,7 +258,7 @@ export const ERAS: Era[] = [
     visual: ["电影化", "写实", "开放世界", "独立复兴"],
     cat: "写实猫，第三视角，HUD简洁",
     narration: "电影化运镜与开放世界，猫成了世界的居民。",
-    image: "gameCatEra/cat-08.jpg",
+    image: "game-cat-era/cat-08.jpg",
     accent: "#4A7DFF",
     accent2: "#FF6B6B",
     bgA: "#050A1C",
@@ -282,7 +282,7 @@ export const ERAS: Era[] = [
     visual: ["PBR", "4K", "光追早期", "风格化"],
     cat: "高细节猫，光影自然",
     narration: "PBR 材质与 4K：「真实」成了默认设置。",
-    image: "gameCatEra/cat-09.jpg",
+    image: "game-cat-era/cat-09.jpg",
     accent: "#B388FF",
     accent2: "#FFB86B",
     bgA: "#0B0620",
@@ -306,7 +306,7 @@ export const ERAS: Era[] = [
     visual: ["光追", "SSD", "体积雾", "全局光照"],
     cat: "超写实猫，毛发根根分明",
     narration: "光追、SSD、体积雾。光影不再需要预烘焙。",
-    image: "gameCatEra/cat-10.jpg",
+    image: "game-cat-era/cat-10.jpg",
     accent: "#00E5FF",
     accent2: "#FF7A45",
     bgA: "#03080F",
@@ -330,7 +330,7 @@ export const ERAS: Era[] = [
     visual: ["神经渲染", "全息UI", "云游戏"],
     cat: "电影级猫，AR / VR 沉浸感",
     narration: "路径追踪与神经渲染，把每一根毛都算成了成本。",
-    image: "gameCatEra/cat-11.jpg",
+    image: "game-cat-era/cat-11.jpg",
     accent: "#FF3DF2",
     accent2: "#22D3EE",
     bgA: "#0A0418",
@@ -448,15 +448,15 @@ export const timecode = (frames: number): string => {
 
 // ==================== 音频：配音 / 底噪 ====================
 
-/** 年代配音文件（与 cat-NN.jpg 同号，由 scripts/gamecat-audio.py 生成） */
-export const voSrc = (era: Era): string => `gameCatEra/vo/cat-${pad2(era.index)}.mp3`;
+/** 年代配音文件（与 cat-NN.jpg 同号，由 scripts/game-cat-era/generate_audio.py 生成） */
+export const voSrc = (era: Era): string => `game-cat-era/vo/cat-${pad2(era.index)}.mp3`;
 
-export const COVER_VO_SRC = "gameCatEra/vo/cover.mp3";
-export const OUTRO_VO_SRC = "gameCatEra/vo/outro.mp3";
+export const COVER_VO_SRC = "game-cat-era/vo/cover.mp3";
+export const OUTRO_VO_SRC = "game-cat-era/vo/outro.mp3";
 
 /** 两条常驻底噪循环素材 */
-export const NOISE_CRT_SRC = "gameCatEra/sfx/static-crt.wav";
-export const NOISE_AIR_SRC = "gameCatEra/sfx/air.wav";
+export const NOISE_CRT_SRC = "game-cat-era/sfx/static-crt.wav";
+export const NOISE_AIR_SRC = "game-cat-era/sfx/air.wav";
 
 /**
  * 当前帧的底噪强度 0–1。

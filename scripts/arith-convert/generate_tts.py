@@ -1,7 +1,7 @@
 """
 Generate TTS audio for the "运算电路与类型转换" video using edge-tts.
 
-Same pipeline as scripts/repr-basics/generate_tts.py: one mp3 per scene, but
+Same pipeline as scripts/integer-float-repr/generate_tts.py: one mp3 per scene, but
 WordBoundary/SentenceBoundary events are streamed so per-cue subtitle timings
 land exactly on the narration.
 

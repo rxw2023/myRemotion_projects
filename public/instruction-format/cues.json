@@ -1,0 +1,1530 @@
+{
+  "s02": {
+    "duration": 37.392,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "按操作码分类，指令有七大类。",
+        "offset": 1000000,
+        "duration": 30985850
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "第一类，数据传输：MOV 搬运，PUSH 入栈，POP 出栈。",
+        "offset": 31485850,
+        "duration": 52476417
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "第二类，算术逻辑：加减乘除，与或非，还有 CMP 比较。",
+        "offset": 83962268,
+        "duration": 57900946
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "第三类，控制转移：JMP 无条件跳转，Jxx 条件跳转，CALL 调用，RET 返回。",
+        "offset": 141863215,
+        "duration": 83962268
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "第四类，输入输出：IN 读端口，OUT 写端口。",
+        "offset": 225825483,
+        "duration": 45636794
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "剩下三类比较边缘：字符串操作、陷阱指令、协处理器指令。",
+        "offset": 271462278,
+        "duration": 59905663
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "记住前三类就够用了，考场上的题九成在这里。",
+        "offset": 331367942,
+        "duration": 42099058
+      }
+    ],
+    "cues": [
+      {
+        "text": "按操作码分类，指令有七大类。",
+        "start": 0.1,
+        "end": 3.199
+      },
+      {
+        "text": "第一类，数据传输：MOV 搬运，PUSH 入栈，POP 出栈。",
+        "start": 3.199,
+        "end": 8.396
+      },
+      {
+        "text": "第二类，算术逻辑：加减乘除，与或非，还有 CMP 比较。",
+        "start": 8.396,
+        "end": 14.186
+      },
+      {
+        "text": "第三类，控制转移：JMP 无条件跳转，Jxx 条件跳转，CALL 调用，RET 返回。",
+        "start": 14.186,
+        "end": 22.583
+      },
+      {
+        "text": "第四类，输入输出：IN 读端口，OUT 写端口。",
+        "start": 22.583,
+        "end": 27.146
+      },
+      {
+        "text": "剩下三类比较边缘：字符串操作、陷阱指令、协处理器指令。",
+        "start": 27.146,
+        "end": 33.137
+      },
+      {
+        "text": "记住前三类就够用了，考场上的题九成在这里。",
+        "start": 33.137,
+        "end": 37.392
+      }
+    ]
+  },
+  "s01": {
+    "duration": 24.096,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "操作码决定这是一条什么指令。",
+        "offset": 1000000,
+        "duration": 28863209
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "加、减、搬运、跳转，全靠它区分。",
+        "offset": 29363209,
+        "duration": 39504719
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "地址这个词要小心，它是一个统称。",
+        "offset": 68867928,
+        "duration": 31603775
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "它可以是内存地址，代号 addr。",
+        "offset": 100471703,
+        "duration": 31603775
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "可以是寄存器编号，代号 reg。",
+        "offset": 132075478,
+        "duration": 29009435
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "也可以直接是一个立即数，代号 imm。",
+        "offset": 161084914,
+        "duration": 36910379
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "同一个位置，放的东西不同，取数的方式就不同。",
+        "offset": 197995293,
+        "duration": 42334907
+      }
+    ],
+    "cues": [
+      {
+        "text": "操作码决定这是一条什么指令。",
+        "start": 0.1,
+        "end": 2.986
+      },
+      {
+        "text": "加、减、搬运、跳转，全靠它区分。",
+        "start": 2.986,
+        "end": 6.887
+      },
+      {
+        "text": "地址这个词要小心，它是一个统称。",
+        "start": 6.887,
+        "end": 10.047
+      },
+      {
+        "text": "它可以是内存地址，代号 addr。",
+        "start": 10.047,
+        "end": 13.208
+      },
+      {
+        "text": "可以是寄存器编号，代号 reg。",
+        "start": 13.208,
+        "end": 16.108
+      },
+      {
+        "text": "也可以直接是一个立即数，代号 imm。",
+        "start": 16.108,
+        "end": 19.8
+      },
+      {
+        "text": "同一个位置，放的东西不同，取数的方式就不同。",
+        "start": 19.8,
+        "end": 24.096
+      }
+    ]
+  },
+  "s00": {
+    "duration": 17.472,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "一条指令，说到底就一句话：对什么数据，做什么操作。",
+        "offset": 1000000,
+        "duration": 49617927
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "所以它被切成两部分：操作码，和地址。",
+        "offset": 50117927,
+        "duration": 41037738
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "操作码决定做什么，地址决定对谁做。",
+        "offset": 91155665,
+        "duration": 36792454
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "这一期，先把格式拆开，再把八种寻址方式走一遍。",
+        "offset": 127948120,
+        "duration": 46226417
+      }
+    ],
+    "cues": [
+      {
+        "text": "一条指令，说到底就一句话：对什么数据，做什么操作。",
+        "start": 0.1,
+        "end": 5.062
+      },
+      {
+        "text": "所以它被切成两部分：操作码，和地址。",
+        "start": 5.062,
+        "end": 9.116
+      },
+      {
+        "text": "操作码决定做什么，地址决定对谁做。",
+        "start": 9.116,
+        "end": 12.795
+      },
+      {
+        "text": "这一期，先把格式拆开，再把八种寻址方式走一遍。",
+        "start": 12.795,
+        "end": 17.472
+      }
+    ]
+  },
+  "s03": {
+    "duration": 31.608,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "换个维度分，看一条指令里写了几个地址。",
+        "offset": 1000000,
+        "duration": 38768870
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "零地址指令，只写操作码。",
+        "offset": 39268870,
+        "duration": 27830190
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "操作数藏在栈顶，靠 PUSH 和 POP 供给。",
+        "offset": 67099060,
+        "duration": 37617926
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "一地址指令，写一个地址，它既是源也是目的。",
+        "offset": 104716986,
+        "duration": 42924530
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "二地址指令最常见：A1 和 A2 运算，结果写回 A1。",
+        "offset": 147641517,
+        "duration": 52004719
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "三地址指令多一个目的地址，结果写进 A3，不破坏源操作数。",
+        "offset": 199646237,
+        "duration": 57665097
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "还有四地址指令，多存一个下条指令的地址，现代机器已经不用了。",
+        "offset": 257311334,
+        "duration": 58136795
+      }
+    ],
+    "cues": [
+      {
+        "text": "换个维度分，看一条指令里写了几个地址。",
+        "start": 0.1,
+        "end": 3.977
+      },
+      {
+        "text": "零地址指令，只写操作码。操作数藏在栈顶，靠 PUSH 和 POP 供给。",
+        "start": 3.977,
+        "end": 10.472
+      },
+      {
+        "text": "一地址指令，写一个地址，它既是源也是目的。",
+        "start": 10.472,
+        "end": 14.764
+      },
+      {
+        "text": "二地址指令最常见：A1 和 A2 运算，结果写回 A1。",
+        "start": 14.764,
+        "end": 19.965
+      },
+      {
+        "text": "三地址指令多一个目的地址，结果写进 A3，不破坏源操作数。",
+        "start": 19.965,
+        "end": 25.731
+      },
+      {
+        "text": "还有四地址指令，多存一个下条指令的地址，现代机器已经不用了。",
+        "start": 25.731,
+        "end": 31.608
+      }
+    ]
+  },
+  "s04": {
+    "duration": 28.608,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "指令的长度怎么定，是两条完全不同的路。",
+        "offset": 1000000,
+        "duration": 37471700
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "定长：所有指令一样长，代表是 ARM 这类 RISC。",
+        "offset": 37971700,
+        "duration": 42570757
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "解码简单，取指一步到位，代价是有时在浪费空间。",
+        "offset": 80542457,
+        "duration": 51533021
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "变长：不同指令不同长度，代表是 x86，属于 CISC。",
+        "offset": 132075478,
+        "duration": 59905663
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "编码紧凑，能塞下复杂操作，代价是指令边界不好找。",
+        "offset": 191981142,
+        "duration": 54363210
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "这两种设计，各自引出一个必考的变形问题。",
+        "offset": 246344352,
+        "duration": 39150945
+      }
+    ],
+    "cues": [
+      {
+        "text": "指令的长度怎么定，是两条完全不同的路。",
+        "start": 0.1,
+        "end": 3.847
+      },
+      {
+        "text": "定长：所有指令一样长，代表是 ARM 这类 RISC。",
+        "start": 3.847,
+        "end": 8.054
+      },
+      {
+        "text": "解码简单，取指一步到位，代价是有时在浪费空间。",
+        "start": 8.054,
+        "end": 13.208
+      },
+      {
+        "text": "变长：不同指令不同长度，代表是 x86，属于 CISC。",
+        "start": 13.208,
+        "end": 19.198
+      },
+      {
+        "text": "编码紧凑，能塞下复杂操作，代价是指令边界不好找。",
+        "start": 19.198,
+        "end": 24.634
+      },
+      {
+        "text": "这两种设计，各自引出一个必考的变形问题。",
+        "start": 24.634,
+        "end": 28.608
+      }
+    ]
+  },
+  "s05": {
+    "duration": 41.208,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "第一个问题：定长指令里，各条指令要的地址字段数量不一样，怎么统一？",
+        "offset": 1000000,
+        "duration": 67306607
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "办法是无效字段填充。",
+        "offset": 67806607,
+        "duration": 24764152
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "缺的部分用填充值占位，不参与执行。",
+        "offset": 92570759,
+        "duration": 36674530
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "长度就齐了，硬件解码逻辑也不必为每条指令单独设计。",
+        "offset": 129245289,
+        "duration": 51768870
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "第二个问题：变长指令里，CPU 怎么知道一条指令到哪里结束？",
+        "offset": 181014160,
+        "duration": 56721701
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "常用办法是指令前缀：在开头放一个字段，说明这条指令有多长。",
+        "offset": 237735861,
+        "duration": 60966984
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "也可以在操作码的高位嵌标志位，先读前缀，再决定读几位。",
+        "offset": 298702846,
+        "duration": 55424531
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "代价是解码变复杂，换来的是编码灵活、指令集好扩展。",
+        "offset": 354127377,
+        "duration": 57429248
+      }
+    ],
+    "cues": [
+      {
+        "text": "第一个问题：定长指令里，各条指令要的地址字段数量不一样，怎么统一？",
+        "start": 0.1,
+        "end": 6.831
+      },
+      {
+        "text": "办法是无效字段填充。缺的部分用填充值占位，不参与执行。",
+        "start": 6.831,
+        "end": 12.925
+      },
+      {
+        "text": "长度就齐了，硬件解码逻辑也不必为每条指令单独设计。",
+        "start": 12.925,
+        "end": 18.101
+      },
+      {
+        "text": "第二个问题：变长指令里，CPU 怎么知道一条指令到哪里结束？",
+        "start": 18.101,
+        "end": 23.774
+      },
+      {
+        "text": "常用办法是指令前缀：在开头放一个字段，说明这条指令有多长。",
+        "start": 23.774,
+        "end": 29.87
+      },
+      {
+        "text": "也可以在操作码的高位嵌标志位，先读前缀，再决定读几位。",
+        "start": 29.87,
+        "end": 35.413
+      },
+      {
+        "text": "代价是解码变复杂，换来的是编码灵活、指令集好扩展。",
+        "start": 35.413,
+        "end": 41.208
+      }
+    ]
+  },
+  "s08": {
+    "duration": 32.352,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "把这个过程抽成算法，只有一句话。",
+        "offset": 1000000,
+        "duration": 31811322
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "每往下扩一层，可用编码数等于：上一层剩下的前缀数，乘以二的扩展位数次方。",
+        "offset": 32311322,
+        "duration": 72641513
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "再减掉这一层实际用掉的条数，剩下的继续往下传。",
+        "offset": 104952835,
+        "duration": 46108493
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "所以判断一道题能不能做出来，就看每一步的剩余量会不会变成负数。",
+        "offset": 151061328,
+        "duration": 62146229
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "常见问法有两种：给条数，求某类最多几条；或者反过来，问你设计得对不对。",
+        "offset": 213207558,
+        "duration": 71226418
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "只要守住前缀编码这一条，答案就是唯一的。",
+        "offset": 284433977,
+        "duration": 38443398
+      }
+    ],
+    "cues": [
+      {
+        "text": "把这个过程抽成算法，只有一句话。",
+        "start": 0.1,
+        "end": 3.281
+      },
+      {
+        "text": "每往下扩一层，可用编码数等于：上一层剩下的前缀数，乘以二的扩展位数次方。",
+        "start": 3.281,
+        "end": 10.495
+      },
+      {
+        "text": "再减掉这一层实际用掉的条数，剩下的继续往下传。",
+        "start": 10.495,
+        "end": 15.106
+      },
+      {
+        "text": "所以判断一道题能不能做出来，就看每一步的剩余量会不会变成负数。",
+        "start": 15.106,
+        "end": 21.321
+      },
+      {
+        "text": "常见问法有两种：给条数，求某类最多几条；或者反过来，问你设计得对不对。",
+        "start": 21.321,
+        "end": 28.443
+      },
+      {
+        "text": "只要守住前缀编码这一条，答案就是唯一的。",
+        "start": 28.443,
+        "end": 32.352
+      }
+    ]
+  },
+  "s06": {
+    "duration": 36.336,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "定长指令里，还有一种思路更常考：操作码扩展编码。",
+        "offset": 1000000,
+        "duration": 49735851
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "它让操作码本身有层次：先读一小段，如果是扩展前缀，就继续往下读。",
+        "offset": 50235851,
+        "duration": 65212267
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "于是指令系统变成：可变长的操作码，配定长的指令字。",
+        "offset": 115448119,
+        "duration": 51650946
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "这里有一条硬规则，叫前缀编码。",
+        "offset": 167099065,
+        "duration": 31014152
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "任何一个短操作码，都不能是长操作码的前缀。",
+        "offset": 198113218,
+        "duration": 41037738
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "比如四位操作码里已经用了 0000，六位操作码就不能再以 0000 开头。",
+        "offset": 239150956,
+        "duration": 70400947
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "否则解码器读到 0000，根本不知道该停，还是该继续。",
+        "offset": 309551903,
+        "duration": 53301889
+      }
+    ],
+    "cues": [
+      {
+        "text": "定长指令里，还有一种思路更常考：操作码扩展编码。",
+        "start": 0.1,
+        "end": 5.074
+      },
+      {
+        "text": "它让操作码本身有层次：先读一小段，如果是扩展前缀，就继续往下读。",
+        "start": 5.074,
+        "end": 11.545
+      },
+      {
+        "text": "于是指令系统变成：可变长的操作码，配定长的指令字。",
+        "start": 11.545,
+        "end": 16.71
+      },
+      {
+        "text": "这里有一条硬规则，叫前缀编码。",
+        "start": 16.71,
+        "end": 19.811
+      },
+      {
+        "text": "任何一个短操作码，都不能是长操作码的前缀。",
+        "start": 19.811,
+        "end": 23.915
+      },
+      {
+        "text": "比如四位操作码里已经用了 0000，六位操作码就不能再以 0000 开头。",
+        "start": 23.915,
+        "end": 30.955
+      },
+      {
+        "text": "否则解码器读到 0000，根本不知道该停，还是该继续。",
+        "start": 30.955,
+        "end": 36.336
+      }
+    ]
+  },
+  "s07": {
+    "duration": 72.0,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "来看真题。",
+        "offset": 1000000,
+        "duration": 14594340
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "指令长十六位，操作码四位，地址码四位。",
+        "offset": 15094340,
+        "duration": 41509436
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "要求做出：三地址十五条，二地址十二条，一地址六十三条，零地址十六条。",
+        "offset": 56603776,
+        "duration": 70990569
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "先看三地址。",
+        "offset": 127594346,
+        "duration": 16981132
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "四位操作码有十六个编码，用掉十五个，从 0000 到 1110。",
+        "offset": 144575479,
+        "duration": 64622644
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "只剩 1111 这一个前缀，拿它去扩。",
+        "offset": 209198124,
+        "duration": 38207549
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "三地址后面跟三个地址，二地址只用两个，所以二地址的操作码是八位。",
+        "offset": 247405673,
+        "duration": 65801890
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "1111 后面还有四位，共十六个编码，用掉十二个：从 1111 0000 到 1111 1011。",
+        "offset": 313207564,
+        "duration": 94929250
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "剩下四个前缀：1100、1101、1110、1111，全都挂在 1111 之后。",
+        "offset": 408136814,
+        "duration": 93042457
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "再往下扩四位，一地址的操作码变成十二位。",
+        "offset": 501179272,
+        "duration": 41981134
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "四个前缀，每个配十六种，一共六十四个编码。",
+        "offset": 543160406,
+        "duration": 42334907
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "用掉六十三个，只剩最后一个：全一。",
+        "offset": 585495314,
+        "duration": 37028303
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "它再扩四位，正好给零地址留出十六个编码。",
+        "offset": 622523618,
+        "duration": 41863209
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "整棵树走完，一层层把编码空间切小，这就是扩展操作码。",
+        "offset": 664386828,
+        "duration": 55306606
+      }
+    ],
+    "cues": [
+      {
+        "text": "来看真题。指令长十六位，操作码四位，地址码四位。",
+        "start": 0.1,
+        "end": 5.66
+      },
+      {
+        "text": "要求做出：三地址十五条，二地址十二条，一地址六十三条，零地址十六条。",
+        "start": 5.66,
+        "end": 12.759
+      },
+      {
+        "text": "先看三地址。四位操作码有十六个编码，用掉十五个，从 0000 到 1110。",
+        "start": 12.759,
+        "end": 20.92
+      },
+      {
+        "text": "只剩 1111 这一个前缀，拿它去扩。",
+        "start": 20.92,
+        "end": 24.741
+      },
+      {
+        "text": "三地址后面跟三个地址，二地址只用两个，所以二地址的操作码是八位。",
+        "start": 24.741,
+        "end": 31.321
+      },
+      {
+        "text": "1111 后面还有四位，共十六个编码，用掉十二个：从 1111 0000 到 1111 1011。",
+        "start": 31.321,
+        "end": 40.814
+      },
+      {
+        "text": "剩下四个前缀：1100、1101、1110、1111，全都挂在 1111 之后。",
+        "start": 40.814,
+        "end": 50.118
+      },
+      {
+        "text": "再往下扩四位，一地址的操作码变成十二位。",
+        "start": 50.118,
+        "end": 54.316
+      },
+      {
+        "text": "四个前缀，每个配十六种，一共六十四个编码。",
+        "start": 54.316,
+        "end": 58.55
+      },
+      {
+        "text": "用掉六十三个，只剩最后一个：全一。",
+        "start": 58.55,
+        "end": 62.252
+      },
+      {
+        "text": "它再扩四位，正好给零地址留出十六个编码。",
+        "start": 62.252,
+        "end": 66.439
+      },
+      {
+        "text": "整棵树走完，一层层把编码空间切小，这就是扩展操作码。",
+        "start": 66.439,
+        "end": 72.0
+      }
+    ]
+  },
+  "s09": {
+    "duration": 15.216,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "这套思想不只属于 CPU。",
+        "offset": 1000000,
+        "duration": 27448114
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "网络里的变长子网划分，是把 IP 地址空间按前缀一层层切开。",
+        "offset": 27948114,
+        "duration": 57900946
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "每往下一层扩一位，地址空间就减半。",
+        "offset": 85849061,
+        "duration": 34669813
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "两个问题，长成了同一棵二叉树。",
+        "offset": 120518874,
+        "duration": 31014152
+      }
+    ],
+    "cues": [
+      {
+        "text": "这套思想不只属于 CPU。",
+        "start": 0.1,
+        "end": 2.845
+      },
+      {
+        "text": "网络里的变长子网划分，是把 IP 地址空间按前缀一层层切开。",
+        "start": 2.845,
+        "end": 8.585
+      },
+      {
+        "text": "每往下一层扩一位，地址空间就减半。",
+        "start": 8.585,
+        "end": 12.052
+      },
+      {
+        "text": "两个问题，长成了同一棵二叉树。",
+        "start": 12.052,
+        "end": 15.216
+      }
+    ]
+  },
+  "s11": {
+    "duration": 16.368,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "第一种，立即寻址。",
+        "offset": 1000000,
+        "duration": 21316038
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "操作数直接写在指令里。",
+        "offset": 21816038,
+        "duration": 26768869
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "取操作数不用访存，速度最快。",
+        "offset": 48584908,
+        "duration": 32900945
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "适合加载常量、和固定值比较。",
+        "offset": 81485853,
+        "duration": 32429247
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "缺点也很明显：它是常数，不能改，也不能当左值。",
+        "offset": 113915100,
+        "duration": 49292455
+      }
+    ],
+    "cues": [
+      {
+        "text": "第一种，立即寻址。操作数直接写在指令里。",
+        "start": 0.1,
+        "end": 4.858
+      },
+      {
+        "text": "取操作数不用访存，速度最快。",
+        "start": 4.858,
+        "end": 8.149
+      },
+      {
+        "text": "适合加载常量、和固定值比较。",
+        "start": 8.149,
+        "end": 11.392
+      },
+      {
+        "text": "缺点也很明显：它是常数，不能改，也不能当左值。",
+        "start": 11.392,
+        "end": 16.368
+      }
+    ]
+  },
+  "s10": {
+    "duration": 32.208,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "格式讲完，进入第二幕：寻址方式。",
+        "offset": 1000000,
+        "duration": 35466983
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "寻址方式回答一个问题：操作数到底在哪里？",
+        "offset": 35966983,
+        "duration": 42334907
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "先纠正一个常见误解。",
+        "offset": 78301891,
+        "duration": 22759435
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "寻址方式针对的是每一个操作数，不是整条指令。",
+        "offset": 101061326,
+        "duration": 47051889
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "MOV AX, 1234H 这一条，其实是两种寻址拼起来的。",
+        "offset": 148113215,
+        "duration": 54952833
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "AX 是寄存器寻址，1234H 是立即寻址。",
+        "offset": 203066048,
+        "duration": 49646229
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "考试里说这条指令采用立即寻址，指的是源操作数，按这个习惯理解就行。",
+        "offset": 252712277,
+        "duration": 68750003
+      }
+    ],
+    "cues": [
+      {
+        "text": "格式讲完，进入第二幕：寻址方式。",
+        "start": 0.1,
+        "end": 3.647
+      },
+      {
+        "text": "寻址方式回答一个问题：操作数到底在哪里？",
+        "start": 3.647,
+        "end": 7.83
+      },
+      {
+        "text": "先纠正一个常见误解。",
+        "start": 7.83,
+        "end": 10.106
+      },
+      {
+        "text": "寻址方式针对的是每一个操作数，不是整条指令。",
+        "start": 10.106,
+        "end": 14.811
+      },
+      {
+        "text": "MOV AX, 1234H 这一条，其实是两种寻址拼起来的。",
+        "start": 14.811,
+        "end": 20.307
+      },
+      {
+        "text": "AX 是寄存器寻址，1234H 是立即寻址。",
+        "start": 20.307,
+        "end": 25.271
+      },
+      {
+        "text": "考试里说这条指令采用立即寻址，指的是源操作数，按这个习惯理解就行。",
+        "start": 25.271,
+        "end": 32.208
+      }
+    ]
+  },
+  "s12": {
+    "duration": 16.704,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "第二种，寄存器寻址。",
+        "offset": 1000000,
+        "duration": 23202831
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "操作数放在寄存器里。",
+        "offset": 23702831,
+        "duration": 24174529
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "指令里写的是寄存器编号，同样不访存。",
+        "offset": 47877361,
+        "duration": 38089624
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "MOV AX, BX，把 BX 的值拷进 AX。",
+        "offset": 85966985,
+        "duration": 44221700
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "寄存器数量有限，所以编号字段很短。",
+        "offset": 130188686,
+        "duration": 36202832
+      }
+    ],
+    "cues": [
+      {
+        "text": "第二种，寄存器寻址。操作数放在寄存器里。",
+        "start": 0.1,
+        "end": 4.788
+      },
+      {
+        "text": "指令里写的是寄存器编号，同样不访存。",
+        "start": 4.788,
+        "end": 8.597
+      },
+      {
+        "text": "MOV AX, BX，把 BX 的值拷进 AX。",
+        "start": 8.597,
+        "end": 13.019
+      },
+      {
+        "text": "寄存器数量有限，所以编号字段很短。",
+        "start": 13.019,
+        "end": 16.704
+      }
+    ]
+  },
+  "s13": {
+    "duration": 20.64,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "第三种，直接寻址。",
+        "offset": 1000000,
+        "duration": 22731133
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "指令里直接给出内存地址。",
+        "offset": 23231133,
+        "duration": 26886793
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "有效地址就是那个地址本身，访存一次。",
+        "offset": 50117927,
+        "duration": 38325473
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "MOV R1, [1000]，去一千号单元把数据取回 R1。",
+        "offset": 88443401,
+        "duration": 50707549
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "注意，现代机器上这个地址是虚拟地址，真正访存前还要过一遍地址翻译。",
+        "offset": 139150950,
+        "duration": 66745286
+      }
+    ],
+    "cues": [
+      {
+        "text": "第三种，直接寻址。指令里直接给出内存地址。",
+        "start": 0.1,
+        "end": 5.012
+      },
+      {
+        "text": "有效地址就是那个地址本身，访存一次。",
+        "start": 5.012,
+        "end": 8.844
+      },
+      {
+        "text": "MOV R1, [1000]，去一千号单元把数据取回 R1。",
+        "start": 8.844,
+        "end": 13.915
+      },
+      {
+        "text": "注意，现代机器上这个地址是虚拟地址，真正访存前还要过一遍地址翻译。",
+        "start": 13.915,
+        "end": 20.64
+      }
+    ]
+  },
+  "s14": {
+    "duration": 23.568,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "第四种，间接寻址。",
+        "offset": 1000000,
+        "duration": 22613208
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "指令给出的是地址的地址。",
+        "offset": 23113208,
+        "duration": 27240567
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "先去取一次地址，再按这个地址取数据，访存两次。",
+        "offset": 50353776,
+        "duration": 46933964
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "它最常用的形态是寄存器间接：地址存在寄存器里。",
+        "offset": 97287741,
+        "duration": 50000002
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "MOV R1, [R2]，R2 里装着地址，取数只要访存一次。",
+        "offset": 147287743,
+        "duration": 56014153
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "指针和链表能跑起来，靠的就是它。",
+        "offset": 203301897,
+        "duration": 31839624
+      }
+    ],
+    "cues": [
+      {
+        "text": "第四种，间接寻址。指令给出的是地址的地址。",
+        "start": 0.1,
+        "end": 5.035
+      },
+      {
+        "text": "先去取一次地址，再按这个地址取数据，访存两次。",
+        "start": 5.035,
+        "end": 9.729
+      },
+      {
+        "text": "它最常用的形态是寄存器间接：地址存在寄存器里。",
+        "start": 9.729,
+        "end": 14.729
+      },
+      {
+        "text": "MOV R1, [R2]，R2 里装着地址，取数只要访存一次。",
+        "start": 14.729,
+        "end": 20.33
+      },
+      {
+        "text": "指针和链表能跑起来，靠的就是它。",
+        "start": 20.33,
+        "end": 23.568
+      }
+    ]
+  },
+  "s15": {
+    "duration": 36.216,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "第五种，基址寻址。",
+        "offset": 1000000,
+        "duration": 22495284
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "有效地址等于基址寄存器加上偏移量。",
+        "offset": 22995284,
+        "duration": 37382077
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "基址由系统定，程序运行中基本不变；变的是那个偏移量。",
+        "offset": 60377361,
+        "duration": 52712266
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "8086 里有两个寄存器干这活：BX 管数组和结构体的起点，BP 管函数栈帧的栈底。",
+        "offset": 113089628,
+        "duration": 84551891
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "看栈帧：BP 指的位置存着旧 BP，往上 BP 加二存返回地址，加四加六是参数。",
+        "offset": 197641520,
+        "duration": 78655664
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "往下 BP 减二减四，是局部变量。",
+        "offset": 276297184,
+        "duration": 35731134
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "所以函数里的局部变量，地址都是 BP 减一个常数。",
+        "offset": 312028318,
+        "duration": 49646229
+      }
+    ],
+    "cues": [
+      {
+        "text": "第五种，基址寻址。有效地址等于基址寄存器加上偏移量。",
+        "start": 0.1,
+        "end": 6.038
+      },
+      {
+        "text": "基址由系统定，程序运行中基本不变；变的是那个偏移量。",
+        "start": 6.038,
+        "end": 11.309
+      },
+      {
+        "text": "8086 里有两个寄存器干这活：BX 管数组和结构体的起点，BP 管函数栈帧的栈底。",
+        "start": 11.309,
+        "end": 19.764
+      },
+      {
+        "text": "看栈帧：BP 指的位置存着旧 BP，往上 BP 加二存返回地址，加四加六是参数。",
+        "start": 19.764,
+        "end": 27.63
+      },
+      {
+        "text": "往下 BP 减二减四，是局部变量。",
+        "start": 27.63,
+        "end": 31.203
+      },
+      {
+        "text": "所以函数里的局部变量，地址都是 BP 减一个常数。",
+        "start": 31.203,
+        "end": 36.216
+      }
+    ]
+  },
+  "s16": {
+    "duration": 28.704,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "第六种，变址寻址。",
+        "offset": 1000000,
+        "duration": 22377359
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "形式一样，也是两个值相加。",
+        "offset": 22877359,
+        "duration": 28066039
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "区别在谁在变：基址寻址里基址不动，变址寻址里变址寄存器在运行时变。",
+        "offset": 50943398,
+        "duration": 71108494
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "遍历数组最典型：BX 指数组起点不动，SI 一个一个往后挪。",
+        "offset": 122051893,
+        "duration": 57783021
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "第一次 BX 加零，第二次加二，第三次加四。",
+        "offset": 179834915,
+        "duration": 45872643
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "一句话记：基址配偏移量管结构体，变址配索引管数组和循环。",
+        "offset": 225707559,
+        "duration": 60731135
+      }
+    ],
+    "cues": [
+      {
+        "text": "第六种，变址寻址。形式一样，也是两个值相加。",
+        "start": 0.1,
+        "end": 5.094
+      },
+      {
+        "text": "区别在谁在变：基址寻址里基址不动，变址寻址里变址寄存器在运行时变。",
+        "start": 5.094,
+        "end": 12.205
+      },
+      {
+        "text": "遍历数组最典型：BX 指数组起点不动，SI 一个一个往后挪。",
+        "start": 12.205,
+        "end": 17.983
+      },
+      {
+        "text": "第一次 BX 加零，第二次加二，第三次加四。",
+        "start": 17.983,
+        "end": 22.571
+      },
+      {
+        "text": "一句话记：基址配偏移量管结构体，变址配索引管数组和循环。",
+        "start": 22.571,
+        "end": 28.704
+      }
+    ]
+  },
+  "s17": {
+    "duration": 33.744,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "第七种，相对寻址。",
+        "offset": 1000000,
+        "duration": 22966982
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "有效地址等于 PC 加偏移量。",
+        "offset": 23466982,
+        "duration": 30070756
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "这里有个坑：PC 指的是下一条指令的地址，不是当前这条。",
+        "offset": 53537738,
+        "duration": 52948116
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "看例子。",
+        "offset": 106485854,
+        "duration": 12500000
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "je 指令在 1000，长两个字节。",
+        "offset": 118985855,
+        "duration": 31014152
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "执行时 PC 已经指到 1002。",
+        "offset": 150000008,
+        "duration": 31957548
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "指令里存的是偏移 18，两者相加，跳到 101A。",
+        "offset": 181957556,
+        "duration": 49528304
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "为什么不用绝对地址？",
+        "offset": 231485861,
+        "duration": 21108491
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "因为程序装到哪里都能跑。",
+        "offset": 252594353,
+        "duration": 27004718
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "指令之间的相对距离不变，机器码就不用改，这就是位置无关代码。",
+        "offset": 279599071,
+        "duration": 57429248
+      }
+    ],
+    "cues": [
+      {
+        "text": "第七种，相对寻址。有效地址等于 PC 加偏移量。",
+        "start": 0.1,
+        "end": 5.354
+      },
+      {
+        "text": "这里有个坑：PC 指的是下一条指令的地址，不是当前这条。",
+        "start": 5.354,
+        "end": 10.649
+      },
+      {
+        "text": "看例子。je 指令在 1000，长两个字节。",
+        "start": 10.649,
+        "end": 15.0
+      },
+      {
+        "text": "执行时 PC 已经指到 1002。",
+        "start": 15.0,
+        "end": 18.196
+      },
+      {
+        "text": "指令里存的是偏移 18，两者相加，跳到 101A。",
+        "start": 18.196,
+        "end": 23.149
+      },
+      {
+        "text": "为什么不用绝对地址？因为程序装到哪里都能跑。",
+        "start": 23.149,
+        "end": 27.96
+      },
+      {
+        "text": "指令之间的相对距离不变，机器码就不用改，这就是位置无关代码。",
+        "start": 27.96,
+        "end": 33.744
+      }
+    ]
+  },
+  "s18": {
+    "duration": 15.312,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "最后一种，堆栈寻址。",
+        "offset": 1000000,
+        "duration": 23910378
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "操作数在栈里，用 SP 定位栈顶。",
+        "offset": 24410378,
+        "duration": 34787737
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "PUSH 时栈顶下移，数据压进去；POP 时数据弹出，栈顶上移。",
+        "offset": 59198116,
+        "duration": 57193399
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "函数调用、现场保护，全靠这一套。",
+        "offset": 116391515,
+        "duration": 36084907
+      }
+    ],
+    "cues": [
+      {
+        "text": "最后一种，堆栈寻址。操作数在栈里，用 SP 定位栈顶。",
+        "start": 0.1,
+        "end": 5.92
+      },
+      {
+        "text": "PUSH 时栈顶下移，数据压进去；POP 时数据弹出，栈顶上移。",
+        "start": 5.92,
+        "end": 11.639
+      },
+      {
+        "text": "函数调用、现场保护，全靠这一套。",
+        "start": 11.639,
+        "end": 15.312
+      }
+    ]
+  },
+  "s19": {
+    "duration": 37.2,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "八种寻址，一张表收住。",
+        "offset": 1000000,
+        "duration": 25797171
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "看两个指标：有效地址怎么算，要访存几次。",
+        "offset": 26297171,
+        "duration": 40919813
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "立即和寄存器，零次；直接、寄存器间接、基址、变址、相对、堆栈，一次。",
+        "offset": 67216984,
+        "duration": 80070759
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "内存间接，两次。",
+        "offset": 147287743,
+        "duration": 21580189
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "用在哪：立即配常量，寄存器配变量，直接配固定单元。",
+        "offset": 168867933,
+        "duration": 55424531
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "基址配栈帧，变址配数组，相对配跳转，堆栈配函数调用。",
+        "offset": 224292464,
+        "duration": 58726418
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "格式决定这条指令怎么读，寻址决定数据去哪里取。",
+        "offset": 283018883,
+        "duration": 47287738
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "把这两件事分清楚，指令系统这一章就立住了。",
+        "offset": 330306621,
+        "duration": 41155662
+      }
+    ],
+    "cues": [
+      {
+        "text": "八种寻址，一张表收住。",
+        "start": 0.1,
+        "end": 2.68
+      },
+      {
+        "text": "看两个指标：有效地址怎么算，要访存几次。",
+        "start": 2.68,
+        "end": 6.722
+      },
+      {
+        "text": "立即和寄存器，零次；直接、寄存器间接、基址、变址、相对、堆栈，一次。",
+        "start": 6.722,
+        "end": 14.729
+      },
+      {
+        "text": "内存间接，两次。用在哪：立即配常量，寄存器配变量，直接配固定单元。",
+        "start": 14.729,
+        "end": 22.429
+      },
+      {
+        "text": "基址配栈帧，变址配数组，相对配跳转，堆栈配函数调用。",
+        "start": 22.429,
+        "end": 28.302
+      },
+      {
+        "text": "格式决定这条指令怎么读，寻址决定数据去哪里取。",
+        "start": 28.302,
+        "end": 33.031
+      },
+      {
+        "text": "把这两件事分清楚，指令系统这一章就立住了。",
+        "start": 33.031,
+        "end": 37.2
+      }
+    ]
+  }
+}

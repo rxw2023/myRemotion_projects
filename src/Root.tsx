@@ -18,13 +18,10 @@ import {
   ItomoriNight,
   TOTAL_FRAMES as ItomoriNightFrames,
 } from "./ItomoriNight";
-import { ChannelIntro } from "./ChannelIntro";
-import { TOTAL_FRAMES as ChannelIntroFrames } from "./ChannelIntro/tokens";
-import { PixelIntro, pixelIntroSchema } from "./PixelIntro";
 import {
   IntegerFloatRepr,
   TOTAL_FRAMES as IntegerFloatReprFrames,
-} from "./ReprBasics";
+} from "./IntegerFloatRepr";
 import {
   ArithConvert,
   TOTAL_FRAMES as ArithConvertFrames,
@@ -34,6 +31,13 @@ import {
   VirtualMemory,
   TOTAL_FRAMES as VirtualMemoryFrames,
 } from "./VirtualMemory";
+import {
+  InstructionFormat,
+  TOTAL_FRAMES as InstructionFormatFrames,
+} from "./InstructionFormat";
+import { EternalSignalManga } from "./EternalSignal/manga";
+import { EternalSignalCover } from "./EternalSignal/cover";
+import { TOTAL_FRAMES as EternalSignalFrames } from "./EternalSignal/timeline";
 
 // ==================== 配置类型 ====================
 
@@ -66,46 +70,6 @@ const RESOLUTION: Record<Orientation, { width: number; height: number }> = {
 // ==================== 注册表 ====================
 
 const compositions: CompConfig[] = [
-  // ---- 频道片头 · 像素游戏版（当前在用，10 秒，两种画幅同源，内容层可切换） ----
-  {
-    id: "PixelIntro",
-    component: PixelIntro,
-    durationInFrames: ChannelIntroFrames,
-    orientation: "portrait",
-    category: "video",
-    description: "MRDave先生 · 频道片头【像素游戏】竖版 — 开机自检 → 溶解 → 逐块显影，10.000s 整",
-    schema: pixelIntroSchema,
-    defaultProps: { pack: "arcade" },
-  },
-  {
-    id: "PixelIntroWide",
-    component: PixelIntro,
-    durationInFrames: ChannelIntroFrames,
-    orientation: "landscape",
-    category: "video",
-    description: "MRDave先生 · 频道片头【像素游戏】横版 — 开机自检 → 溶解 → 逐块显影，10.000s 整",
-    schema: pixelIntroSchema,
-    defaultProps: { pack: "arcade" },
-  },
-
-  // ---- 频道片头 · 丝网印刷版（原版，10 秒，两种画幅同源） ----
-  {
-    id: "ChannelIntro",
-    component: ChannelIntro,
-    durationInFrames: ChannelIntroFrames,
-    orientation: "portrait",
-    category: "video",
-    description: "MRDave先生 · 频道片头（竖版）— 终端初始化 → 二向箔显影，10.000s 整",
-  },
-  {
-    id: "ChannelIntroWide",
-    component: ChannelIntro,
-    durationInFrames: ChannelIntroFrames,
-    orientation: "landscape",
-    category: "video",
-    description: "MRDave先生 · 频道片头（横版）— 终端初始化 → 二向箔显影，10.000s 整",
-  },
-
   // ---- 竖版科普视频 ----
   {
     id: "StorageKnowledge",
@@ -228,12 +192,52 @@ const compositions: CompConfig[] = [
       "虚拟存储器（横版 1920×1080）— 物理/虚拟内存、页式划分、地址结构、MMU 分工、单级与多级页表、PTBR、TLB、缺页中断、请求页式、页面置换、完整访存流程与访存次数、综合例题",
   },
   {
+    id: "InstructionFormat",
+    component: InstructionFormat,
+    durationInFrames: InstructionFormatFrames,
+    orientation: "landscape",
+    category: "video",
+    description:
+      "指令格式与寻址方式（横版 1920×1080 · 3Blue1Brown 风格）— 操作码/地址码、按操作码与地址数分类、定长变长、无效字段填充与指令前缀、扩展操作码 16 位真题、前缀编码与 VLSM、八种寻址方式与访存次数",
+  },
+  {
     id: "DualVectorFoil",
     component: DualVectorFoil,
     durationInFrames: DualVectorFoilFrames,
     orientation: "landscape",
     category: "video",
     description: "二向箔 · 太阳系二维化 — 三体系列名场面，3D可视化重现",
+  },
+
+  // ---- 漫画版（唯一版本，电台体旧版已归档至 src/EternalSignal/legacy-radio）----
+  {
+    id: "EternalSignal",
+    component: EternalSignalManga,
+    durationInFrames: EternalSignalFrames,
+    orientation: "landscape",
+    category: "video",
+    description:
+      "永不消逝的电波 · 漫画版 — 51 张生成分镜 / 黑白网点 / 只出现剪影与背影 / 10 幕 92 行台词 / 7:54",
+  },
+
+  // ---- 封面（静态帧，still 出图）----
+  {
+    // npx remotion still EternalSignalCover out/cover-wide.png
+    id: "EternalSignalCover",
+    component: EternalSignalCover,
+    durationInFrames: 1,
+    orientation: "landscape",
+    category: "demo",
+    description: "《永不消逝的电波》封面 1920×1080（still 出图）",
+  },
+  {
+    // npx remotion still EternalSignalCoverTall out/cover-tall.png
+    id: "EternalSignalCoverTall",
+    component: EternalSignalCover,
+    durationInFrames: 1,
+    orientation: "portrait",
+    category: "demo",
+    description: "《永不消逝的电波》封面 1080×1920（still 出图）",
   },
 
   // ---- 横版视频：三维微缩景观 ----

@@ -23,7 +23,8 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const TMP = path.join(ROOT, ".tmp");
 
 const CHROME = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
-const CONCURRENCY = "10";
+// 图页每帧要解码几十张 1600px 的图，并发太高会吃光内存，默认 6，可用环境变量覆盖
+const CONCURRENCY = process.env.RENDER_CONCURRENCY ?? "6";
 
 /** 可复用缓存：默认保留（删了下次要重新 bundle / 重新拷贝静态资源） */
 const KEEP = [/^remotion-webpack-bundle-/, /^remotion-v[\d.]+-assets/, /^node-compile-cache$/];
@@ -96,7 +97,9 @@ console.log(`  临时目录 ${TMP}   并发 ${CONCURRENCY}${cleanAll ? "   结�
 
 const cmd =
   `npx remotion render "${id}" "${outPath}" ` +
-  `--browser-executable="${CHROME}" --concurrency=${CONCURRENCY}`;
+  `--browser-executable="${CHROME}" --concurrency=${CONCURRENCY}` +
+  // 透传额外的 Remotion 参数，例如 RENDER_EXTRA="--crf=20"
+  (process.env.RENDER_EXTRA ? ` ${process.env.RENDER_EXTRA}` : "");
 
 let child = null;
 let interrupted = false;

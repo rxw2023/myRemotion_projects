@@ -36,6 +36,7 @@
     "dev": "remotion studio",
     "build": "remotion bundle",
     "render": "node scripts/render.mjs",
+    "panels": "node scripts/eternal-signal/scan-panels.mjs",
     "upgrade": "remotion upgrade",
     "lint": "eslint src && tsc"
   },

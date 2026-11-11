@@ -1,6 +1,6 @@
 import React from "react";
 import { AbsoluteFill, Img, staticFile, useVideoConfig } from "remotion";
-import { CHANNEL } from "../ChannelIntro/tokens";
+import { CHANNEL } from "../shared/brand";
 
 /**
  * 《计算机系统层次结构》视频封面 —— 静态帧，供 `npx remotion still` 出 PNG。
@@ -14,7 +14,7 @@ import { CHANNEL } from "../ChannelIntro/tokens";
  *   2. 封面只讲一件事：层次结构。五层梯形堆叠（越往下越宽、越实），
  *      一眼就能读出"从应用软件到硬件，层层抽象"。
  *   3. 缩略图要能认出来：标题最大，右上角红底"考研 408"是唯一一块非蓝彩色。
- *   4. 频道品牌取实测值（src/ChannelIntro/tokens.ts）：真实头像 + MRDave先生。
+ *   4. 频道品牌取实测值（src/shared/brand.ts）：真实头像 + MRDave先生。
  *
  * 同一份内容两种排版：竖版单列居中（标题 → 堆叠 → 关键词），横版左右分栏
  * （左标题、右堆叠）。尺寸全部走下面的 MODE 表，改比例不用碰 JSX。
@@ -89,7 +89,7 @@ export const ComputerStructureCover: React.FC = () => {
     <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
       <div style={{ display: "flex", alignItems: "center", gap: m.headerGap }}>
         <Img
-          src={staticFile("channel/avatar.jpg")}
+          src={staticFile("shared/avatar.jpg")}
           style={{
             width: m.avatar,
             height: m.avatar,

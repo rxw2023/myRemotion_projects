@@ -60,12 +60,12 @@ import {
 
 /**
  * BGM 接入位 —— 你自己找的那首 BGM 放这里：
- *   1. 把音频文件放到  public/gameCatEra/bgm.mp3
+ *   1. 把音频文件放到  public/game-cat-era/bgm.mp3
  *   2. 把下面 BGM_ENABLED 改成 true
  *   3. 重新渲染即可（本片已自带配音＋底噪，BGM 只是叠在下面）
  */
 export const BGM_ENABLED: boolean = true;
-const BGM_SRC = "gameCatEra/bgm.mp3";
+const BGM_SRC = "game-cat-era/bgm.mp3";
 /** 素材实测 RMS −13.3 dBFS，这里压到约 −27 dBFS，垫在配音下面 */
 const BGM_VOLUME = 0.2;
 

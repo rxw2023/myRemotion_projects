@@ -1,6 +1,6 @@
 """
 Generate TTS audio for each scene using edge-tts.
-Output: public/voice/  directory with mp3 files + duration metadata.
+Output: public/storage-knowledge/  directory with mp3 files + duration metadata.
 """
 import asyncio
 import json
@@ -8,8 +8,10 @@ import os
 import subprocess
 
 VOICE = "zh-CN-YunxiNeural"  # 云希 - 男声，科普风格
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-OUT_DIR = os.path.join(BASE_DIR, "public", "voice")
+# 三级 dirname 才是项目根：scripts/storage-knowledge/generate_tts.py → scripts → <root>
+# 原值少跳一级，导致 OUT_DIR 落到 scripts/public/voice、ffprobe 去找 scripts/node_modules（都不存在）
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+OUT_DIR = os.path.join(BASE_DIR, "public", "storage-knowledge")
 os.makedirs(OUT_DIR, exist_ok=True)
 
 # ffprobe from Remotion's node_modules

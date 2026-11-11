@@ -23,7 +23,7 @@ const endpoints = [
   `https://api.bilibili.com/x/space/arc/search?mid=${mid}&ps=10&pn=1&order=pubdate`,
 ];
 
-const outDir = path.join(process.cwd(), "public", "channel");
+const outDir = path.join(process.cwd(), "public", "shared");
 await mkdir(outDir, { recursive: true });
 
 for (const url of endpoints) {

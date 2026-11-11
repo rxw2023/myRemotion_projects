@@ -31,7 +31,7 @@ export const LAYOUT = {
 // ==================== 棋盘格 / 屏幕纹理 ====================
 
 /** 胶片颗粒：预先用 Pillow 生成的 192×192 无缝噪点瓦片（比 SVG feTurbulence 快得多） */
-export const GRAIN_URL = `url("${staticFile("gameCatEra/grain.png")}")`;
+export const GRAIN_URL = `url("${staticFile("game-cat-era/grain.png")}")`;
 
 export const Grain: React.FC<{ opacity: number }> = ({ opacity }) => {
   if (opacity <= 0) {

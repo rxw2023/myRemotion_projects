@@ -35,3 +35,7 @@ public/**/*.mp3
 # 本地文档与升级审计记录，只留在本机，不随代码同步
 docs/
 
+
+# Python caches from scripts/ (edge-tts + prep scripts)
+__pycache__/
+*.pyc
