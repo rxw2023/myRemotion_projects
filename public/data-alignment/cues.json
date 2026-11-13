@@ -1,0 +1,928 @@
+{
+  "s00": {
+    "duration": 16.968,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "先看一个现象：同样是一个 int，为什么有的地址能放，有的不能？",
+        "offset": 1000000,
+        "duration": 56457550
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "编译器给它的地址，一定能被四整除。",
+        "offset": 56957550,
+        "duration": 33608492
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "不是巧合，这是硬件定下的规矩。",
+        "offset": 90566042,
+        "duration": 32193397
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "这一期只讲一件事：数据在内存里，为什么要对齐。",
+        "offset": 122759440,
+        "duration": 46344342
+      }
+    ],
+    "cues": [
+      {
+        "text": "先看一个现象：同样是一个 int，为什么有的地址能放，有的不能？",
+        "start": 0.1,
+        "end": 5.746
+      },
+      {
+        "text": "编译器给它的地址，一定能被四整除。",
+        "start": 5.746,
+        "end": 9.057
+      },
+      {
+        "text": "不是巧合，这是硬件定下的规矩。",
+        "start": 9.057,
+        "end": 12.276
+      },
+      {
+        "text": "这一期只讲一件事：数据在内存里，为什么要对齐。",
+        "start": 12.276,
+        "end": 16.968
+      }
+    ]
+  },
+  "s02": {
+    "duration": 31.392,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "对齐因子多大，由数据类型的大小决定。",
+        "offset": 1000000,
+        "duration": 36764152
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "基本规律一句话：对齐因子等于类型自身的字节数。",
+        "offset": 37264152,
+        "duration": 48584908
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "char 一字节，因子一，任何地址都能放。",
+        "offset": 85849061,
+        "duration": 37971700
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "short 两字节，地址必须是二的倍数。",
+        "offset": 123820761,
+        "duration": 35613209
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "int 和 float 四字节，地址是四的倍数。",
+        "offset": 159433970,
+        "duration": 36674530
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "double 和 long long 八字节，地址是八的倍数。",
+        "offset": 196108501,
+        "duration": 38797171
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "六十四位系统里，指针也是八。",
+        "offset": 234905673,
+        "duration": 29245284
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "但有个上限：对齐因子不会超过硬件的最大对齐限制。",
+        "offset": 264150957,
+        "duration": 49292455
+      }
+    ],
+    "cues": [
+      {
+        "text": "对齐因子多大，由数据类型的大小决定。",
+        "start": 0.1,
+        "end": 3.776
+      },
+      {
+        "text": "基本规律一句话：对齐因子等于类型自身的字节数。",
+        "start": 3.776,
+        "end": 8.585
+      },
+      {
+        "text": "char 一字节，因子一，任何地址都能放。",
+        "start": 8.585,
+        "end": 12.382
+      },
+      {
+        "text": "short 两字节，地址必须是二的倍数。",
+        "start": 12.382,
+        "end": 15.943
+      },
+      {
+        "text": "int 和 float 四字节，地址是四的倍数。",
+        "start": 15.943,
+        "end": 19.611
+      },
+      {
+        "text": "double 和 long long 八字节，地址是八的倍数。",
+        "start": 19.611,
+        "end": 23.491
+      },
+      {
+        "text": "六十四位系统里，指针也是八。",
+        "start": 23.491,
+        "end": 26.415
+      },
+      {
+        "text": "但有个上限：对齐因子不会超过硬件的最大对齐限制。",
+        "start": 26.415,
+        "end": 31.392
+      }
+    ]
+  },
+  "s01": {
+    "duration": 23.496,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "这个规矩，叫数据对齐。",
+        "offset": 1000000,
+        "duration": 25443397
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "它要求数据的起始地址，必须是某个数的整数倍。",
+        "offset": 25943397,
+        "duration": 43160379
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "这个数，叫对齐因子。",
+        "offset": 69103777,
+        "duration": 23349057
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "写成公式就是：起始地址对 K 取余，等于零。",
+        "offset": 92452835,
+        "duration": 43632077
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "换成二进制看更直接：地址的低几位必须全是零。",
+        "offset": 136084913,
+        "duration": 48231134
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "对齐因子是四，低两位为零；是八，低三位为零。",
+        "offset": 184316047,
+        "duration": 50000002
+      }
+    ],
+    "cues": [
+      {
+        "text": "这个规矩，叫数据对齐。",
+        "start": 0.1,
+        "end": 2.644
+      },
+      {
+        "text": "它要求数据的起始地址，必须是某个数的整数倍。",
+        "start": 2.644,
+        "end": 6.91
+      },
+      {
+        "text": "这个数，叫对齐因子。",
+        "start": 6.91,
+        "end": 9.245
+      },
+      {
+        "text": "写成公式就是：起始地址对 K 取余，等于零。",
+        "start": 9.245,
+        "end": 13.608
+      },
+      {
+        "text": "换成二进制看更直接：地址的低几位必须全是零。",
+        "start": 13.608,
+        "end": 18.432
+      },
+      {
+        "text": "对齐因子是四，低两位为零；是八，低三位为零。",
+        "start": 18.432,
+        "end": 23.496
+      }
+    ]
+  },
+  "s04": {
+    "duration": 28.728,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "再往下一层问：硬件为什么非要这样？",
+        "offset": 1000000,
+        "duration": 33933964
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "因为地址送到内存，低几位根本不参与选行。",
+        "offset": 34433964,
+        "duration": 41037738
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "它们只决定块内偏移，也就是你要的那几个字节，在块里的位置。",
+        "offset": 75471702,
+        "duration": 54952833
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "真正被选中、整块取回的，是高位地址指向的那一行。",
+        "offset": 130424535,
+        "duration": 47877361
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "所以硬件干脆规定：一次访问的起点，只能是块大小的整数倍。",
+        "offset": 178301896,
+        "duration": 57900946
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "对齐，是这种读取方式的必然结果，不是后来加的约束。",
+        "offset": 236202842,
+        "duration": 50471700
+      }
+    ],
+    "cues": [
+      {
+        "text": "再往下一层问：硬件为什么非要这样？",
+        "start": 0.1,
+        "end": 3.493
+      },
+      {
+        "text": "因为地址送到内存，低几位根本不参与选行。",
+        "start": 3.493,
+        "end": 7.547
+      },
+      {
+        "text": "它们只决定块内偏移，也就是你要的那几个字节，在块里的位置。",
+        "start": 7.547,
+        "end": 13.042
+      },
+      {
+        "text": "真正被选中、整块取回的，是高位地址指向的那一行。",
+        "start": 13.042,
+        "end": 17.83
+      },
+      {
+        "text": "所以硬件干脆规定：一次访问的起点，只能是块大小的整数倍。",
+        "start": 17.83,
+        "end": 23.62
+      },
+      {
+        "text": "对齐，是这种读取方式的必然结果，不是后来加的约束。",
+        "start": 23.62,
+        "end": 28.728
+      }
+    ]
+  },
+  "s03": {
+    "duration": 33.264,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "那偏要放在不对齐的位置呢？",
+        "offset": 1000000,
+        "duration": 25797171
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "多数机器允许，但代价来了。",
+        "offset": 26297171,
+        "duration": 29127360
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "内存是按块读的：一次搬一个存储字，起点必须落在块的边界上。",
+        "offset": 55424531,
+        "duration": 57783021
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "一个 double 放在偏移二，就横跨了两个存储字。",
+        "offset": 113207553,
+        "duration": 40566039
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "取这一个数，要拆成两次访存。",
+        "offset": 153773593,
+        "duration": 30660379
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "再把两半拼回去，电路多一级，时间多一倍。",
+        "offset": 184433972,
+        "duration": 40448115
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "在更严格的架构上，比如某些 ARM，这不只是慢，直接抛异常。",
+        "offset": 224882087,
+        "duration": 54245285
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "所以对齐不是为了好看，是为了让一次访存，真的一次搬完。",
+        "offset": 279127373,
+        "duration": 52948116
+      }
+    ],
+    "cues": [
+      {
+        "text": "那偏要放在不对齐的位置呢？",
+        "start": 0.1,
+        "end": 2.68
+      },
+      {
+        "text": "多数机器允许，但代价来了。",
+        "start": 2.68,
+        "end": 5.542
+      },
+      {
+        "text": "内存是按块读的：一次搬一个存储字，起点必须落在块的边界上。",
+        "start": 5.542,
+        "end": 11.321
+      },
+      {
+        "text": "一个 double 放在偏移二，就横跨了两个存储字。",
+        "start": 11.321,
+        "end": 15.377
+      },
+      {
+        "text": "取这一个数，要拆成两次访存。",
+        "start": 15.377,
+        "end": 18.443
+      },
+      {
+        "text": "再把两半拼回去，电路多一级，时间多一倍。",
+        "start": 18.443,
+        "end": 22.488
+      },
+      {
+        "text": "在更严格的架构上，比如某些 ARM，这不只是慢，直接抛异常。",
+        "start": 22.488,
+        "end": 27.913
+      },
+      {
+        "text": "所以对齐不是为了好看，是为了让一次访存，真的一次搬完。",
+        "start": 27.913,
+        "end": 33.264
+      }
+    ]
+  },
+  "s05": {
+    "duration": 22.68,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "单个变量好办。",
+        "offset": 1000000,
+        "duration": 16363208
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "真正考人的，是结构体。",
+        "offset": 16863208,
+        "duration": 25235850
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "定义一个结构体，两个成员：一个 char，一个 int。",
+        "offset": 42099058,
+        "duration": 43985851
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "按直觉，一加四，占五个字节。",
+        "offset": 86084910,
+        "duration": 32783020
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "但 sizeof 打印出来，是八。",
+        "offset": 118867930,
+        "duration": 26415095
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "多出来的三个字节，叫填充，padding。",
+        "offset": 145283026,
+        "duration": 34080190
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "它们不存任何数据，只为了让后面的成员站对位置。",
+        "offset": 179363217,
+        "duration": 46816040
+      }
+    ],
+    "cues": [
+      {
+        "text": "单个变量好办。真正考人的，是结构体。",
+        "start": 0.1,
+        "end": 4.21
+      },
+      {
+        "text": "定义一个结构体，两个成员：一个 char，一个 int。",
+        "start": 4.21,
+        "end": 8.608
+      },
+      {
+        "text": "按直觉，一加四，占五个字节。",
+        "start": 8.608,
+        "end": 11.887
+      },
+      {
+        "text": "但 sizeof 打印出来，是八。",
+        "start": 11.887,
+        "end": 14.528
+      },
+      {
+        "text": "多出来的三个字节，叫填充，padding。",
+        "start": 14.528,
+        "end": 17.936
+      },
+      {
+        "text": "它们不存任何数据，只为了让后面的成员站对位置。",
+        "start": 17.936,
+        "end": 22.68
+      }
+    ]
+  },
+  "s06": {
+    "duration": 27.144,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "把内存摊开看，一格一字节。",
+        "offset": 1000000,
+        "duration": 28981133
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "a 是 char，因子一，放在偏移零，占一格。",
+        "offset": 29481133,
+        "duration": 40330190
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "b 是 int，因子四，地址必须是四的倍数。",
+        "offset": 69811324,
+        "duration": 41745285
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "偏移一、二、三这三格，只能空着。",
+        "offset": 111556609,
+        "duration": 37146228
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "从偏移四开始，b 占四到七。",
+        "offset": 148702838,
+        "duration": 30660379
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "总共八字节，正好是四的倍数，末尾不用再补。",
+        "offset": 179363217,
+        "duration": 43396228
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "这三格填充不是浪费，是让 b 的地址能够被四整除。",
+        "offset": 222759445,
+        "duration": 48113210
+      }
+    ],
+    "cues": [
+      {
+        "text": "把内存摊开看，一格一字节。",
+        "start": 0.1,
+        "end": 2.998
+      },
+      {
+        "text": "a 是 char，因子一，放在偏移零，占一格。",
+        "start": 2.998,
+        "end": 6.981
+      },
+      {
+        "text": "b 是 int，因子四，地址必须是四的倍数。",
+        "start": 6.981,
+        "end": 11.156
+      },
+      {
+        "text": "偏移一、二、三这三格，只能空着。",
+        "start": 11.156,
+        "end": 14.87
+      },
+      {
+        "text": "从偏移四开始，b 占四到七。",
+        "start": 14.87,
+        "end": 17.936
+      },
+      {
+        "text": "总共八字节，正好是四的倍数，末尾不用再补。",
+        "start": 17.936,
+        "end": 22.276
+      },
+      {
+        "text": "这三格填充不是浪费，是让 b 的地址能够被四整除。",
+        "start": 22.276,
+        "end": 27.144
+      }
+    ]
+  },
+  "s07": {
+    "duration": 21.696,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "这里插一句：编译器明知道有空隙，为什么不把成员挪紧凑？",
+        "offset": 1000000,
+        "duration": 54334908
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "因为标准规定，成员必须按声明顺序存放。",
+        "offset": 54834908,
+        "duration": 41273587
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "顺序一变，初始化列表、指针运算、内存映射，全都对不上。",
+        "offset": 96108495,
+        "duration": 57900946
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "所以编译器只填空隙，不搬家。",
+        "offset": 154009442,
+        "duration": 32665096
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "省空间的活，留给写代码的人。",
+        "offset": 186674538,
+        "duration": 29599058
+      }
+    ],
+    "cues": [
+      {
+        "text": "这里插一句：编译器明知道有空隙，为什么不把成员挪紧凑？",
+        "start": 0.1,
+        "end": 5.533
+      },
+      {
+        "text": "因为标准规定，成员必须按声明顺序存放。",
+        "start": 5.533,
+        "end": 9.611
+      },
+      {
+        "text": "顺序一变，初始化列表、指针运算、内存映射，全都对不上。",
+        "start": 9.611,
+        "end": 15.401
+      },
+      {
+        "text": "所以编译器只填空隙，不搬家。",
+        "start": 15.401,
+        "end": 18.667
+      },
+      {
+        "text": "省空间的活，留给写代码的人。",
+        "start": 18.667,
+        "end": 21.696
+      }
+    ]
+  },
+  "s08": {
+    "duration": 33.192,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "再换一个更阴的：char、short、char。",
+        "offset": 1000000,
+        "duration": 34995284
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "直觉是三，实际是六。",
+        "offset": 35495284,
+        "duration": 24882076
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "a 在零，b 要对齐到二，所以偏移一空着，b 占二三。",
+        "offset": 60377361,
+        "duration": 49292455
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "c 是 char，紧跟着放在四。",
+        "offset": 109669817,
+        "duration": 26768869
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "到这里只用了五格，答案却是六。",
+        "offset": 136438686,
+        "duration": 30306605
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "因为整体大小，必须是最大对齐因子的整数倍。",
+        "offset": 166745292,
+        "duration": 41863209
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "最大因子是 short 的二，五要补齐到六。",
+        "offset": 208608501,
+        "duration": 36438681
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "末尾这一格，是给数组留的。",
+        "offset": 245047183,
+        "duration": 27004718
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "结构体数组里每个元素都得对齐；末尾不补，第二个元素就站歪了。",
+        "offset": 272051901,
+        "duration": 59316040
+      }
+    ],
+    "cues": [
+      {
+        "text": "再换一个更阴的：char、short、char。",
+        "start": 0.1,
+        "end": 3.6
+      },
+      {
+        "text": "直觉是三，实际是六。",
+        "start": 3.6,
+        "end": 6.038
+      },
+      {
+        "text": "a 在零，b 要对齐到二，所以偏移一空着，b 占二三。",
+        "start": 6.038,
+        "end": 10.967
+      },
+      {
+        "text": "c 是 char，紧跟着放在四。",
+        "start": 10.967,
+        "end": 13.644
+      },
+      {
+        "text": "到这里只用了五格，答案却是六。",
+        "start": 13.644,
+        "end": 16.675
+      },
+      {
+        "text": "因为整体大小，必须是最大对齐因子的整数倍。",
+        "start": 16.675,
+        "end": 20.861
+      },
+      {
+        "text": "最大因子是 short 的二，五要补齐到六。",
+        "start": 20.861,
+        "end": 24.505
+      },
+      {
+        "text": "末尾这一格，是给数组留的。",
+        "start": 24.505,
+        "end": 27.205
+      },
+      {
+        "text": "结构体数组里每个元素都得对齐；末尾不补，第二个元素就站歪了。",
+        "start": 27.205,
+        "end": 33.192
+      }
+    ]
+  },
+  "s09": {
+    "duration": 23.592,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "到这里，结构体大小只剩两条规则。",
+        "offset": 1000000,
+        "duration": 37235851
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "第一条：每个成员按自己的因子找位置，放不下就补空隙。",
+        "offset": 37735851,
+        "duration": 51415097
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "第二条：整体大小，向上取整到最大因子的倍数。",
+        "offset": 89150948,
+        "duration": 46816040
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "还有一条附带结论：结构体自己的对齐因子，等于成员里最大的那个。",
+        "offset": 135966988,
+        "duration": 60495286
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "所以结构体套结构体，还是同一套算法。",
+        "offset": 196462274,
+        "duration": 38797171
+      }
+    ],
+    "cues": [
+      {
+        "text": "到这里，结构体大小只剩两条规则。",
+        "start": 0.1,
+        "end": 3.824
+      },
+      {
+        "text": "第一条：每个成员按自己的因子找位置，放不下就补空隙。",
+        "start": 3.824,
+        "end": 8.915
+      },
+      {
+        "text": "第二条：整体大小，向上取整到最大因子的倍数。",
+        "start": 8.915,
+        "end": 13.597
+      },
+      {
+        "text": "还有一条附带结论：结构体自己的对齐因子，等于成员里最大的那个。",
+        "start": 13.597,
+        "end": 19.646
+      },
+      {
+        "text": "所以结构体套结构体，还是同一套算法。",
+        "start": 19.646,
+        "end": 23.592
+      }
+    ]
+  },
+  "s10": {
+    "duration": 31.608,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "填充既然是空转，能不能少填一点？",
+        "offset": 1000000,
+        "duration": 32872643
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "办法是把成员按对齐因子从大到小排。",
+        "offset": 33372643,
+        "duration": 39268870
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "原来 char、int、char：一加三空，四加四，一加三空，共十二字节。",
+        "offset": 72641513,
+        "duration": 64858494
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "改成 int、char、char：四加一加一，再补两格，八字节。",
+        "offset": 137500007,
+        "duration": 55188682
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "信息一点没少，省下三分之一。",
+        "offset": 192688689,
+        "duration": 31485850
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "这也是好头文件里，大类型总写在前面。",
+        "offset": 224174540,
+        "duration": 37853775
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "反过来也有：用 pack 强行压缩对齐，那是拿速度换空间。",
+        "offset": 262028316,
+        "duration": 53419814
+      }
+    ],
+    "cues": [
+      {
+        "text": "填充既然是空转，能不能少填一点？",
+        "start": 0.1,
+        "end": 3.387
+      },
+      {
+        "text": "办法是把成员按对齐因子从大到小排。",
+        "start": 3.387,
+        "end": 7.264
+      },
+      {
+        "text": "原来 char、int、char：一加三空，四加四，一加三空，共十二字节。",
+        "start": 7.264,
+        "end": 13.75
+      },
+      {
+        "text": "改成 int、char、char：四加一加一，再补两格，八字节。",
+        "start": 13.75,
+        "end": 19.269
+      },
+      {
+        "text": "信息一点没少，省下三分之一。",
+        "start": 19.269,
+        "end": 22.417
+      },
+      {
+        "text": "这也是好头文件里，大类型总写在前面。",
+        "start": 22.417,
+        "end": 26.203
+      },
+      {
+        "text": "反过来也有：用 pack 强行压缩对齐，那是拿速度换空间。",
+        "start": 26.203,
+        "end": 31.608
+      }
+    ]
+  },
+  "s11": {
+    "duration": 18.6,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "回到最开始的问题。",
+        "offset": 1000000,
+        "duration": 19665095
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "地址能不能放，看它能不能被对齐因子整除。",
+        "offset": 20165095,
+        "duration": 40330190
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "填充不是浪费，是让每个成员都站在自己的边界上。",
+        "offset": 60495286,
+        "duration": 46698115
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "算大小分两步：先按成员铺一遍，再整体取整。",
+        "offset": 107193402,
+        "duration": 45165096
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "这两步练熟，这类题就不会再错。",
+        "offset": 152358498,
+        "duration": 33018869
+      }
+    ],
+    "cues": [
+      {
+        "text": "回到最开始的问题。",
+        "start": 0.1,
+        "end": 2.067
+      },
+      {
+        "text": "地址能不能放，看它能不能被对齐因子整除。",
+        "start": 2.067,
+        "end": 6.05
+      },
+      {
+        "text": "填充不是浪费，是让每个成员都站在自己的边界上。",
+        "start": 6.05,
+        "end": 10.719
+      },
+      {
+        "text": "算大小分两步：先按成员铺一遍，再整体取整。",
+        "start": 10.719,
+        "end": 15.236
+      },
+      {
+        "text": "这两步练熟，这类题就不会再错。",
+        "start": 15.236,
+        "end": 18.6
+      }
+    ]
+  }
+}

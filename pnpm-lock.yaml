@@ -57,9 +57,15 @@ importers:
         specifier: 4.5.4
         version: 4.5.4
     devDependencies:
+      '@remotion/bundler':
+        specifier: 4.0.538
+        version: 4.0.538(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       '@remotion/eslint-config-flat':
         specifier: 4.0.538
         version: 4.0.538(eslint@9.19.0(jiti@2.6.1))
+      '@remotion/renderer':
+        specifier: 4.0.538
+        version: 4.0.538(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       '@types/react':
         specifier: 19.2.7
         version: 19.2.7

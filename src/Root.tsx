@@ -35,6 +35,9 @@ import {
   InstructionFormat,
   TOTAL_FRAMES as InstructionFormatFrames,
 } from "./InstructionFormat";
+import { DataAlignment, TOTAL_FRAMES as DataAlignmentFrames } from "./DataAlignment";
+import { CiscRisc, TOTAL_FRAMES as CiscRiscFrames } from "./CiscRisc";
+import { UdpBasics, TOTAL_FRAMES as UdpBasicsFrames } from "./UdpBasics";
 import { EternalSignalManga } from "./EternalSignal/manga";
 import { EternalSignalCover } from "./EternalSignal/cover";
 import { TOTAL_FRAMES as EternalSignalFrames } from "./EternalSignal/timeline";
@@ -181,6 +184,16 @@ const compositions: CompConfig[] = [
       "TCP 可靠传输 — 四条规矩、首部与标志位、三次握手、四次挥手与 2MSL、滑动窗口与序列号回绕、三个窗口、累计确认、超时重传与 RTO、校验和、慢开始/拥塞避免/超时归零/快速重传与快速恢复",
   },
 
+  {
+    id: "UdpBasics",
+    component: UdpBasics,
+    durationInFrames: UdpBasicsFrames,
+    orientation: "landscape",
+    category: "video",
+    description:
+      "UDP（横版 1920×1080 · 3Blue1Brown 风格）— 8 字节首部四字段、分用与 ICMP 端口不可达、伪首部 12 字节、发送端四步与进位回卷、完整算例 43E1/BC1E、接收端验证与全 0 全 1 约定、五个特点、四类应用场景、考点表",
+  },
+
   // ---- 横版视频 ----
   {
     id: "VirtualMemory",
@@ -199,6 +212,24 @@ const compositions: CompConfig[] = [
     category: "video",
     description:
       "指令格式与寻址方式（横版 1920×1080 · 3Blue1Brown 风格）— 操作码/地址码、按操作码与地址数分类、定长变长、无效字段填充与指令前缀、扩展操作码 16 位真题、前缀编码与 VLSM、八种寻址方式与访存次数",
+  },
+  {
+    id: "DataAlignment",
+    component: DataAlignment,
+    durationInFrames: DataAlignmentFrames,
+    orientation: "landscape",
+    category: "video",
+    description:
+      "数据对齐与结构体填充（横版 1920×1080 · 3Blue1Brown 风格，接《指令格式与寻址方式》）— 对齐因子与二进制视角、类型对齐因子表、不对齐的两次访存、地址译码、结构体 padding 逐字节铺开、成员不可重排、末尾整体补齐、两条规则与成员排序优化",
+  },
+  {
+    id: "CiscRisc",
+    component: CiscRisc,
+    durationInFrames: CiscRiscFrames,
+    orientation: "landscape",
+    category: "video",
+    description:
+      "指令系统 · ISA 与 CISC/RISC（横版 1920×1080 · 3Blue1Brown 风格，接《数据对齐与结构体填充》）— ISA 是软硬件契约、七项内容、规定做什么不规定怎么做、一条 x86 对八条 MIPS、CISC 五特征与变长指令、RISC 五特征与寄存器阵列、有效地址拆解、定长与流水线、七行对照表",
   },
   {
     id: "DualVectorFoil",

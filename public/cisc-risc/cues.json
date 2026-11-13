@@ -1,0 +1,922 @@
+{
+  "s00": {
+    "duration": 31.584,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "先问一个问题：编译器写下一条 ADD 指令的时候，它到底在跟谁打交道？",
+        "offset": 1000000,
+        "duration": 60113210
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "不是某一块具体的芯片，而是芯片对软件承诺的那份契约。",
+        "offset": 60613210,
+        "duration": 51533021
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "这份契约，叫指令体系结构，ISA。",
+        "offset": 112146232,
+        "duration": 35259435
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "它是软件能观察到的处理器行为，以及软硬件交互必须遵守的规则。",
+        "offset": 147405668,
+        "duration": 59905663
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "上面是程序，下面是电路，中间这条线，就是 ISA。",
+        "offset": 207311331,
+        "duration": 51415097
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "对软件来说，线下面的流水线、Cache、ALU，一概不可见。",
+        "offset": 258726429,
+        "duration": 56485852
+      }
+    ],
+    "cues": [
+      {
+        "text": "先问一个问题：编译器写下一条 ADD 指令的时候，它到底在跟谁打交道？",
+        "start": 0.1,
+        "end": 6.111
+      },
+      {
+        "text": "不是某一块具体的芯片，而是芯片对软件承诺的那份契约。",
+        "start": 6.111,
+        "end": 11.215
+      },
+      {
+        "text": "这份契约，叫指令体系结构，ISA。",
+        "start": 11.215,
+        "end": 14.741
+      },
+      {
+        "text": "它是软件能观察到的处理器行为，以及软硬件交互必须遵守的规则。",
+        "start": 14.741,
+        "end": 20.731
+      },
+      {
+        "text": "上面是程序，下面是电路，中间这条线，就是 ISA。",
+        "start": 20.731,
+        "end": 25.873
+      },
+      {
+        "text": "对软件来说，线下面的流水线、Cache、ALU，一概不可见。",
+        "start": 25.873,
+        "end": 31.584
+      }
+    ]
+  },
+  "s02": {
+    "duration": 38.784,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "反过来说，ISA 不规定的东西，才是真正的分界线。",
+        "offset": 1000000,
+        "duration": 45490568
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "它只说：执行完 ADD，目标寄存器等于两个操作数之和。",
+        "offset": 45990568,
+        "duration": 52830191
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "至于有几级流水线、是否乱序、有没有寄存器重命名，一字不提。",
+        "offset": 98820760,
+        "duration": 60023588
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "ALU 有几个、Cache 多大、分支预测用什么算法，也不提。",
+        "offset": 158844348,
+        "duration": 52948116
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "这些属于微架构，是实现，不是契约。",
+        "offset": 211792464,
+        "duration": 36910379
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "一句话记住：ISA 规定机器表现成什么样，微架构规定它具体怎么做到。",
+        "offset": 248702843,
+        "duration": 66155663
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "所以同一个 x86-64，Intel 和 AMD 的内部可以完全不同，程序照样跑。",
+        "offset": 314858507,
+        "duration": 72405664
+      }
+    ],
+    "cues": [
+      {
+        "text": "反过来说，ISA 不规定的东西，才是真正的分界线。",
+        "start": 0.1,
+        "end": 4.649
+      },
+      {
+        "text": "它只说：执行完 ADD，目标寄存器等于两个操作数之和。",
+        "start": 4.649,
+        "end": 9.882
+      },
+      {
+        "text": "至于有几级流水线、是否乱序、有没有寄存器重命名，一字不提。",
+        "start": 9.882,
+        "end": 15.884
+      },
+      {
+        "text": "ALU 有几个、Cache 多大、分支预测用什么算法，也不提。",
+        "start": 15.884,
+        "end": 21.179
+      },
+      {
+        "text": "这些属于微架构，是实现，不是契约。",
+        "start": 21.179,
+        "end": 24.87
+      },
+      {
+        "text": "一句话记住：ISA 规定机器表现成什么样，微架构规定它具体怎么做到。",
+        "start": 24.87,
+        "end": 31.486
+      },
+      {
+        "text": "所以同一个 x86-64，Intel 和 AMD 的内部可以完全不同，程序照样跑。",
+        "start": 31.486,
+        "end": 38.784
+      }
+    ]
+  },
+  "s01": {
+    "duration": 46.608,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "这份契约规定七件事，先过一遍，有个整体印象。",
+        "offset": 1000000,
+        "duration": 44783021
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "第一，有哪些指令，每条执行后产生什么可观察的结果。",
+        "offset": 45283021,
+        "duration": 53537738
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "第二，指令怎么编码：操作码、操作数各占几位。",
+        "offset": 98820760,
+        "duration": 48702832
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "第三，软件可见的寄存器：有哪些、干什么用、怎么访问。",
+        "offset": 147523592,
+        "duration": 54481135
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "第四，操作数怎么给：立即数、寄存器，还是内存地址。",
+        "offset": 202004727,
+        "duration": 55070757
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "第五，支持哪些数据类型，整数、浮点，还是向量。",
+        "offset": 257075485,
+        "duration": 51533021
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "第六，访存行为：字节序、原子操作、多处理器的内存一致性。",
+        "offset": 308608507,
+        "duration": 60966984
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "第七，异常、中断与特权级，操作系统靠它管住处理器。",
+        "offset": 369575491,
+        "duration": 56485852
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "这七条，全都是从软件那一侧能看见的东西。",
+        "offset": 426061343,
+        "duration": 39504719
+      }
+    ],
+    "cues": [
+      {
+        "text": "这份契约规定七件事，先过一遍，有个整体印象。",
+        "start": 0.1,
+        "end": 4.578
+      },
+      {
+        "text": "第一，有哪些指令，每条执行后产生什么可观察的结果。",
+        "start": 4.578,
+        "end": 9.882
+      },
+      {
+        "text": "第二，指令怎么编码：操作码、操作数各占几位。",
+        "start": 9.882,
+        "end": 14.752
+      },
+      {
+        "text": "第三，软件可见的寄存器：有哪些、干什么用、怎么访问。",
+        "start": 14.752,
+        "end": 20.2
+      },
+      {
+        "text": "第四，操作数怎么给：立即数、寄存器，还是内存地址。",
+        "start": 20.2,
+        "end": 25.708
+      },
+      {
+        "text": "第五，支持哪些数据类型，整数、浮点，还是向量。",
+        "start": 25.708,
+        "end": 30.861
+      },
+      {
+        "text": "第六，访存行为：字节序、原子操作、多处理器的内存一致性。",
+        "start": 30.861,
+        "end": 36.958
+      },
+      {
+        "text": "第七，异常、中断与特权级，操作系统靠它管住处理器。",
+        "start": 36.958,
+        "end": 42.606
+      },
+      {
+        "text": "这七条，全都是从软件那一侧能看见的东西。",
+        "start": 42.606,
+        "end": 46.608
+      }
+    ]
+  },
+  "s03": {
+    "duration": 23.4,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "契约只要求行为一致，至于这份契约怎么设计，就出现了两条路。",
+        "offset": 1000000,
+        "duration": 56457550
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "看这一行 C：给二维数组的一个元素赋值。",
+        "offset": 56957550,
+        "duration": 37500002
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "在 x86 上，它是一条指令。",
+        "offset": 94457552,
+        "duration": 29952831
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "在 MIPS 上，它是一串指令。",
+        "offset": 124410384,
+        "duration": 26297171
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "一条对一串，这就是复杂指令集和精简指令集的分野。",
+        "offset": 150707555,
+        "duration": 50117927
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "不是谁更先进，是两种设计哲学。",
+        "offset": 200825482,
+        "duration": 32665096
+      }
+    ],
+    "cues": [
+      {
+        "text": "契约只要求行为一致，至于这份契约怎么设计，就出现了两条路。",
+        "start": 0.1,
+        "end": 5.746
+      },
+      {
+        "text": "看这一行 C：给二维数组的一个元素赋值。",
+        "start": 5.746,
+        "end": 9.446
+      },
+      {
+        "text": "在 x86 上，它是一条指令。",
+        "start": 9.446,
+        "end": 12.441
+      },
+      {
+        "text": "在 MIPS 上，它是一串指令。",
+        "start": 12.441,
+        "end": 15.071
+      },
+      {
+        "text": "一条对一串，这就是复杂指令集和精简指令集的分野。",
+        "start": 15.071,
+        "end": 20.083
+      },
+      {
+        "text": "不是谁更先进，是两种设计哲学。",
+        "start": 20.083,
+        "end": 23.4
+      }
+    ]
+  },
+  "s04": {
+    "duration": 35.376,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "先看复杂指令集，CISC。",
+        "offset": 1000000,
+        "duration": 31929247
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "第一条，指令复杂：一条指令里可以既访问内存，又做运算。",
+        "offset": 32429247,
+        "duration": 56957550
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "第二条，指令不定长：一个字节到十几个字节都有。",
+        "offset": 89386797,
+        "duration": 46933964
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "第三条，寻址方式多，允许指令直接访问内存。",
+        "offset": 136320762,
+        "duration": 45636794
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "前三条的后果，是第四条：控制器只能靠微程序。",
+        "offset": 181957556,
+        "duration": 48584908
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "把一条复杂指令，翻译成一串微指令，存进控制存储器，一条条执行。",
+        "offset": 230542465,
+        "duration": 62264154
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "第五条，硬件复杂、芯片面积大。",
+        "offset": 292806619,
+        "duration": 33608492
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "典型代表就是 x86。",
+        "offset": 326415111,
+        "duration": 26886793
+      }
+    ],
+    "cues": [
+      {
+        "text": "先看复杂指令集，CISC。",
+        "start": 0.1,
+        "end": 3.293
+      },
+      {
+        "text": "第一条，指令复杂：一条指令里可以既访问内存，又做运算。",
+        "start": 3.293,
+        "end": 8.939
+      },
+      {
+        "text": "第二条，指令不定长：一个字节到十几个字节都有。",
+        "start": 8.939,
+        "end": 13.632
+      },
+      {
+        "text": "第三条，寻址方式多，允许指令直接访问内存。",
+        "start": 13.632,
+        "end": 18.196
+      },
+      {
+        "text": "前三条的后果，是第四条：控制器只能靠微程序。",
+        "start": 18.196,
+        "end": 23.054
+      },
+      {
+        "text": "把一条复杂指令，翻译成一串微指令，存进控制存储器，一条条执行。",
+        "start": 23.054,
+        "end": 29.281
+      },
+      {
+        "text": "第五条，硬件复杂、芯片面积大。典型代表就是 x86。",
+        "start": 29.281,
+        "end": 35.376
+      }
+    ]
+  },
+  "s05": {
+    "duration": 28.8,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "再看精简指令集，RISC。",
+        "offset": 1000000,
+        "duration": 26150944
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "指令少而简单，每条只做一件事。",
+        "offset": 26650944,
+        "duration": 31957548
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "长度固定，ARM 和 MIPS 都是四字节。",
+        "offset": 58608493,
+        "duration": 35377360
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "寻址方式很少，想算数，先把数据 load 进寄存器。",
+        "offset": 93985854,
+        "duration": 48231134
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "于是控制器可以用硬布线：组合逻辑直接出控制信号，不查微程序表。",
+        "offset": 142216988,
+        "duration": 65801890
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "代价是寄存器必须多，少了根本不够用。",
+        "offset": 208018879,
+        "duration": 37617926
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "硬件精简，功耗低。",
+        "offset": 245636805,
+        "duration": 22051887
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "典型代表是 ARM。",
+        "offset": 267688693,
+        "duration": 19811321
+      }
+    ],
+    "cues": [
+      {
+        "text": "再看精简指令集，RISC。",
+        "start": 0.1,
+        "end": 2.715
+      },
+      {
+        "text": "指令少而简单，每条只做一件事。",
+        "start": 2.715,
+        "end": 5.861
+      },
+      {
+        "text": "长度固定，ARM 和 MIPS 都是四字节。",
+        "start": 5.861,
+        "end": 9.399
+      },
+      {
+        "text": "寻址方式很少，想算数，先把数据 load 进寄存器。",
+        "start": 9.399,
+        "end": 14.222
+      },
+      {
+        "text": "于是控制器可以用硬布线：组合逻辑直接出控制信号，不查微程序表。",
+        "start": 14.222,
+        "end": 20.802
+      },
+      {
+        "text": "代价是寄存器必须多，少了根本不够用。",
+        "start": 20.802,
+        "end": 24.564
+      },
+      {
+        "text": "硬件精简，功耗低。典型代表是 ARM。",
+        "start": 24.564,
+        "end": 28.8
+      }
+    ]
+  },
+  "s06": {
+    "duration": 28.992,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "把 x86 那条指令放大看，它一次干了五件事。",
+        "offset": 1000000,
+        "duration": 43485851
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "取 ecx 当基址，把 edx 乘四当偏移，再加上 0x00422000 这个常数。",
+        "offset": 43985851,
+        "duration": 78537740
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "三者相加，得到有效地址。",
+        "offset": 122523591,
+        "duration": 27712265
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "再把立即数 0x0A 写进这个地址。",
+        "offset": 150235857,
+        "duration": 36556605
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "整个过程取指一次、译码一次、访存一次，全在一条指令里完成。",
+        "offset": 186792462,
+        "duration": 58608493
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "程序短、代码密度高，这是 CISC 的长处。",
+        "offset": 245400956,
+        "duration": 44103775
+      }
+    ],
+    "cues": [
+      {
+        "text": "把 x86 那条指令放大看，它一次干了五件事。",
+        "start": 0.1,
+        "end": 4.449
+      },
+      {
+        "text": "取 ecx 当基址，把 edx 乘四当偏移，再加上 0x00422000 这个常数。",
+        "start": 4.449,
+        "end": 12.252
+      },
+      {
+        "text": "三者相加，得到有效地址。",
+        "start": 12.252,
+        "end": 15.024
+      },
+      {
+        "text": "再把立即数 0x0A 写进这个地址。",
+        "start": 15.024,
+        "end": 18.679
+      },
+      {
+        "text": "整个过程取指一次、译码一次、访存一次，全在一条指令里完成。",
+        "start": 18.679,
+        "end": 24.54
+      },
+      {
+        "text": "程序短、代码密度高，这是 CISC 的长处。",
+        "start": 24.54,
+        "end": 28.992
+      }
+    ]
+  },
+  "s07": {
+    "duration": 33.288,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "同样一件事，MIPS 怎么做？",
+        "offset": 1000000,
+        "duration": 25679246
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "先把 i 左移六位，相当于乘六十四；加上 j，再左移两位，乘四。",
+        "offset": 26179246,
+        "duration": 63089626
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "基址太长，一条指令装不下，只能 lui 取高十六位，ori 补低十六位。",
+        "offset": 89268872,
+        "duration": 62853776
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "三段相加得到地址，把十装进 a1，最后 sw 写内存。",
+        "offset": 152122649,
+        "duration": 56721701
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "八条指令，一条不多，一条不少。",
+        "offset": 208844350,
+        "duration": 31603775
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "每条都只做一件事，译码器看一眼就知道要干什么。",
+        "offset": 240448126,
+        "duration": 46462266
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "代码变长了，但每一步都简单、规整、可以并行。",
+        "offset": 286910392,
+        "duration": 45518870
+      }
+    ],
+    "cues": [
+      {
+        "text": "同样一件事，MIPS 怎么做？",
+        "start": 0.1,
+        "end": 2.668
+      },
+      {
+        "text": "先把 i 左移六位，相当于乘六十四；加上 j，再左移两位，乘四。",
+        "start": 2.668,
+        "end": 8.927
+      },
+      {
+        "text": "基址太长，一条指令装不下，只能 lui 取高十六位，ori 补低十六位。",
+        "start": 8.927,
+        "end": 15.212
+      },
+      {
+        "text": "三段相加得到地址，把十装进 a1，最后 sw 写内存。",
+        "start": 15.212,
+        "end": 20.884
+      },
+      {
+        "text": "八条指令，一条不多，一条不少。",
+        "start": 20.884,
+        "end": 24.045
+      },
+      {
+        "text": "每条都只做一件事，译码器看一眼就知道要干什么。",
+        "start": 24.045,
+        "end": 28.691
+      },
+      {
+        "text": "代码变长了，但每一步都简单、规整、可以并行。",
+        "start": 28.691,
+        "end": 33.288
+      }
+    ]
+  },
+  "s08": {
+    "duration": 28.272,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "为什么简单和规整这么重要？",
+        "offset": 1000000,
+        "duration": 25679246
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "因为流水线。",
+        "offset": 26179246,
+        "duration": 16037736
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "流水线要求每个周期，都能取到一条完整的指令。",
+        "offset": 42216983,
+        "duration": 42924530
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "定长四字节，取指地址加四就行，下一条在哪，永远知道。",
+        "offset": 85141514,
+        "duration": 54009436
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "不定长就麻烦：不译码完，不知道这条指令到底有几个字节。",
+        "offset": 139150950,
+        "duration": 53773587
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "所以 CISC 的取指和译码，很难整齐地排进流水线。",
+        "offset": 192924538,
+        "duration": 50353776
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "RISC 用长度换了规律，规律换来了并行。",
+        "offset": 243278315,
+        "duration": 38915096
+      }
+    ],
+    "cues": [
+      {
+        "text": "为什么简单和规整这么重要？因为流水线。",
+        "start": 0.1,
+        "end": 4.222
+      },
+      {
+        "text": "流水线要求每个周期，都能取到一条完整的指令。",
+        "start": 4.222,
+        "end": 8.514
+      },
+      {
+        "text": "定长四字节，取指地址加四就行，下一条在哪，永远知道。",
+        "start": 8.514,
+        "end": 13.915
+      },
+      {
+        "text": "不定长就麻烦：不译码完，不知道这条指令到底有几个字节。",
+        "start": 13.915,
+        "end": 19.292
+      },
+      {
+        "text": "所以 CISC 的取指和译码，很难整齐地排进流水线。",
+        "start": 19.292,
+        "end": 24.328
+      },
+      {
+        "text": "RISC 用长度换了规律，规律换来了并行。",
+        "start": 24.328,
+        "end": 28.272
+      }
+    ]
+  },
+  "s10": {
+    "duration": 30.144,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "最后提醒一句：这条界线，今天已经模糊了。",
+        "offset": 1000000,
+        "duration": 41009436
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "x86 内部会把复杂指令翻译成类 RISC 的微操作，再送进流水线。",
+        "offset": 41509436,
+        "duration": 62264154
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "ARM 也在不断加指令，做成了以定长为主、部分变长的混合编码。",
+        "offset": 103773590,
+        "duration": 56603776
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "但两者的分野没有消失，它变成了同一份 ISA 下不同的微架构选择。",
+        "offset": 160377367,
+        "duration": 59905663
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "回到开头那条线：契约规定做什么，实现决定怎么做。",
+        "offset": 220283030,
+        "duration": 48938681
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "记住这张表，比记住结论更有用。",
+        "offset": 269221712,
+        "duration": 31603775
+      }
+    ],
+    "cues": [
+      {
+        "text": "最后提醒一句：这条界线，今天已经模糊了。",
+        "start": 0.1,
+        "end": 4.201
+      },
+      {
+        "text": "x86 内部会把复杂指令翻译成类 RISC 的微操作，再送进流水线。",
+        "start": 4.201,
+        "end": 10.377
+      },
+      {
+        "text": "ARM 也在不断加指令，做成了以定长为主、部分变长的混合编码。",
+        "start": 10.377,
+        "end": 16.038
+      },
+      {
+        "text": "但两者的分野没有消失，它变成了同一份 ISA 下不同的微架构选择。",
+        "start": 16.038,
+        "end": 22.028
+      },
+      {
+        "text": "回到开头那条线：契约规定做什么，实现决定怎么做。",
+        "start": 22.028,
+        "end": 26.922
+      },
+      {
+        "text": "记住这张表，比记住结论更有用。",
+        "start": 26.922,
+        "end": 30.144
+      }
+    ]
+  },
+  "s09": {
+    "duration": 32.76,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "把两者放进同一张表里，这是选择题最常见的样子。",
+        "offset": 1000000,
+        "duration": 45254719
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "指令集：一个复杂、数量多，一个精简、数量少。",
+        "offset": 45754719,
+        "duration": 48113210
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "指令长度：一个不定长，一个固定。",
+        "offset": 93867929,
+        "duration": 33844341
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "寻址模式：一个多，一个少。",
+        "offset": 127712271,
+        "duration": 29481133
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "控制方式：一个微程序，一个硬布线。",
+        "offset": 157193404,
+        "duration": 35495284
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "硬件复杂度：一个复杂，一个精简。",
+        "offset": 192688689,
+        "duration": 34433964
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "优点：一个功能强，一个性能高、功耗低。",
+        "offset": 227122653,
+        "duration": 41509436
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "缺点也对称：一个执行效率低，一个复杂操作要靠多条指令拼。",
+        "offset": 268632089,
+        "duration": 58372644
+      }
+    ],
+    "cues": [
+      {
+        "text": "把两者放进同一张表里，这是选择题最常见的样子。",
+        "start": 0.1,
+        "end": 4.625
+      },
+      {
+        "text": "指令集：一个复杂、数量多，一个精简、数量少。",
+        "start": 4.625,
+        "end": 9.387
+      },
+      {
+        "text": "指令长度：一个不定长，一个固定。",
+        "start": 9.387,
+        "end": 12.771
+      },
+      {
+        "text": "寻址模式：一个多，一个少。",
+        "start": 12.771,
+        "end": 15.719
+      },
+      {
+        "text": "控制方式：一个微程序，一个硬布线。",
+        "start": 15.719,
+        "end": 19.269
+      },
+      {
+        "text": "硬件复杂度：一个复杂，一个精简。",
+        "start": 19.269,
+        "end": 22.712
+      },
+      {
+        "text": "优点：一个功能强，一个性能高、功耗低。",
+        "start": 22.712,
+        "end": 26.863
+      },
+      {
+        "text": "缺点也对称：一个执行效率低，一个复杂操作要靠多条指令拼。",
+        "start": 26.863,
+        "end": 32.76
+      }
+    ]
+  }
+}

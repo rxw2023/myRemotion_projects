@@ -1,0 +1,963 @@
+{
+  "s02": {
+    "duration": 29.952,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "数据报到了主机，怎么知道该交给哪个程序？",
+        "offset": 1000000,
+        "duration": 39712266
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "靠目的端口。",
+        "offset": 40212266,
+        "duration": 15801887
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "这一步，叫分用。",
+        "offset": 56014153,
+        "duration": 19457548
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "IP 层把数据报交上来，传输层按目的端口，分给不同的应用进程。",
+        "offset": 75471702,
+        "duration": 62264154
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "端口五十三给 DNS，六十九给 TFTP，五百二十给 RIP。",
+        "offset": 137735856,
+        "duration": 57665097
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "如果目的端口上根本没有进程在等，这个报文会被直接丢掉。",
+        "offset": 195400953,
+        "duration": 52712266
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "同时，主机回一个 ICMP 差错报文：端口不可达。",
+        "offset": 248113220,
+        "duration": 50825474
+      }
+    ],
+    "cues": [
+      {
+        "text": "数据报到了主机，怎么知道该交给哪个程序？",
+        "start": 0.1,
+        "end": 4.071
+      },
+      {
+        "text": "靠目的端口。这一步，叫分用。",
+        "start": 4.071,
+        "end": 7.547
+      },
+      {
+        "text": "IP 层把数据报交上来，传输层按目的端口，分给不同的应用进程。",
+        "start": 7.547,
+        "end": 13.774
+      },
+      {
+        "text": "端口五十三给 DNS，六十九给 TFTP，五百二十给 RIP。",
+        "start": 13.774,
+        "end": 19.54
+      },
+      {
+        "text": "如果目的端口上根本没有进程在等，这个报文会被直接丢掉。",
+        "start": 19.54,
+        "end": 24.811
+      },
+      {
+        "text": "同时，主机回一个 ICMP 差错报文：端口不可达。",
+        "start": 24.811,
+        "end": 29.952
+      }
+    ]
+  },
+  "s00": {
+    "duration": 32.424,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "先想一个问题：寄一张明信片，你会等对方签收吗？",
+        "offset": 1000000,
+        "duration": 45962266
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "不会。",
+        "offset": 46462266,
+        "duration": 10613208
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "写好地址，投进邮筒，剩下的事就与自己无关了。",
+        "offset": 57075474,
+        "duration": 47051889
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "UDP 就是这样一种协议：不建立连接，也不等确认，发出去就算完。",
+        "offset": 104127364,
+        "duration": 60849059
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "传输层有两条路，一条是 TCP，一条是 UDP。",
+        "offset": 164976424,
+        "duration": 49646229
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "TCP 把可靠性做进了协议里，UDP 把这件事留给了应用层。",
+        "offset": 214622653,
+        "duration": 58726418
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "这一期只讲 UDP：首部、校验，和它为什么还活着。",
+        "offset": 273349071,
+        "duration": 50353776
+      }
+    ],
+    "cues": [
+      {
+        "text": "先想一个问题：寄一张明信片，你会等对方签收吗？",
+        "start": 0.1,
+        "end": 4.696
+      },
+      {
+        "text": "不会。写好地址，投进邮筒，剩下的事就与自己无关了。",
+        "start": 4.696,
+        "end": 10.413
+      },
+      {
+        "text": "UDP 就是这样一种协议：不建立连接，也不等确认，发出去就算完。",
+        "start": 10.413,
+        "end": 16.498
+      },
+      {
+        "text": "传输层有两条路，一条是 TCP，一条是 UDP。",
+        "start": 16.498,
+        "end": 21.462
+      },
+      {
+        "text": "TCP 把可靠性做进了协议里，UDP 把这件事留给了应用层。",
+        "start": 21.462,
+        "end": 27.335
+      },
+      {
+        "text": "这一期只讲 UDP：首部、校验，和它为什么还活着。",
+        "start": 27.335,
+        "end": 32.424
+      }
+    ]
+  },
+  "s01": {
+    "duration": 35.52,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "先从最小的东西看起：UDP 的首部。",
+        "offset": 1000000,
+        "duration": 35466983
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "它固定八个字节，六十四位，不管带多少数据，长度都不变。",
+        "offset": 35966983,
+        "duration": 54716984
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "四个字段，每个两字节：源端口、目的端口、长度、校验和。",
+        "offset": 90683967,
+        "duration": 60731135
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "前两个字段各标识一端：发送方的应用进程，和接收方的应用进程。",
+        "offset": 151415102,
+        "duration": 61320758
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "长度字段指的是整个数据报的长度，首部加数据。",
+        "offset": 212735860,
+        "duration": 46816040
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "所以它的最小值是八：只有首部、不带数据的时候。",
+        "offset": 259551900,
+        "duration": 47877361
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "换句话说，长度字段的值，永远等于数据长度加八。",
+        "offset": 307429261,
+        "duration": 47287738
+      }
+    ],
+    "cues": [
+      {
+        "text": "先从最小的东西看起：UDP 的首部。",
+        "start": 0.1,
+        "end": 3.647
+      },
+      {
+        "text": "它固定八个字节，六十四位，不管带多少数据，长度都不变。",
+        "start": 3.647,
+        "end": 9.068
+      },
+      {
+        "text": "四个字段，每个两字节：源端口、目的端口、长度、校验和。",
+        "start": 9.068,
+        "end": 15.142
+      },
+      {
+        "text": "前两个字段各标识一端：发送方的应用进程，和接收方的应用进程。",
+        "start": 15.142,
+        "end": 21.274
+      },
+      {
+        "text": "长度字段指的是整个数据报的长度，首部加数据。",
+        "start": 21.274,
+        "end": 25.955
+      },
+      {
+        "text": "所以它的最小值是八：只有首部、不带数据的时候。",
+        "start": 25.955,
+        "end": 30.743
+      },
+      {
+        "text": "换句话说，长度字段的值，永远等于数据长度加八。",
+        "start": 30.743,
+        "end": 35.52
+      }
+    ]
+  },
+  "s03": {
+    "duration": 42.984,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "第二个问题：数据在路上坏掉了，怎么知道？",
+        "offset": 1000000,
+        "duration": 39948115
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "UDP 有校验和，但它只做一件事：发现错误，不负责纠正。",
+        "offset": 40448115,
+        "duration": 56485852
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "校验的范围不止 UDP 自己，还包括一个假的头部，叫伪首部。",
+        "offset": 96933967,
+        "duration": 54245285
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "伪首部十二个字节：源 IP 四字节，目的 IP 四字节。",
+        "offset": 151179253,
+        "duration": 52830191
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "再加一个全零字节、一个协议号十七，和两字节的 UDP 长度。",
+        "offset": 204009444,
+        "duration": 56132078
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "这些信息本来就在 IP 首部里，为什么还要再抄一遍？",
+        "offset": 260141523,
+        "duration": 47169813
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "因为校验必须覆盖 IP 地址：防止数据报被投递到了错误的主机。",
+        "offset": 307311337,
+        "duration": 59905663
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "伪首部不传输，只参与计算。",
+        "offset": 367217000,
+        "duration": 28773586
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "协议号十七，就是 UDP 的身份证。",
+        "offset": 395990587,
+        "duration": 33254718
+      }
+    ],
+    "cues": [
+      {
+        "text": "第二个问题：数据在路上坏掉了，怎么知道？",
+        "start": 0.1,
+        "end": 4.095
+      },
+      {
+        "text": "UDP 有校验和，但它只做一件事：发现错误，不负责纠正。",
+        "start": 4.095,
+        "end": 9.693
+      },
+      {
+        "text": "校验的范围不止 UDP 自己，还包括一个假的头部，叫伪首部。",
+        "start": 9.693,
+        "end": 15.118
+      },
+      {
+        "text": "伪首部十二个字节：源 IP 四字节，目的 IP 四字节。",
+        "start": 15.118,
+        "end": 20.401
+      },
+      {
+        "text": "再加一个全零字节、一个协议号十七，和两字节的 UDP 长度。",
+        "start": 20.401,
+        "end": 26.014
+      },
+      {
+        "text": "这些信息本来就在 IP 首部里，为什么还要再抄一遍？",
+        "start": 26.014,
+        "end": 30.731
+      },
+      {
+        "text": "因为校验必须覆盖 IP 地址：防止数据报被投递到了错误的主机。",
+        "start": 30.731,
+        "end": 36.722
+      },
+      {
+        "text": "伪首部不传输，只参与计算。协议号十七，就是 UDP 的身份证。",
+        "start": 36.722,
+        "end": 42.984
+      }
+    ]
+  },
+  "s04": {
+    "duration": 34.848,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "计算分四步。",
+        "offset": 1000000,
+        "duration": 15773585
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "第一步，把伪首部、UDP 首部、数据首尾相接，按十六位分组。",
+        "offset": 16273585,
+        "duration": 60495286
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "校验和字段先填零；数据如果是奇数字节，末尾补一个零字节。",
+        "offset": 76768872,
+        "duration": 60613210
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "第二步，把所有十六位数加起来。",
+        "offset": 137382082,
+        "duration": 30188680
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "这里有个坑：溢出不能丢，要把最高位的进位加回最低位。",
+        "offset": 167570763,
+        "duration": 51533021
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "这个动作叫回卷。",
+        "offset": 219103785,
+        "duration": 18396227
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "卷一次不够，就再卷一次。",
+        "offset": 237500012,
+        "duration": 25353774
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "第三步，把得到的和按位取反，就是校验和。",
+        "offset": 262853787,
+        "duration": 41863209
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "第四步，把它填进首部的校验和字段，发出去。",
+        "offset": 304716997,
+        "duration": 43278304
+      }
+    ],
+    "cues": [
+      {
+        "text": "计算分四步。",
+        "start": 0.1,
+        "end": 1.677
+      },
+      {
+        "text": "第一步，把伪首部、UDP 首部、数据首尾相接，按十六位分组。",
+        "start": 1.677,
+        "end": 7.677
+      },
+      {
+        "text": "校验和字段先填零；数据如果是奇数字节，末尾补一个零字节。",
+        "start": 7.677,
+        "end": 13.738
+      },
+      {
+        "text": "第二步，把所有十六位数加起来。",
+        "start": 13.738,
+        "end": 16.757
+      },
+      {
+        "text": "这里有个坑：溢出不能丢，要把最高位的进位加回最低位。",
+        "start": 16.757,
+        "end": 21.91
+      },
+      {
+        "text": "这个动作叫回卷。卷一次不够，就再卷一次。",
+        "start": 21.91,
+        "end": 26.285
+      },
+      {
+        "text": "第三步，把得到的和按位取反，就是校验和。",
+        "start": 26.285,
+        "end": 30.472
+      },
+      {
+        "text": "第四步，把它填进首部的校验和字段，发出去。",
+        "start": 30.472,
+        "end": 34.848
+      }
+    ]
+  },
+  "s06": {
+    "duration": 35.976,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "接收端怎么验证？",
+        "offset": 1000000,
+        "duration": 18367925
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "方法简单得有点意外。",
+        "offset": 18867925,
+        "duration": 21816038
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "把收到的数据原样再算一遍，连校验和字段一起算。",
+        "offset": 40683964,
+        "duration": 45518870
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "如果数据没错，加起来的结果一定是全一。",
+        "offset": 86202834,
+        "duration": 40094341
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "不是全一，说明路上出了错。",
+        "offset": 126297176,
+        "duration": 28066039
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "UDP 通常直接丢弃，它不重传。",
+        "offset": 154363215,
+        "duration": 33844341
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "但丢弃不是唯一选择：也可以交给上层，附上一句这是错的数据。",
+        "offset": 188207557,
+        "duration": 60141512
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "还有两个特殊值要记牢：校验和全零，表示发送端根本没算。",
+        "offset": 248349070,
+        "duration": 54834908
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "而如果算出来的和恰好是零，就填全一，避免和禁用混淆。",
+        "offset": 303183978,
+        "duration": 55896229
+      }
+    ],
+    "cues": [
+      {
+        "text": "接收端怎么验证？方法简单得有点意外。",
+        "start": 0.1,
+        "end": 4.068
+      },
+      {
+        "text": "把收到的数据原样再算一遍，连校验和字段一起算。",
+        "start": 4.068,
+        "end": 8.62
+      },
+      {
+        "text": "如果数据没错，加起来的结果一定是全一。",
+        "start": 8.62,
+        "end": 12.63
+      },
+      {
+        "text": "不是全一，说明路上出了错。UDP 通常直接丢弃，它不重传。",
+        "start": 12.63,
+        "end": 18.821
+      },
+      {
+        "text": "但丢弃不是唯一选择：也可以交给上层，附上一句这是错的数据。",
+        "start": 18.821,
+        "end": 24.835
+      },
+      {
+        "text": "还有两个特殊值要记牢：校验和全零，表示发送端根本没算。",
+        "start": 24.835,
+        "end": 30.318
+      },
+      {
+        "text": "而如果算出来的和恰好是零，就填全一，避免和禁用混淆。",
+        "start": 30.318,
+        "end": 35.976
+      }
+    ]
+  },
+  "s05": {
+    "duration": 41.784,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "拿一个例子走一遍，这是考试最爱的形式。",
+        "offset": 1000000,
+        "duration": 35584907
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "源地址 192.168.1.1，目的地址 192.168.1.2。",
+        "offset": 36084907,
+        "duration": 66509437
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "源端口 1024，目的端口 2048，数据是三个字节的 Hel。",
+        "offset": 102594345,
+        "duration": 60613210
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "长度字段等于 3 加 8，也就是 11。",
+        "offset": 163207555,
+        "duration": 34787737
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "现在分组：两个 IP 地址各拆成两段，加上零和协议号，一共十二个十六位数。",
+        "offset": 197995293,
+        "duration": 70400947
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "数据 Hel 只有三字节，补一个零，凑成两个十六位。",
+        "offset": 268396240,
+        "duration": 45990568
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "累加，中间回卷两次，得到十六位和 43E1。",
+        "offset": 314386809,
+        "duration": 57547172
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "按位取反，得到 BC1E。",
+        "offset": 371933982,
+        "duration": 27594341
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "这就是校验和。",
+        "offset": 399528323,
+        "duration": 17806604
+      }
+    ],
+    "cues": [
+      {
+        "text": "拿一个例子走一遍，这是考试最爱的形式。",
+        "start": 0.1,
+        "end": 3.658
+      },
+      {
+        "text": "源地址 192.168.1.1，目的地址 192.168.1.2。",
+        "start": 3.658,
+        "end": 10.259
+      },
+      {
+        "text": "源端口 1024，目的端口 2048，数据是三个字节的 Hel。",
+        "start": 10.259,
+        "end": 16.321
+      },
+      {
+        "text": "长度字段等于 3 加 8，也就是 11。",
+        "start": 16.321,
+        "end": 19.8
+      },
+      {
+        "text": "现在分组：两个 IP 地址各拆成两段，加上零和协议号，一共十二个十六位数。",
+        "start": 19.8,
+        "end": 26.84
+      },
+      {
+        "text": "数据 Hel 只有三字节，补一个零，凑成两个十六位。",
+        "start": 26.84,
+        "end": 31.439
+      },
+      {
+        "text": "累加，中间回卷两次，得到十六位和 43E1。",
+        "start": 31.439,
+        "end": 37.193
+      },
+      {
+        "text": "按位取反，得到 BC1E。这就是校验和。",
+        "start": 37.193,
+        "end": 41.784
+      }
+    ]
+  },
+  "s07": {
+    "duration": 31.392,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "回到设计本身。",
+        "offset": 1000000,
+        "duration": 17306604
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "UDP 的特点，五条。",
+        "offset": 17806604,
+        "duration": 23349057
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "第一，无连接：发之前不握手，每个数据报都是独立的。",
+        "offset": 41155662,
+        "duration": 51533021
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "第二，轻量：没有连接状态，没有拥塞控制，开销只有八个字节。",
+        "offset": 92688684,
+        "duration": 59787739
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "第三，无序：先发的可能后到，排序要靠应用自己来做。",
+        "offset": 152476423,
+        "duration": 53066040
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "第四，不可靠：丢了不重传，错了不纠正，也不通知对方。",
+        "offset": 205542463,
+        "duration": 53655663
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "第五，支持一对多：广播和组播，这一条只有 UDP 能做。",
+        "offset": 259198127,
+        "duration": 54127361
+      }
+    ],
+    "cues": [
+      {
+        "text": "回到设计本身。UDP 的特点，五条。",
+        "start": 0.1,
+        "end": 4.116
+      },
+      {
+        "text": "第一，无连接：发之前不握手，每个数据报都是独立的。",
+        "start": 4.116,
+        "end": 9.269
+      },
+      {
+        "text": "第二，轻量：没有连接状态，没有拥塞控制，开销只有八个字节。",
+        "start": 9.269,
+        "end": 15.248
+      },
+      {
+        "text": "第三，无序：先发的可能后到，排序要靠应用自己来做。",
+        "start": 15.248,
+        "end": 20.554
+      },
+      {
+        "text": "第四，不可靠：丢了不重传，错了不纠正，也不通知对方。",
+        "start": 20.554,
+        "end": 25.92
+      },
+      {
+        "text": "第五，支持一对多：广播和组播，这一条只有 UDP 能做。",
+        "start": 25.92,
+        "end": 31.392
+      }
+    ]
+  },
+  "s10": {
+    "duration": 20.064,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "再回到那张明信片。",
+        "offset": 1000000,
+        "duration": 20962265
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "寄信的人不负责送达，只负责写清楚地址、投进邮筒。",
+        "offset": 21462265,
+        "duration": 50117927
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "剩下的事，交给邮局，也交给写信的两个人自己去约定。",
+        "offset": 71580192,
+        "duration": 51768870
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "UDP 的全部哲学，就在这八个字节里。",
+        "offset": 123349063,
+        "duration": 35731134
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "它不承诺什么，所以它也几乎不花什么代价。",
+        "offset": 159080197,
+        "duration": 40919813
+      }
+    ],
+    "cues": [
+      {
+        "text": "再回到那张明信片。",
+        "start": 0.1,
+        "end": 2.196
+      },
+      {
+        "text": "寄信的人不负责送达，只负责写清楚地址、投进邮筒。",
+        "start": 2.196,
+        "end": 7.158
+      },
+      {
+        "text": "剩下的事，交给邮局，也交给写信的两个人自己去约定。",
+        "start": 7.158,
+        "end": 12.335
+      },
+      {
+        "text": "UDP 的全部哲学，就在这八个字节里。",
+        "start": 12.335,
+        "end": 15.908
+      },
+      {
+        "text": "它不承诺什么，所以它也几乎不花什么代价。",
+        "start": 15.908,
+        "end": 20.064
+      }
+    ]
+  },
+  "s08": {
+    "duration": 40.536,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "这些特点听起来全是缺点，那它为什么还在用？",
+        "offset": 1000000,
+        "duration": 41245285
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "第一类，一次只传一点点数据：DNS、SNMP。",
+        "offset": 41745285,
+        "duration": 50707549
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "为了一次查询去握手三次、挥手四次，开销比数据本身还大。",
+        "offset": 92452835,
+        "duration": 57900946
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "第二类，对延迟敏感：视频会议、直播、游戏。",
+        "offset": 150353781,
+        "duration": 48466983
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "晚到的画面没有价值，宁可丢一帧，也不要卡住等重传。",
+        "offset": 198820765,
+        "duration": 49528304
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "第三类，应用自己实现可靠性：在 UDP 上面自己写确认和重传。",
+        "offset": 248349070,
+        "duration": 63915097
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "QUIC 就是这么干的，HTTP/3 就跑在 UDP 上。",
+        "offset": 312264167,
+        "duration": 45754719
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "所以 UDP 不是不可靠，它是把可靠性外包了出去。",
+        "offset": 358018887,
+        "duration": 46816040
+      }
+    ],
+    "cues": [
+      {
+        "text": "这些特点听起来全是缺点，那它为什么还在用？",
+        "start": 0.1,
+        "end": 4.225
+      },
+      {
+        "text": "第一类，一次只传一点点数据：DNS、SNMP。",
+        "start": 4.225,
+        "end": 9.245
+      },
+      {
+        "text": "为了一次查询去握手三次、挥手四次，开销比数据本身还大。",
+        "start": 9.245,
+        "end": 15.035
+      },
+      {
+        "text": "第二类，对延迟敏感：视频会议、直播、游戏。",
+        "start": 15.035,
+        "end": 19.882
+      },
+      {
+        "text": "晚到的画面没有价值，宁可丢一帧，也不要卡住等重传。",
+        "start": 19.882,
+        "end": 24.835
+      },
+      {
+        "text": "第三类，应用自己实现可靠性：在 UDP 上面自己写确认和重传。",
+        "start": 24.835,
+        "end": 31.226
+      },
+      {
+        "text": "QUIC 就是这么干的，HTTP/3 就跑在 UDP 上。",
+        "start": 31.226,
+        "end": 35.802
+      },
+      {
+        "text": "所以 UDP 不是不可靠，它是把可靠性外包了出去。",
+        "start": 35.802,
+        "end": 40.536
+      }
+    ]
+  },
+  "s09": {
+    "duration": 32.472,
+    "sentences": [
+      {
+        "type": "SentenceBoundary",
+        "text": "最后把这一期的考点，压成一张表。",
+        "offset": 1000000,
+        "duration": 32400945
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "首部：固定八字节，四个字段各两字节。",
+        "offset": 32900945,
+        "duration": 40683964
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "长度字段：首部加数据，最小值是八。",
+        "offset": 73584909,
+        "duration": 38207549
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "伪首部：十二字节，协议号十七，只算不传。",
+        "offset": 111792458,
+        "duration": 44811323
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "校验：全零表示禁用；算得零就填全一；验证通过是全一。",
+        "offset": 156603782,
+        "duration": 59905663
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "分用：看目的端口；端口不可达，回 ICMP 差错报文。",
+        "offset": 216509445,
+        "duration": 55778304
+      },
+      {
+        "type": "SentenceBoundary",
+        "text": "特点：无连接、无序、不可靠，却支持广播和组播。",
+        "offset": 272287750,
+        "duration": 52004719
+      }
+    ],
+    "cues": [
+      {
+        "text": "最后把这一期的考点，压成一张表。",
+        "start": 0.1,
+        "end": 3.34
+      },
+      {
+        "text": "首部：固定八字节，四个字段各两字节。",
+        "start": 3.34,
+        "end": 7.358
+      },
+      {
+        "text": "长度字段：首部加数据，最小值是八。",
+        "start": 7.358,
+        "end": 11.179
+      },
+      {
+        "text": "伪首部：十二字节，协议号十七，只算不传。",
+        "start": 11.179,
+        "end": 15.66
+      },
+      {
+        "text": "校验：全零表示禁用；算得零就填全一；验证通过是全一。",
+        "start": 15.66,
+        "end": 21.651
+      },
+      {
+        "text": "分用：看目的端口；端口不可达，回 ICMP 差错报文。",
+        "start": 21.651,
+        "end": 27.229
+      },
+      {
+        "text": "特点：无连接、无序、不可靠，却支持广播和组播。",
+        "start": 27.229,
+        "end": 32.472
+      }
+    ]
+  }
+}
