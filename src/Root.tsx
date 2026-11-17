@@ -38,6 +38,8 @@ import {
 import { DataAlignment, TOTAL_FRAMES as DataAlignmentFrames } from "./DataAlignment";
 import { CiscRisc, TOTAL_FRAMES as CiscRiscFrames } from "./CiscRisc";
 import { UdpBasics, TOTAL_FRAMES as UdpBasicsFrames } from "./UdpBasics";
+import { HighLowLanguage, TOTAL_FRAMES as HighLowLanguageFrames } from "./HighLowLanguage";
+import { InstructionOps, TOTAL_FRAMES as InstructionOpsFrames } from "./InstructionOps";
 import { EternalSignalManga } from "./EternalSignal/manga";
 import { EternalSignalCover } from "./EternalSignal/cover";
 import { TOTAL_FRAMES as EternalSignalFrames } from "./EternalSignal/timeline";
@@ -195,6 +197,24 @@ const compositions: CompConfig[] = [
   },
 
   // ---- 横版视频 ----
+  {
+    id: "HighLowLanguage",
+    component: HighLowLanguage,
+    durationInFrames: HighLowLanguageFrames,
+    orientation: "landscape",
+    category: "video",
+    description:
+      "高级语言与机器码（横版 1920×1080 · 3Blue1Brown 风格，接《CISC/RISC》）— 主题页、编译四步（预处理/编译/汇编/链接）、编译与汇编之辨、if-else 四步控制流、while/do-while/for、栈帧布局、add 与 func 逐行拆解、考点表",
+  },
+  {
+    id: "InstructionOps",
+    component: InstructionOps,
+    durationInFrames: InstructionOpsFrames,
+    orientation: "landscape",
+    category: "video",
+    description:
+      "指令操作码（横版 1920×1080 · 3Blue1Brown 风格，接《高级语言与机器码》）— 五份状态主线（REG/MEM/FLAGS/PC/PORT）、MOV 五种操作数组合、PUSH/POP 等价序列、EDX:EAX 乘除通路、四种位操作与三类移位、CMP 只改标志位、JMP 相对寻址偏移量与两套条件跳转、CALL/RET 返回地址、INT 陷阱与特权级切换、CLI/STI 与 IN/OUT 编址、五份状态收口表",
+  },
   {
     id: "VirtualMemory",
     component: VirtualMemory,

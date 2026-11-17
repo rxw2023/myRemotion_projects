@@ -21,6 +21,14 @@ debug.log
 # Ignore generated TTS audio files
 public/**/*.mp3
 
+# TTS 逐场产物（sXX.wav，24kHz 单声道），可由 scripts/*/generate_tts.py 重建。
+# 只按 sXX 命名排除，别写成 public/**/*.wav ——
+# public/*/sfx/ 与 eternal-signal/bed.wav 是真正的音效素材，必须进仓库。
+public/*/s[0-9][0-9].wav
+
+# TTS 逐句 PCM 缓存（按引擎分目录，edge 免费、DeepSeek 计费）
+scripts/*/.cache/
+
 # Claude Code compatibility junctions created by `npx remotion skills add`
 # (Windows junctions cannot be versioned; recreate with the command above).
 .claude/
