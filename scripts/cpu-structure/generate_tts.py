@@ -34,8 +34,30 @@ import urllib.error
 import urllib.request
 import wave
 
-API_URL = "https://api.deepseek.com/v1/tools/tts"
-VOICE = "stella"  # stella（女，默认）/ tide（男）
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+
+def load_env(path):
+    """把项目根 .env 里的 KEY=VALUE 读进 os.environ（已存在的环境变量优先）。
+
+    只用标准库：python 侧没装 dotenv，而"命令行 export"和".env 里躺着"两条路
+    都得能跑 —— 少一件事要记，就不会再出现"DEEPSEEK_API_KEY 缺失"。
+    """
+    if not os.path.exists(path):
+        return
+    with open(path, "r", encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+            k, v = line.split("=", 1)
+            os.environ.setdefault(k.strip(), v.strip().strip('"').strip("'"))
+
+
+load_env(os.path.join(BASE_DIR, ".env"))
+
+API_URL = os.environ.get("DEEPSEEK_TTS_URL", "https://api.deepseek.com/v1/tools/tts")
+VOICE = os.environ.get("DEEPSEEK_TTS_VOICE", "stella")  # stella（女，默认）/ tide（男）
 EDGE_VOICE = "zh-CN-XiaoxiaoNeural"
 ENGINE = os.environ.get("TTS_ENGINE", "deepseek")
 SAMPLE_RATE = 24000  # pcm 固定 24kHz / 16bit / mono
@@ -47,7 +69,6 @@ MAX_RETRIES = 5
 RETRY_BASE_DELAY = 2.5
 CONCURRENCY = 6
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 OUT_DIR = os.path.join(BASE_DIR, "public", "cpu-structure")
 CACHE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".cache")
 TS_PATH = os.path.join(BASE_DIR, "src", "CpuStructure", "timings.ts")
