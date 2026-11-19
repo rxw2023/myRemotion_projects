@@ -40,6 +40,7 @@ import { CiscRisc, TOTAL_FRAMES as CiscRiscFrames } from "./CiscRisc";
 import { UdpBasics, TOTAL_FRAMES as UdpBasicsFrames } from "./UdpBasics";
 import { HighLowLanguage, TOTAL_FRAMES as HighLowLanguageFrames } from "./HighLowLanguage";
 import { InstructionOps, TOTAL_FRAMES as InstructionOpsFrames } from "./InstructionOps";
+import { CpuStructure, TOTAL_FRAMES as CpuStructureFrames } from "./CpuStructure";
 import { EternalSignalManga } from "./EternalSignal/manga";
 import { EternalSignalCover } from "./EternalSignal/cover";
 import { TOTAL_FRAMES as EternalSignalFrames } from "./EternalSignal/timeline";
@@ -214,6 +215,15 @@ const compositions: CompConfig[] = [
     category: "video",
     description:
       "指令操作码（横版 1920×1080 · 3Blue1Brown 风格，接《高级语言与机器码》）— 五份状态主线（REG/MEM/FLAGS/PC/PORT）、MOV 五种操作数组合、PUSH/POP 等价序列、EDX:EAX 乘除通路、四种位操作与三类移位、CMP 只改标志位、JMP 相对寻址偏移量与两套条件跳转、CALL/RET 返回地址、INT 陷阱与特权级切换、CLI/STI 与 IN/OUT 编址、五份状态收口表",
+  },
+  {
+    id: "CpuStructure",
+    component: CpuStructure,
+    durationInFrames: CpuStructureFrames,
+    orientation: "landscape",
+    category: "video",
+    description:
+      "CPU 的结构（横版 1920×1080 · 3Blue1Brown 风格，接《指令操作码》）— 一条总线两种元件主线、五大部件到数据通路+控制器两分法、组合逻辑四件套（ALU/译码器/MUX/三态门）、时序逻辑与时钟、单总线逼出暂存器 T、控制器四步、8086 全景与指令队列、寄存器五类与可见性、CS:IP 拼二十位地址、段与栈帧与变址、标志寄存器 CF/OF 本质、8086 引脚复用、三列收口表",
   },
   {
     id: "VirtualMemory",
